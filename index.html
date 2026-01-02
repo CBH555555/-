@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ehefrau Sex-Szenarien Helfer</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #1a1a2e;
+            color: #e6e6e6;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            background-color: #16213e;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #ff6b8b;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #8d99ae;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .disclaimer {
+            background-color: #0f3460;
+            border-left: 5px solid #ff6b8b;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .selection-area {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .category-card {
+            background: linear-gradient(145deg, #0f3460, #1a3a6e);
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(255, 107, 139, 0.3);
+            border-color: #ff6b8b;
+        }
+        
+        .category-card.selected {
+            border-color: #ff6b8b;
+            background: linear-gradient(145deg, #1a3a6e, #2a4a8e);
+            box-shadow: inset 0 0 15px rgba(255, 107, 139, 0.2);
+        }
+        
+        .category-title {
+            color: #ff6b8b;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .difficulty {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        
+        .easy {
+            background-color: #2e7d32;
+            color: white;
+        }
+        
+        .medium {
+            background-color: #f57c00;
+            color: white;
+        }
+        
+        .hard {
+            background-color: #c62828;
+            color: white;
+        }
+        
+        .intimate {
+            background-color: #9c27b0;
+            color: white;
+        }
+        
+        .category-description {
+            color: #b8c1ec;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+        
+        .category-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        
+        .tag {
+            background-color: rgba(255, 107, 139, 0.2);
+            color: #ffb3c1;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+        }
+        
+        .content-display {
+            background: linear-gradient(145deg, #0f3460, #16213e);
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 20px;
+            min-height: 400px;
+            display: none;
+            border: 1px solid #1a3a6e;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .content-display.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-title {
+            color: #ff6b8b;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #1a3a6e;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .option-list {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .option-item {
+            background-color: rgba(26, 58, 110, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ff6b8b;
+            transition: all 0.3s;
+            backdrop-filter: blur(5px);
+            border: 1px solid #2a4a8e;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .option-item:hover {
+            background-color: rgba(42, 74, 142, 0.8);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .option-item.intimate {
+            border-left-color: #9c27b0;
+            background-color: rgba(156, 39, 176, 0.1);
+        }
+        
+        .option-item.intimate:hover {
+            background-color: rgba(156, 39, 176, 0.2);
+        }
+        
+        .option-text {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+        
+        .intimate-text {
+            color: #e1bee7;
+            font-weight: bold;
+        }
+        
+        .option-details {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #b8c1ec;
+            border-left: 3px solid #4fc3f7;
+        }
+        
+        .option-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .btn-select {
+            background-color: #ff6b8b;
+            color: white;
+        }
+        
+        .btn-select:hover {
+            background-color: #ff577a;
+            transform: scale(1.05);
+        }
+        
+        .btn-back {
+            background-color: #8d99ae;
+            color: white;
+        }
+        
+        .btn-back:hover {
+            background-color: #7a8496;
+        }
+        
+        .btn-next {
+            background-color: #2e7d32;
+            color: white;
+        }
+        
+        .btn-next:hover {
+            background-color: #276c2a;
+        }
+        
+        .btn-intimate {
+            background-color: #9c27b0;
+            color: white;
+        }
+        
+        .btn-intimate:hover {
+            background-color: #8a1fa0;
+        }
+        
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #1a3a6e;
+        }
+        
+        .history {
+            background-color: #0f3460;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 25px;
+            font-size: 0.9rem;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .history-title {
+            color: #ff6b8b;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .history-item {
+            padding: 8px 0;
+            border-bottom: 1px dashed #1a3a6e;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .history-text {
+            flex-grow: 1;
+        }
+        
+        .history-time {
+            color: #8d99ae;
+            font-size: 0.8rem;
+            min-width: 60px;
+            text-align: right;
+        }
+        
+        .reset-btn {
+            background-color: #c62828;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            transition: all 0.3s;
+        }
+        
+        .reset-btn:hover {
+            background-color: #b71c1c;
+            transform: scale(1.05);
+        }
+        
+        .instructions {
+            background-color: #0f3460;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+            border-left: 5px solid #4fc3f7;
+        }
+        
+        .instructions h3 {
+            color: #4fc3f7;
+            margin-bottom: 10px;
+        }
+        
+        .intensity-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .toggle-label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .toggle-switch {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            background-color: #0f3460;
+            border-radius: 15px;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+        
+        .toggle-switch::after {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background-color: #ff6b8b;
+            top: 2px;
+            left: 2px;
+            transition: all 0.3s;
+        }
+        
+        input[type="checkbox"]:checked + .toggle-switch {
+            background-color: #9c27b0;
+        }
+        
+        input[type="checkbox"]:checked + .toggle-switch::after {
+            transform: translateX(30px);
+        }
+        
+        input[type="checkbox"] {
+            display: none;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: rgba(15, 52, 96, 0.5);
+            border-radius: 10px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.8rem;
+            color: #ff6b8b;
+            font-weight: bold;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #8d99ae;
+        }
+        
+        .saved-scenarios {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #0f3460;
+            border-radius: 10px;
+            display: none;
+        }
+        
+        .saved-scenarios.active {
+            display: block;
+        }
+        
+        .scenario-item {
+            background-color: #1a3a6e;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .scenario-item:hover {
+            background-color: #2a4a8e;
+        }
+        
+        .mood-selector {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .mood-btn {
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: 2px solid transparent;
+            background-color: #0f3460;
+            color: #b8c1ec;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+        
+        .mood-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .mood-btn.active {
+            border-color: #ff6b8b;
+            background-color: #1a3a6e;
+            color: #ff6b8b;
+        }
+        
+        .mood-btn.romantic {
+            border-color: #ff6b8b;
+        }
+        
+        .mood-btn.passionate {
+            border-color: #f44336;
+        }
+        
+        .mood-btn.adventurous {
+            border-color: #4caf50;
+        }
+        
+        .mood-btn.intimate {
+            border-color: #9c27b0;
+        }
+        
+        .mood-btn.playful {
+            border-color: #ff9800;
+        }
+        
+        .mood-btn.therapeutic {
+            border-color: #2196f3;
+        }
+        
+        @media (max-width: 768px) {
+            .selection-area {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .option-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .mood-selector {
+                gap: 8px;
+            }
+            
+            .mood-btn {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        .tip-box {
+            background-color: rgba(79, 195, 247, 0.1);
+            border-left: 4px solid #4fc3f7;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .tip-title {
+            color: #4fc3f7;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💖 Ehefrau Sex-Szenarien Helfer 💖</h1>
+        <div class="subtitle">Entdecke neue Ideen für Intimität, Leidenschaft und Verbindung in deiner Ehe</div>
+        
+        <div class="disclaimer">
+            <strong>Hinweis:</strong> Dieses Tool soll inspirieren und helfen, neue Aspekte der Sexualität in einer vertrauensvollen Beziehung zu erkunden. Kommunikation, Einvernehmlichkeit und Respekt sind die Grundlage für ein erfülltes Sexleben. Hört auf eure Gefühle und redet über eure Grenzen.
+        </div>
+        
+        <div class="instructions">
+            <h3>Wie du dieses Tool nutzen kannst:</h3>
+            <p>1. Wähle deine aktuelle Stimmung oder das gewünschte Tempo</p>
+            <p>2. Entdecke verschiedene Szenarien-Kategorien</p>
+            <p>3. Wähle ein Szenario, das dich anspricht und folge den Handlungsvorschlägen</p>
+            <p>4. Speichere deine Favoriten für später</p>
+            <p>5. Teile die Ideen mit deinem Partner oder nutze sie als Inspiration für Gespräche</p>
+        </div>
+        
+        <div class="mood-selector" id="moodSelector">
+            <button class="mood-btn romantic active" data-mood="all">Alle Stimmungen</button>
+            <button class="mood-btn romantic" data-mood="romantic">Romantisch</button>
+            <button class="mood-btn passionate" data-mood="passionate">Leidenschaftlich</button>
+            <button class="mood-btn adventurous" data-mood="adventurous">Abenteuerlich</button>
+            <button class="mood-btn intimate" data-mood="intimate">Intim & Sinnlich</button>
+            <button class="mood-btn playful" data-mood="playful">Verspielt</button>
+            <button class="mood-btn therapeutic" data-mood="therapeutic">Heilend & Verbindend</button>
+        </div>
+        
+        <div class="intensity-toggle">
+            <label class="toggle-label">
+                <input type="checkbox" id="intimateToggle">
+                <span class="toggle-switch"></span>
+                <span>Zeige intime/heikle Themen</span>
+            </label>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-value" id="totalScenarios">0</div>
+                <div class="stat-label">Szenarien</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="intimateCount">0</div>
+                <div class="stat-label">Intime</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="selectedCount">0</div>
+                <div class="stat-label">Ausgewählt</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="savedCount">0</div>
+                <div class="stat-label">Gespeichert</div>
+            </div>
+        </div>
+        
+        <div class="selection-area" id="categorySelection">
+            <!-- Kategorien werden per JavaScript geladen -->
+        </div>
+        
+        <div class="content-display" id="contentDisplay">
+            <!-- Inhalte werden dynamisch geladen -->
+        </div>
+        
+        <div class="navigation" id="navigation" style="display: none;">
+            <button class="btn btn-back" id="backBtn">← Zurück</button>
+            <div>
+                <button class="btn btn-intimate" id="saveBtn" style="display: none;">💾 Speichern</button>
+                <button class="btn btn-next" id="nextBtn" style="display: none; margin-left: 10px;">Weiter →</button>
+            </div>
+        </div>
+        
+        <div class="tip-box">
+            <div class="tip-title">Tipp für die Kommunikation:</div>
+            <div>"Ich habe etwas gefunden, das mich interessiert. Könnten wir darüber reden, ob es auch für dich spannend klingt?" ist ein guter Einstieg, um neue Ideen mit deinem Partner zu besprechen.</div>
+        </div>
+        
+        <div class="saved-scenarios" id="savedScenarios">
+            <h3 class="history-title">Gespeicherte Szenarien</h3>
+            <div id="savedList"></div>
+        </div>
+        
+        <div class="history">
+            <div class="history-title">
+                <span>Verlauf</span>
+                <button class="btn" id="clearHistoryBtn" style="padding: 5px 10px; font-size: 0.8rem;">Verlauf löschen</button>
+            </div>
+            <div id="historyList"></div>
+        </div>
+        
+        <button class="reset-btn" id="resetBtn">🔄 Neustart</button>
+    </div>
+
+    <script>
+        // Datenstruktur für allgemeine Sex-Szenarien
+        const roleplayData = {
+            categories: [
+                {
+                    id: "romantic_evening",
+                    title: "Romantischer Abend zu zweit",
+                    description: "Langsame, gefühlvolle Szenarien mit Fokus auf emotionale Verbindung und Zärtlichkeit",
+                    difficulty: "easy",
+                    icon: "🌹",
+                    intimate: false,
+                    moods: ["romantic", "intimate"],
+                    tags: ["Zärtlichkeit", "Emotionen", "Langsam", "Augenkontakt"],
+                    content: [
+                        {
+                            id: "romantic1",
+                            text: "„Lass uns heute Abend mal das Tempo drosseln. Statt direkt ins Schlafzimmer zu gehen, nehmen wir uns Zeit für eine ausgedehnte Massage mit duftendem Öl bei Kerzenschein.“",
+                            intimate: false,
+                            details: "Fokus auf Berührung ohne Erwartung an Sex. Verwende warmes Massageöl und konzentriere dich auf jeden Zentimeter seines/ihres Körpers.",
+                            followUps: [
+                                {
+                                    text: "„Nach der Massage bleiben wir einfach eng umschlungen liegen und reden über schöne Erinnerungen oder unsere Träume. Ohne Ablenkung, nur wir zwei.“",
+                                    intimate: false,
+                                    followUps: [
+                                        {
+                                            text: "„Wenn sich daraus mehr entwickelt, ist das schön. Wenn nicht, ist die Nähe und Verbindung genug. Der Druck, Sex haben zu müssen, fällt weg.“",
+                                            intimate: false,
+                                            isEnd: true
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "„Ich massiere dich, bis du völlig entspannt bist. Dann küsse ich jeden Zentimeter, den ich massiert habe - langsam, ohne Eile.“",
+                                    intimate: false,
+                                    isEnd: true
+                                }
+                            ]
+                        },
+                        {
+                            id: "romantic2",
+                            text: "„Stell dir vor, wir tanzen eng umschlungen zu unserer Musik im Wohnzimmer, wie auf unserer Hochzeit. Nur wir zwei, im Schein einer einzigen Lampe.“",
+                            intimate: false,
+                            details: "Wähle Musik, die für euch beide Bedeutung hat. Der Fokus liegt auf der körperlichen Nähe und dem Gefühl der Verbindung.",
+                            followUps: [
+                                {
+                                    text: "„Wir tanzen, bis die Stimmung sich natürlich verändert. Vom Tanzen zum Stehenbleiben und Umarmen, zum Küssen, zum langsamen Ablegen der Kleidung... im Rhythmus der Musik.“",
+                                    intimate: false,
+                                    followUps: [
+                                        {
+                                            text: "„Wir lassen uns Zeit mit jedem Kleidungsstück. Jedes Mal, wenn etwas fällt, halten wir inne, schauen uns in die Augen und küssen uns, bevor es weitergeht.“",
+                                            intimate: false,
+                                            isEnd: true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            id: "romantic3",
+                            text: "„Wie wäre es mit einem Bad zu zweit bei Kerzenschein? Wir nehmen uns Zeit, uns gegenseitig zu waschen und zu pflegen, wie in einem Luxus-Spa.“",
+                            intimate: false,
+                            details: "Badezusatz verwenden, weiche Handtücher bereitlegen. Kein Sex als Ziel, sondern sinnliche Fürsorge.",
+                            followUps: [
+                                {
+                                    text: "„Nach dem Bad trocknen wir uns gegenseitig ab, ganz langsam. Jeder Körperteil bekommt Aufmerksamkeit. Dann eincremen mit duftender Lotion, von den Füßen bis zum Nacken.“",
+                                    intimate: false,
+                                    isEnd: true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: "communication_focus",
+                    title: "Kommunikation & Verbindung",
+                    description: "Szenarien, die offene Gespräche über Wünsche, Fantasien und Grenzen fördern",
+                    difficulty: "medium",
+                    icon: "💬",
+                    intimate: true,
+                    moods: ["therapeutic", "intimate"],
+                    tags: ["Kommunikation", "Vertrauen", "Gefühle", "Sicherheit"],
+                    content: [
+                        {
+                            id: "communication1",
+                            text: "„Lass uns heute Abend ein Spiel spielen: Wir nehmen uns je 5 Zettel und schreiben Wünsche/Fantasien auf, die wir noch nie ausgesprochen haben. Dann tauschen wir sie aus und reden darüber - ohne Druck, etwas umzusetzen.“",
+                            intimate: true,
+                            details: "Wichtig: Kein Urteilen, nur Zuhören und Verstehen. Es geht darum, einander besser kennenzulernen.",
+                            followUps: [
+                                {
+                                    text: "„Wenn etwas dabei ist, das wir beide spannend finden, könnten wir überlegen, wie wir es behutsam ausprobieren. Aber der Fokus bleibt auf dem Gespräch und dem Vertrauensaufbau.“",
+                                    intimate: true,
+                                    followUps: [
+                                        {
+                                            text: "„Wir könnten einen Wunsch auswählen, den wir beide interessant finden, und gemeinsam brainstormen, wie eine behutsame, sichere Version davon aussehen könnte.“",
+                                            intimate: true,
+                                            isEnd: true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            id: "communication2",
+                            text: "„Wie wäre es mit einem 'Feedback-Abend', wo wir nur über Sex reden - was wir lieben, was wir uns wünschen, was wir ändern möchten? Mit dem Fokus auf 'Ich'-Botschaften und Wertschätzung.“",
+                            intimate: true,
+                            details: "Strukturiere das Gespräch mit Leitfragen wie 'Was hat dir letzte Woche besonders gut gefallen?' oder 'Gibt es etwas, das du dir öfter/vielleicht anders wünschst?'",
+                            followUps: [
+                                {
+                                    text: "„Wir beginnen mit Komplimenten - jeder sagt drei Dinge, die er/sie am Sex mit dem anderen besonders schätzt. Das schafft eine positive, sichere Atmosphäre.“",
+                                    intimate: true,
+                                    followUps: [
+                                        {
+                                            text: "„Dann teilen wir Wünsche mit 'Ich würde mich freuen, wenn wir mal... probieren könnten' oder 'Manchmal wünsche ich mir mehr/von...'. Immer als Einladung, nicht als Forderung.“",
+                                            intimate: true,
+                                            isEnd: true
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: "sensual_exploration",
+                    title: "Sinnliche Erkundung",
+                    description: "Die eigenen und die erogenen Zonen des Partners neu entdecken",
+                    difficulty: "easy",
+                    icon: "✨",
+                    intimate: false,
+                    moods: ["intimate", "playful"],
+                    tags: ["Berührung", "Erkundung", "Langsam", "Achtsamkeit"],
+                    content: [
+                        {
+                            id: "sensual1",
+                            text: "„Lass uns heute Abend nur berühren und erforschen, ohne dass es zum Sex führen muss. Wir nehmen uns 30 Minuten Zeit, um mit verbundenen Augen den Körper des anderen zu erkunden - nur mit den Händen.“",
+                            intimate: false,
+                            details: "Augenbinden verwenden. Der Fokus liegt auf der Wahrnehmung von Texturen, Temperaturen und Reaktionen.",
+                            followUps: [
+                                {
+                                    text: "„Nach der Hälfte der Zeit wechseln wir. Derjenige, der berührt wurde, erzählt, wie sich die Berührungen angefühlt haben und welche besonders angenehm waren.“",
+                                    intimate: false,
+                                    followUps: [
+                                        {
+                                            text: "„Zum Abschluss umarmen wir uns einfach und spüren nach. Wenn sich daraus mehr entwickelt, ist das in Ordnung. Wenn nicht, war es eine wertvolle Erfahrung der Nähe.“",
+                                            intimate: false,
+                                            isEnd: true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            id: "sensual2",
+                            text: "„Wie wäre es mit einem 'Tast-Dinner' im Bett? Verschiedene Gegenstände mit unterschiedlichen Texturen (Seide, Fell, Bürste, Federn) und wir erforschen, wie sie sich auf der Haut anfühlen.“",
+                            intimate: false,
+                            details: "Vorbereiten verschiedener Texturen. Langsam und achtsam ausprobieren, kommunizieren, was sich gut anfühlt.",
+                            followUps: [
+                                {
+                                    text: "„Wir könnten auch Lebensmittel einbeziehen - Erdbeeren, Sahne, Honig... und sie nicht nur essen, sondern auch zur sinnlichen Berührung nutzen.“",
+                                    intimate: false,
+                                    isEnd: true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: "new_positions",
+                    title: "Neue Positionen erkunden",
+                    description: "Verschiedene Sexpositionen ausprobieren, die unterschiedliche Intensitäten und Verbindungen bieten",
+                    difficulty: "medium",
+                    icon: "🔄",
+                    intimate: false,
+                    moods: ["passionate", "adventurous", "playful"],
+                    tags: ["Positionen", "Variation", "Komfort", "Spaß"],
+                    content: [
+                        {
+                            id: "positions1",
+                            text: "„Lass uns heute Abend drei neue Positionen ausprobieren - aber mit einem Twist: Wir wechseln alle 2-3 Minuten, egal ob wir 'fertig' sind oder nicht. Es geht um die Erfahrung, nicht um den Höhepunkt.“",
+                            intimate: false,
+                            details: "Vorher ein paar Positionen aussuchen, die ihr noch nie oder selten probiert habt. Kein Druck auf Performance.",
+                            followUps: [
+                                {
+                                    text: "„Nach jedem Wechsel reden wir kurz: 'Wie hat sich das angefühlt?' 'War es angenehm?' 'Sollten wir es länger probieren?' So lernen wir, was für uns funktioniert.“",
+                                    intimate: false,
+                                    followUps: [
+                                        {
+                                            text: "„Zum Abschluss wählen wir die Position, die uns beiden am besten gefallen hat, und bleiben darin, bis es natürlich endet.“",
+                                            intimate: false,
+                                            isEnd: true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            id: "positions2",
+                            text: "„Stell dir vor, wir probieren Positionen aus, die besonders viel Augenkontakt und Nähe ermöglichen - wie Löffelchen, Missionarsstellung mit aufgestütztem Oberkörper, oder Sitting. Der Fokus liegt auf der Verbindung.“",
+                            intimate: false,
+                            details: "Positionen wählen, bei denen ihr euch anschauen könnt. Langsame, tiefe Bewegungen.",
+                            followUps: [
+                                {
+                                    text: "„Wir könnten abwechselnd führen: Eine Runde bestimmst du das Tempo und die Tiefe, dann ich. So erfahren wir, was dem anderen gefällt.“",
+                                    intimate: false,
+                                    isEnd: true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: "fantasy_roleplay",
+                    title: "Sanfte Rollenspiele",
+                    description: "Einfache Rollenspiele, die Fantasie anregen ohne überwältigend zu sein",
+                    difficulty: "medium",
+                    icon: "🎭",
+                    intimate: true,
+                    moods: ["playful", "adventurous"],
+                    tags: ["Fantasie", "Spiel", "Charaktere", "Leichtigkeit"],
+                    content: [
+                        {
+                            id: "fantasy1",
+                            text: "„Wie wäre es, wenn wir heute Abend jemand anderes wären? Nicht komplett mit Kostüm, aber mit einer kleinen Rolle: Du bist der Masseur/die Masseuse, und ich bin der anspruchsvolle Kunde/die Kundin.“",
+                            intimate: false,
+                            details: "Einfache Rollen, die nicht zu weit von der Realität entfernt sind. Hilft, Hemmungen abzubauen.",
+                            followUps: [
+                                {
+                                    text: "„Wir bleiben in unseren Rollen, bis die 'Behandlung' vorbei ist. Das gibt uns die Freiheit, Dinge zu sagen und zu tun, die wir in unserer normalen Rolle vielleicht nicht täten.“",
+                                    intimate: false,
+                                    followUps: [
+                                        {
+                                            text: "„Nachdem wir 'aus den Rollen' sind, reden wir darüber, wie es sich angefühlt hat. Was war aufregend? Was war komisch? Ohne Druck, es wiederholen zu müssen.“",
+                                            intimate: false,
+                                            isEnd: true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            id: "fantasy2",
+                            text: "„Stell dir vor, wir treffen uns in einer Bar als Fremde. Wir setzen uns getrennt hin und beginnen ein Gespräch, als ob wir uns nicht kennen würden. Flirten, als wäre es das erste Mal.“",
+                            intimate: false,
+                            details: "Getrennt im Raum positionieren. Sich mit neuer Identität ansprechen. Langsam annähern.",
+                            followUps: [
+                                {
+                                    text: "„Wir könnten sogar 'mit nach Hause nehmen' spielen - als ob wir beschließen würden, die Nacht zusammen zu verbringen, obwohl wir uns gerade erst kennengelernt haben.“",
+                                    intimate: false,
+                                    isEnd: true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: "healing_intimacy",
+                    title: "Heilende Intimität",
+                    description: "Szenarien für Paare, die nach Konflikten, Stress oder Trockenphasen wieder zueinander finden möchten",
+                    difficulty: "hard",
+                    icon: "🕊️",
+                    intimate: true,
+                    moods: ["therapeutic", "intimate", "romantic"],
+                    tags: ["Heilung", "Wiederverbindung", "Sanft", "Achtsam"],
+                    content: [
+                        {
+                            id: "healing1",
+                            text: "„Nach der schwierigen Zeit, die wir hatten, schlage ich vor: Ein Abend nur mit Halten und Streicheln. Wir legen uns nackt aneinander, decken uns zu und bleiben einfach so - sprechen, weinen, schweigen, was auch immer kommt.“",
+                            intimate: true,
+                            details: "Kein Sex als Erwartung. Nur körperliche Nähe und die Erlaubnis, verletzlich zu sein.",
+                            followUps: [
+                                {
+                                    text: "„Wenn wir reden, verwenden wir Sätze wie 'Ich fühle...' oder 'Ich brauche...'. Keine Vorwürfe. Nur was jetzt in diesem Moment ist.“",
+                                    intimate: true,
+                                    followUps: [
+                                        {
+                                            text: "„Wir könnten vereinbaren: Wenn sich Sex natürlich entwickelt, ist das okay. Wenn nicht, ist die Nähe genug. Der Druck fällt weg.“",
+                                            intimate: true,
+                                            isEnd: true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            id: "healing2",
+                            text: "„Wie wäre es mit einem 'Neuanfangs-Ritual'? Wir schreiben auf Zettel, was wir in unserer sexuellen Beziehung hinter uns lassen möchten, und verbrennen sie sicher in einer Schale. Dann schreiben wir, was wir uns wünschen, und bewahren sie auf.“",
+                            intimate: true,
+                            details: "Symbolischer Akt des Loslassens und Neuausrichtens. Schafft psychologische Klarheit.",
+                            followUps: [
+                                {
+                                    text: "„Nach dem Ritual umarmen wir uns und versprechen uns, mit Geduld und Liebe an unserer Intimität zu arbeiten - einen Schritt nach dem anderen.“",
+                                    intimate: true,
+                                    isEnd: true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: "quick_connection",
+                    title: "Schnelle Verbindung",
+                    description: "Intime Momente für volle Terminkalender - wenn Zeit knapp ist, aber Nähe wichtig",
+                    difficulty: "easy",
+                    icon: "⚡",
+                    intimate: false,
+                    moods: ["passionate", "playful"],
+                    tags: ["Schnell", "Intensiv", "Effizient", "Überraschend"],
+                    content: [
+                        {
+                            id: "quick1",
+                            text: "„Du hast nur 20 Minuten vor der Arbeit? Wie wäre es mit einer 'Power-Intimität'-Session: 10 Minuten Massage, 5 Minuten leidenschaftliches Küssen, 5 Minuten schneller, intensiver Sex. Fokussiert und präsent.“",
+                            intimate: false,
+                            details: "Zeit nehmen, ganz präsent zu sein. Handy aus, Tür zu, nur ihr zwei in diesen Minuten.",
+                            followUps: [
+                                {
+                                    text: "„Wir könnten es 'Sprint statt Marathon' nennen. Manchmal ist kurzer, intensiver Sex genau das Richtige, um die Verbindung aufzufrischen.“",
+                                    intimate: false,
+                                    isEnd: true
+                                }
+                            ]
+                        },
+                        {
+                            id: "quick2",
+                            text: "„Wie wäre es mit einer 'Überraschungs-Pause'? Ich schicke dir eine Nachricht: 'In 10 Minuten bist du für 15 Minuten nur für mich da. Stelle den Timer.' Und dann machen wir in dieser Zeit nur das, worauf wir Lust haben.“",
+                            intimate: false,
+                            details: "Die begrenzte Zeit schafft Intensität und Spannung. Kein Aufbau, direkt zur Sache.",
+                            followUps: [
+                                {
+                                    text: "„Die Regel: In diesen 15 Minuten gibt es keine Ablenkungen, keine To-Do-Listen im Kopf. Nur körperliche Präsenz und Genuss.“",
+                                    intimate: false,
+                                    isEnd: true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: "self_exploration",
+                    title: "Selbsterkundung zu zweit",
+                    description: "Sich selbst vor dem Partner zeigen und darüber sprechen - für mehr Vertrauen und Körperakzeptanz",
+                    difficulty: "hard",
+                    icon: "👁️",
+                    intimate: true,
+                    moods: ["intimate", "therapeutic"],
+                    tags: ["Selbstakzeptanz", "Verletzlichkeit", "Vertrauen", "Körperbild"],
+                    content: [
+                        {
+                            id: "self1",
+                            text: "„Ich möchte heute Abend etwas Verletzliches teilen: Ich zeige dir, wie ich mich selbst berühre, was mir gefällt. Du schaust nur zu, ohne einzugreifen. Danach reden wir darüber.“",
+                            intimate: true,
+                            details: "Sehr intimer Akt des Teilens. Schafft tiefes Vertrauen und Verständnis.",
+                            followUps: [
+                                {
+                                    text: "„Wenn du möchtest, könntest du danach dasselbe tun. Wir lernen, was dem anderen allein gefällt, ohne den Druck, es 'richtig' machen zu müssen.“",
+                                    intimate: true,
+                                    followUps: [
+                                        {
+                                            text: "„Später könnten wir diese Erkenntnisse nutzen, um unsere gemeinsame Intimität zu verbessern. Aber der Fokus heute ist das Teilen und Zuhören.“",
+                                            intimate: true,
+                                            isEnd: true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            id: "self2",
+                            text: "„Lass uns nackt vor den Spiegel stellen und uns gegenseitig sagen, was wir an unserem und am Körper des anderen lieben. Keine Selbstkritik erlaubt, nur Wertschätzung.“",
+                            intimate: true,
+                            details: "Gegen Körperunzufriedenheit. Fokus auf das, was funktioniert und schön ist.",
+                            followUps: [
+                                {
+                                    text: "„Wir könnten sogar die 'Problemzonen' berühren und sagen: 'Dieser Teil von dir gehört zu dir, und ich liebe ihn, weil er dich zu dir macht.'“",
+                                    intimate: true,
+                                    isEnd: true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        };
+
+        // App State
+        let currentState = {
+            selectedCategory: null,
+            selectedOption: null,
+            selectedFollowUp: null,
+            history: [],
+            savedScenarios: [],
+            showIntimate: false,
+            currentMood: "all",
+            stats: {
+                totalSelections: 0,
+                intimateSelections: 0
+            }
+        };
+
+        // DOM Elemente
+        const categorySelectionEl = document.getElementById('categorySelection');
+        const contentDisplayEl = document.getElementById('contentDisplay');
+        const navigationEl = document.getElementById('navigation');
+        const backBtn = document.getElementById('backBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const saveBtn = document.getElementById('saveBtn');
+        const historyListEl = document.getElementById('historyList');
+        const savedScenariosEl = document.getElementById('savedScenarios');
+        const savedListEl = document.getElementById('savedList');
+        const intimateToggle = document.getElementById('intimateToggle');
+        const clearHistoryBtn = document.getElementById('clearHistoryBtn');
+        const totalScenariosEl = document.getElementById('totalScenarios');
+        const intimateCountEl = document.getElementById('intimateCount');
+        const selectedCountEl = document.getElementById('selectedCount');
+        const savedCountEl = document.getElementById('savedCount');
+        const moodButtons = document.querySelectorAll('.mood-btn');
+
+        // Kategorien anzeigen
+        function displayCategories() {
+            categorySelectionEl.innerHTML = '';
+            
+            roleplayData.categories.forEach(category => {
+                // Filtere nach intimen Inhalten wenn nötig
+                if (!currentState.showIntimate && category.intimate) {
+                    return;
+                }
+                
+                // Filtere nach Stimmung
+                if (currentState.currentMood !== "all" && !category.moods.includes(currentState.currentMood)) {
+                    return;
+                }
+                
+                const card = document.createElement('div');
+                card.className = `category-card ${currentState.selectedCategory?.id === category.id ? 'selected' : ''}`;
+                
+                let tagsHTML = '';
+                if (category.tags && category.tags.length > 0) {
+                    tagsHTML = '<div class="category-tags">';
+                    category.tags.forEach(tag => {
+                        tagsHTML += `<span class="tag">${tag}</span>`;
+                    });
+                    tagsHTML += '</div>';
+                }
+                
+                card.innerHTML = `
+                    <div class="category-title">
+                        ${category.icon} ${category.title}
+                        <span class="difficulty ${category.difficulty}">${getDifficultyText(category.difficulty)}</span>
+                        ${category.intimate ? '<span class="difficulty intimate">INTIM</span>' : ''}
+                    </div>
+                    <div class="category-description">${category.description}</div>
+                    ${tagsHTML}
+                `;
+                
+                card.addEventListener('click', () => {
+                    selectCategory(category);
+                });
+                
+                categorySelectionEl.appendChild(card);
+            });
+            
+            updateStats();
+        }
+
+        function getDifficultyText(difficulty) {
+            switch(difficulty) {
+                case 'easy': return 'Einfach';
+                case 'medium': return 'Mittel';
+                case 'hard': return 'Herausfordernd';
+                default: return '';
+            }
+        }
+
+        // Kategorie auswählen
+        function selectCategory(category) {
+            currentState.selectedCategory = category;
+            currentState.selectedOption = null;
+            currentState.selectedFollowUp = null;
+            
+            displayCategories();
+            displayCategoryContent(category);
+            addToHistory(`Kategorie: ${category.title}`, category.icon);
+            
+            navigationEl.style.display = 'flex';
+            nextBtn.style.display = 'none';
+            saveBtn.style.display = 'none';
+            savedScenariosEl.classList.remove('active');
+        }
+
+        // Kategorie-Inhalt anzeigen
+        function displayCategoryContent(category) {
+            contentDisplayEl.innerHTML = '';
+            contentDisplayEl.classList.add('active');
+            
+            const title = document.createElement('h2');
+            title.className = 'content-title';
+            title.innerHTML = `${category.icon} ${category.title} ${category.intimate ? '<span class="difficulty intimate">INTIM</span>' : ''}`;
+            contentDisplayEl.appendChild(title);
+            
+            if (category.content.length === 0) {
+                const emptyMessage = document.createElement('div');
+                emptyMessage.className = 'option-item';
+                emptyMessage.innerHTML = `<div class="option-text">Keine Inhalte verfügbar für diese Kategorie.</div>`;
+                contentDisplayEl.appendChild(emptyMessage);
+                return;
+            }
+            
+            const list = document.createElement('ul');
+            list.className = 'option-list';
+            
+            category.content.forEach(option => {
+                const item = document.createElement('li');
+                item.className = `option-item ${option.intimate ? 'intimate' : ''}`;
+                
+                const textDiv = document.createElement('div');
+                textDiv.className = 'option-text';
+                if (option.intimate) {
+                    textDiv.innerHTML = `<span class="intimate-text">${option.text}</span>`;
+                } else {
+                    textDiv.textContent = option.text;
+                }
+                
+                item.appendChild(textDiv);
+                
+                if (option.details) {
+                    const detailsDiv = document.createElement('div');
+                    detailsDiv.className = 'option-details';
+                    detailsDiv.textContent = option.details;
+                    item.appendChild(detailsDiv);
+                }
+                
+                const actionsDiv = document.createElement('div');
+                actionsDiv.className = 'option-actions';
+                
+                const selectBtn = document.createElement('button');
+                selectBtn.className = `btn ${option.intimate ? 'btn-intimate' : 'btn-select'}`;
+                selectBtn.innerHTML = option.intimate ? '💖 Diese Option wählen' : 'Diese Option wählen';
+                selectBtn.dataset.id = option.id;
+                
+                selectBtn.addEventListener('click', () => {
+                    selectOption(option);
+                });
+                
+                actionsDiv.appendChild(selectBtn);
+                item.appendChild(actionsDiv);
+                list.appendChild(item);
+            });
+            
+            contentDisplayEl.appendChild(list);
+        }
+
+        // Option auswählen
+        function selectOption(option) {
+            currentState.selectedOption = option;
+            currentState.stats.totalSelections++;
+            if (option.intimate) {
+                currentState.stats.intimateSelections++;
+            }
+            
+            displayOptionFollowUps(option);
+            addToHistory(`Option: ${option.text.substring(0, 60)}...`, '💬');
+            
+            nextBtn.style.display = option.followUps && option.followUps.length > 0 ? 'inline-block' : 'none';
+            saveBtn.style.display = 'inline-block';
+            
+            updateStats();
+        }
+
+        // Folgoptionen anzeigen
+        function displayOptionFollowUps(option) {
+            contentDisplayEl.innerHTML = '';
+            
+            const title = document.createElement('h2');
+            title.className = 'content-title';
+            title.innerHTML = `${currentState.selectedCategory.icon} Ausgewählte Option ${option.intimate ? '<span class="difficulty intimate">INTIM</span>' : ''}`;
+            contentDisplayEl.appendChild(title);
+            
+            const selectedOption = document.createElement('div');
+            selectedOption.className = `option-item ${option.intimate ? 'intimate' : ''}`;
+            
+            const textDiv = document.createElement('div');
+            textDiv.className = 'option-text';
+            if (option.intimate) {
+                textDiv.innerHTML = `<span class="intimate-text">${option.text}</span>`;
+            } else {
+                textDiv.textContent = option.text;
+            }
+            
+            selectedOption.appendChild(textDiv);
+            
+            if (option.details) {
+                const detailsDiv = document.createElement('div');
+                detailsDiv.className = 'option-details';
+                detailsDiv.textContent = option.details;
+                selectedOption.appendChild(detailsDiv);
+            }
+            
+            contentDisplayEl.appendChild(selectedOption);
+            
+            if (option.followUps && option.followUps.length > 0) {
+                const followUpTitle = document.createElement('h3');
+                followUpTitle.className = 'content-title';
+                followUpTitle.textContent = 'Wie könnte es weitergehen?';
+                followUpTitle.style.fontSize = '1.2rem';
+                followUpTitle.style.marginTop = '20px';
+                contentDisplayEl.appendChild(followUpTitle);
+                
+                const list = document.createElement('ul');
+                list.className = 'option-list';
+                
+                option.followUps.forEach((followUp, index) => {
+                    const item = document.createElement('li');
+                    item.className = `option-item ${followUp.intimate ? 'intimate' : ''}`;
+                    
+                    const textDiv = document.createElement('div');
+                    textDiv.className = 'option-text';
+                    if (followUp.intimate) {
+                        textDiv.innerHTML = `<span class="intimate-text">${followUp.text}</span>`;
+                    } else {
+                        textDiv.textContent = followUp.text;
+                    }
+                    
+                    item.appendChild(textDiv);
+                    
+                    const actionsDiv = document.createElement('div');
+                    actionsDiv.className = 'option-actions';
+                    
+                    const selectBtn = document.createElement('button');
+                    selectBtn.className = `btn ${followUp.intimate ? 'btn-intimate' : 'btn-select'}`;
+                    selectBtn.textContent = 'Diesen Weg wählen';
+                    selectBtn.dataset.index = index;
+                    
+                    selectBtn.addEventListener('click', () => {
+                        selectFollowUp(followUp, index);
+                    });
+                    
+                    actionsDiv.appendChild(selectBtn);
+                    item.appendChild(actionsDiv);
+                    list.appendChild(item);
+                });
+                
+                contentDisplayEl.appendChild(list);
+            } else {
+                displayEndOfPath(option);
+            }
+        }
+
+        // Folgoption auswählen
+        function selectFollowUp(followUp, index) {
+            currentState.selectedFollowUp = { followUp, index };
+            currentState.stats.totalSelections++;
+            if (followUp.intimate) {
+                currentState.stats.intimateSelections++;
+            }
+            
+            if (followUp.isEnd) {
+                displayEndOfPath(followUp);
+                addToHistory(`Fortsetzung: ${followUp.text.substring(0, 60)}... [ENDE]`, '🏁');
+            } else if (followUp.followUps && followUp.followUps.length > 0) {
+                displayOptionFollowUps(followUp);
+                addToHistory(`Fortsetzung: ${followUp.text.substring(0, 60)}...`, '→');
+            }
+            
+            nextBtn.style.display = followUp.followUps && followUp.followUps.length > 0 ? 'inline-block' : 'none';
+            saveBtn.style.display = 'inline-block';
+            
+            updateStats();
+        }
+
+        // Ende eines Handlungsstrangs anzeigen
+        function displayEndOfPath(item) {
+            contentDisplayEl.innerHTML = '';
+            
+            const title = document.createElement('h2');
+            title.className = 'content-title';
+            title.innerHTML = `✨ Vorschlag abgeschlossen ✨`;
+            contentDisplayEl.appendChild(title);
+            
+            const selectedOption = document.createElement('div');
+            selectedOption.className = `option-item ${item.intimate ? 'intimate' : ''}`;
+            
+            const textDiv = document.createElement('div');
+            textDiv.className = 'option-text';
+            if (item.intimate) {
+                textDiv.innerHTML = `<span class="intimate-text">${item.text}</span>`;
+            } else {
+                textDiv.textContent = item.text;
+            }
+            
+            selectedOption.appendChild(textDiv);
+            contentDisplayEl.appendChild(selectedOption);
+            
+            const endMessage = document.createElement('div');
+            endMessage.className = 'option-item';
+            endMessage.innerHTML = `
+                <div class="option-text" style="text-align: center; padding: 30px;">
+                    <strong>Dieser Vorschlag ist jetzt vollständig.</strong><br><br>
+                    <div style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
+                        <div>Du könntest nun:</div>
+                        <div>1. Zurück zur vorherigen Entscheidung gehen</div>
+                        <div>2. Eine neue Kategorie auswählen</div>
+                        <div>3. Dieses Szenario mit deinem Partner besprechen</div>
+                        <div>4. Dieses Szenario für später speichern</div>
+                        <div style="margin-top: 15px; font-style: italic; color: #ff6b8b;">
+                            Denke daran: Jede Idee kann angepasst werden, um für euch beide zu funktionieren.
+                        </div>
+                    </div>
+                </div>
+            `;
+            contentDisplayEl.appendChild(endMessage);
+        }
+
+        // Szenario speichern
+        function saveScenario() {
+            if (!currentState.selectedOption) return;
+            
+            const scenario = {
+                id: Date.now(),
+                category: currentState.selectedCategory?.title || 'Unbekannt',
+                option: currentState.selectedOption.text,
+                followUp: currentState.selectedFollowUp?.followUp?.text || null,
+                timestamp: new Date().toLocaleString(),
+                intimate: currentState.selectedOption.intimate || (currentState.selectedFollowUp?.followUp?.intimate || false)
+            };
+            
+            currentState.savedScenarios.push(scenario);
+            updateSavedScenarios();
+            addToHistory('Szenario gespeichert', '💾');
+            
+            // Kurze Bestätigung anzeigen
+            const saveBtn = document.getElementById('saveBtn');
+            const originalText = saveBtn.innerHTML;
+            saveBtn.innerHTML = '✅ Gespeichert!';
+            saveBtn.style.backgroundColor = '#2e7d32';
+            
+            setTimeout(() => {
+                saveBtn.innerHTML = originalText;
+                saveBtn.style.backgroundColor = '';
+            }, 1500);
+        }
+
+        // Gespeicherte Szenarien aktualisieren
+        function updateSavedScenarios() {
+            savedListEl.innerHTML = '';
+            
+            if (currentState.savedScenarios.length === 0) {
+                savedListEl.innerHTML = '<div class="scenario-item">Noch keine Szenarien gespeichert.</div>';
+                savedScenariosEl.classList.remove('active');
+                return;
+            }
+            
+            savedScenariosEl.classList.add('active');
+            
+            // Zeige die gespeicherten Szenarien (neueste zuerst)
+            const reversedScenarios = [...currentState.savedScenarios].reverse();
+            
+            reversedScenarios.forEach((scenario, index) => {
+                const item = document.createElement('div');
+                item.className = `scenario-item ${scenario.intimate ? 'intimate' : ''}`;
+                
+                const content = document.createElement('div');
+                content.style.flexGrow = '1';
+                content.innerHTML = `
+                    <div><strong>${scenario.category}</strong></div>
+                    <div style="font-size: 0.9rem; margin-top: 5px; color: #b8c1ec;">${scenario.option.substring(0, 80)}${scenario.option.length > 80 ? '...' : ''}</div>
+                    <div style="font-size: 0.8rem; margin-top: 5px; color: #8d99ae;">${scenario.timestamp}</div>
+                `;
+                
+                const deleteBtn = document.createElement('button');
+                deleteBtn.className = 'btn';
+                deleteBtn.style.padding = '5px 10px';
+                deleteBtn.style.fontSize = '0.8rem';
+                deleteBtn.style.backgroundColor = '#c62828';
+                deleteBtn.textContent = 'Löschen';
+                deleteBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    deleteSavedScenario(scenario.id);
+                });
+                
+                item.appendChild(content);
+                item.appendChild(deleteBtn);
+                item.addEventListener('click', () => {
+                    loadSavedScenario(scenario);
+                });
+                
+                savedListEl.appendChild(item);
+            });
+            
+            updateStats();
+        }
+
+        // Gespeichertes Szenario laden
+        function loadSavedScenario(scenario) {
+            // Finde die Kategorie
+            const category = roleplayData.categories.find(cat => cat.title === scenario.category);
+            if (category) {
+                selectCategory(category);
+                addToHistory(`Geladen: ${scenario.category}`, '📂');
+            }
+        }
+
+        // Gespeichertes Szenario löschen
+        function deleteSavedScenario(id) {
+            currentState.savedScenarios = currentState.savedScenarios.filter(s => s.id !== id);
+            updateSavedScenarios();
+            addToHistory('Szenario gelöscht', '🗑️');
+        }
+
+        // Zurück-Button Funktion
+        function goBack() {
+            if (currentState.selectedFollowUp) {
+                // Zurück zur Option
+                currentState.selectedFollowUp = null;
+                displayOptionFollowUps(currentState.selectedOption);
+                addToHistory(`← Zurück`, '↩️');
+            } else if (currentState.selectedOption) {
+                // Zurück zur Kategorie
+                currentState.selectedOption = null;
+                displayCategoryContent(currentState.selectedCategory);
+                addToHistory(`← Zurück zur Kategorie`, '↩️');
+            } else if (currentState.selectedCategory) {
+                // Zurück zur Kategorieauswahl
+                currentState.selectedCategory = null;
+                contentDisplayEl.classList.remove('active');
+                navigationEl.style.display = 'none';
+                saveBtn.style.display = 'none';
+                displayCategories();
+                addToHistory(`← Zurück zur Übersicht`, '↩️');
+            }
+            
+            nextBtn.style.display = 'none';
+        }
+
+        // Weiter-Button Funktion (nächste Folgoption)
+        function goNext() {
+            if (currentState.selectedFollowUp && currentState.selectedFollowUp.followUp.followUps) {
+                // Zeige die nächsten Folgoptionen
+                displayOptionFollowUps(currentState.selectedFollowUp.followUp);
+            }
+        }
+
+        // Zur Geschichte hinzufügen
+        function addToHistory(text, icon = '📝') {
+            const timestamp = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+            currentState.history.push({ text, timestamp, icon });
+            updateHistoryDisplay();
+            
+            // Begrenze die History auf 50 Einträge
+            if (currentState.history.length > 50) {
+                currentState.history = currentState.history.slice(-50);
+            }
+        }
+
+        // Geschichte aktualisieren
+        function updateHistoryDisplay() {
+            historyListEl.innerHTML = '';
+            
+            if (currentState.history.length === 0) {
+                historyListEl.innerHTML = '<div class="history-item"><div class="history-text">Noch keine Auswahl getroffen.</div></div>';
+                return;
+            }
+            
+            // Zeige die Einträge (neueste zuerst)
+            const reversedHistory = [...currentState.history].reverse();
+            
+            reversedHistory.forEach(entry => {
+                const item = document.createElement('div');
+                item.className = 'history-item';
+                item.innerHTML = `
+                    <div class="history-text">${entry.icon} ${entry.text}</div>
+                    <div class="history-time">${entry.timestamp}</div>
+                `;
+                historyListEl.appendChild(item);
+            });
+        }
+
+        // Statistiken aktualisieren
+        function updateStats() {
+            // Zähle alle Szenarien
+            let totalScenarios = 0;
+            let intimateScenarios = 0;
+            
+            roleplayData.categories.forEach(category => {
+                category.content.forEach(option => {
+                    totalScenarios++;
+                    if (option.intimate) intimateScenarios++;
+                    
+                    // Zähle auch FollowUps
+                    if (option.followUps) {
+                        option.followUps.forEach(followUp => {
+                            totalScenarios++;
+                            if (followUp.intimate) intimateScenarios++;
+                            
+                            if (followUp.followUps) {
+                                followUp.followUps.forEach(followUp2 => {
+                                    totalScenarios++;
+                                    if (followUp2.intimate) intimateScenarios++;
+                                });
+                            }
+                        });
+                    }
+                });
+            });
+            
+            totalScenariosEl.textContent = totalScenarios;
+            intimateCountEl.textContent = intimateScenarios;
+            selectedCountEl.textContent = currentState.stats.totalSelections;
+            savedCountEl.textContent = currentState.savedScenarios.length;
+        }
+
+        // Zurücksetzen
+        function resetApp() {
+            currentState = {
+                selectedCategory: null,
+                selectedOption: null,
+                selectedFollowUp: null,
+                history: [],
+                savedScenarios: currentState.savedScenarios, // Behalte gespeicherte Szenarien
+                showIntimate: currentState.showIntimate, // Behalte den Intim-Filter
+                currentMood: currentState.currentMood, // Behalte die aktuelle Stimmung
+                stats: {
+                    totalSelections: 0,
+                    intimateSelections: 0
+                }
+            };
+            
+            contentDisplayEl.classList.remove('active');
+            navigationEl.style.display = 'none';
+            saveBtn.style.display = 'none';
+            savedScenariosEl.classList.remove('active');
+            displayCategories();
+            updateHistoryDisplay();
+            updateStats();
+            addToHistory("Helfer zurückgesetzt", "🔄");
+        }
+
+        // Event Listener
+        backBtn.addEventListener('click', goBack);
+        nextBtn.addEventListener('click', goNext);
+        resetBtn.addEventListener('click', resetApp);
+        saveBtn.addEventListener('click', saveScenario);
+        clearHistoryBtn.addEventListener('click', () => {
+            currentState.history = [];
+            updateHistoryDisplay();
+            addToHistory("Verlauf gelöscht", "🗑️");
+        });
+
+        // Intim-Toggle
+        intimateToggle.addEventListener('change', () => {
+            currentState.showIntimate = intimateToggle.checked;
+            displayCategories();
+            
+            if (currentState.selectedCategory && currentState.selectedCategory.intimate && !currentState.showIntimate) {
+                // Wenn die aktuelle Kategorie intim ist und wir sie ausblenden, zurücksetzen
+                currentState.selectedCategory = null;
+                contentDisplayEl.classList.remove('active');
+                navigationEl.style.display = 'none';
+            }
+            
+            addToHistory(`Intime Themen: ${currentState.showIntimate ? 'EIN' : 'AUS'}`, currentState.showIntimate ? '💖' : '👁️');
+        });
+
+        // Stimmungs-Buttons
+        moodButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Entferne aktive Klasse von allen Buttons
+                moodButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Füge aktive Klasse zum geklickten Button hinzu
+                button.classList.add('active');
+                
+                // Setze die aktuelle Stimmung
+                currentState.currentMood = button.dataset.mood;
+                
+                // Aktualisiere die Anzeige
+                displayCategories();
+                
+                // Zurücksetzen der Auswahl
+                currentState.selectedCategory = null;
+                contentDisplayEl.classList.remove('active');
+                navigationEl.style.display = 'none';
+                saveBtn.style.display = 'none';
+                
+                addToHistory(`Stimmung: ${button.textContent}`, '🎭');
+            });
+        });
+
+        // Tastatur-Shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                goBack();
+            } else if (e.key === 'ArrowRight' && nextBtn.style.display !== 'none') {
+                goNext();
+            } else if (e.key === 's' && (e.ctrlKey || e.metaKey)) {
+                e.preventDefault();
+                saveScenario();
+            } else if (e.key === 'r' && (e.ctrlKey || e.metaKey)) {
+                e.preventDefault();
+                resetApp();
+            }
+        });
+
+        // Initialisierung
+        displayCategories();
+        updateHistoryDisplay();
+        updateStats();
+        updateSavedScenarios();
+        addToHistory("Ehefrau Sex-Szenarien Helfer gestartet", "🚀");
+
+        // Info über Tastaturkürzel anzeigen
+        setTimeout(() => {
+            addToHistory("Tipp: Drücke ESC für zurück, Pfeil rechts für weiter", "💡");
+            addToHistory("Wähle eine Stimmung, die deiner aktuellen Verfassung entspricht", "🎭");
+        }, 2000);
+    </script>
+</body>
+</html>
