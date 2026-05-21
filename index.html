@@ -323,11 +323,11 @@ header h1 { font-size: 1.2rem; }
       <p>Viele Fragen fuer uns beide</p>
       <button class="btn-small btn-gold">Spielen</button>
     </div>
-    <div class="gc red-card">
+    <div class="gc" id="openAdvet" style="border-color:#c96e6e;cursor:pointer;">
       <div class="ico">&#128269;</div>
-      <h2>Realitaetscheck</h2>
+      <h2 style="color:#c96e6e;">Realitaetscheck</h2>
       <p>Psychologischer Test</p>
-      <button class="btn-small btn-ghost">Kommt bald</button>
+      <button class="btn-small" style="background:#c96e6e;color:white;">Spielen</button>
     </div>
     <div class="gc purple-card" id="openEropoly">
       <div class="ico">&#127922;</div>
@@ -809,33 +809,203 @@ header h1 { font-size: 1.2rem; }
       el.innerHTML = "<p style='color:#7a6e7a;'>Noch keine Antworten. Spiele zuerst!</p>";
       return;
     }
-    var byCat = {};
-    for (var i=0;i<answered.length;i++){
-      var c = answered[i].cat;
-      if (!byCat[c]) byCat[c] = [];
-      byCat[c].push(answered[i]);
-    }
-    var html = "<div class='result-grid'>";
-    for (var k in byCat){
-      var arr = byCat[k];
-      var aCount = 0, total = 0;
-      for (var j=0;j<arr.length;j++){
-        var vals = [];
-        for (var key in arr[j].answers){ vals.push(arr[j].answers[key]); }
-        total += vals.length;
-        for (var m=0;m<vals.length;m++){ if (vals[m]==="a") aCount++; }
+
+    // Group answers by person
+    function getAnswersFor(person){
+      var results = { wishes: {}, limits: {}, unsure: {} };
+      for (var k in CATS){
+        results.wishes[k] = [];
+        results.limits[k] = [];
+        results.unsure[k] = [];
       }
-      var aPct = total ? Math.round(aCount/total*100) : 0;
-      html += "<div class='result-card'><h3>" + (CATS[k]||k) + "</h3>" +
-        "<div style='font-size:0.8rem;color:#7a6e7a;margin-bottom:10px;'>" + arr.length + " Fragen</div>" +
-        "<div style='font-size:0.8rem;margin-bottom:4px;'>A: " + aPct + "%</div>" +
-        "<div class='bar'><div class='bar-fill' style='width:" + aPct + "%;'></div></div>" +
-        "<div style='font-size:0.8rem;margin-bottom:4px;'>B: " + (100-aPct) + "%</div>" +
-        "<div class='bar'><div class='bar-fill' style='width:" + (100-aPct) + "%;background:#8b5e8b;'></div></div>" +
-        "</div>";
+      for (var i=0;i<answered.length;i++){
+        var q = answered[i];
+        var ans = q.answers[person];
+        if (!ans) continue;
+        var chosen = ans === "a" ? q.a : q.b;
+        var rejected = ans === "a" ? q.b : q.a;
+        if (!results.wishes[q.cat]) {
+          results.wishes[q.cat] = [];
+          results.limits[q.cat] = [];
+        }
+        results.wishes[q.cat].push({ q: q.q, chosen: chosen });
+        results.limits[q.cat].push({ q: q.q, rejected: rejected });
+      }
+      return results;
     }
+
+    function getStats(person){
+      var count = 0;
+      for (var i=0;i<answered.length;i++){
+        if (answered[i].answers[person]) count++;
+      }
+      return count;
+    }
+
+    function getAgreement(){
+      var agree = 0, disagree = 0, onlyOne = 0, both = 0;
+      var conflicts = [];
+      for (var i=0;i<answered.length;i++){
+        var q = answered[i];
+        var fa = q.answers["frau"];
+        var ma = q.answers["mann"];
+        if (fa && ma){
+          both++;
+          if (fa === ma) agree++;
+          else {
+            disagree++;
+            conflicts.push({
+              q: q.q,
+              cat: q.cat,
+              frau: fa === "a" ? q.a : q.b,
+              mann: ma === "a" ? q.a : q.b
+            });
+          }
+        } else if (fa || ma){
+          onlyOne++;
+        }
+      }
+      return { agree: agree, disagree: disagree, both: both, conflicts: conflicts };
+    }
+
+    var frauStats = getStats("frau");
+    var mannStats = getStats("mann");
+    var agree = getAgreement();
+
+    var html = "";
+
+    // Summary header
+    html += "<div class='result-card' style='margin-bottom:20px;'>";
+    html += "<h3 style='color:#c9a96e;'>Zusammenfassung</h3>";
+    html += "<div style='display:flex;gap:20px;flex-wrap:wrap;margin-top:10px;'>";
+    html += "<div><div style='font-size:1.5rem;color:#c9a96e;font-weight:bold;'>" + frauStats + "</div><div style='font-size:0.8rem;color:#7a6e7a;'>Frau beantwortet</div></div>";
+    html += "<div><div style='font-size:1.5rem;color:#8b5e8b;font-weight:bold;'>" + mannStats + "</div><div style='font-size:0.8rem;color:#7a6e7a;'>Mann beantwortet</div></div>";
+    if (agree.both > 0){
+      var aPct = Math.round(agree.agree / agree.both * 100);
+      html += "<div><div style='font-size:1.5rem;color:#6ec9a9;font-weight:bold;'>" + aPct + "%</div><div style='font-size:0.8rem;color:#7a6e7a;'>Uebereinstimmung</div></div>";
+      html += "<div><div style='font-size:1.5rem;color:#c96e6e;font-weight:bold;'>" + agree.disagree + "</div><div style='font-size:0.8rem;color:#7a6e7a;'>Konfliktthemen</div></div>";
+    }
+    html += "</div></div>";
+
+    // Tabs for Frau / Mann / Vergleich
+    html += "<div style='display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap;'>";
+    html += "<button class='cb active' onclick='window.showResultView(\"frau\")' id='rv-frau'>Wuensche Frau</button>";
+    html += "<button class='cb' onclick='window.showResultView(\"mann\")' id='rv-mann'>Wuensche Mann</button>";
+    html += "<button class='cb' onclick='window.showResultView(\"conflict\")' id='rv-conflict'>Wo ihr unterschiedlich denkt</button>";
     html += "</div>";
+
+    html += "<div id='resultView'></div>";
+
     el.innerHTML = html;
+
+    // Render initial view
+    window.resultsData = {
+      frau: getAnswersFor("frau"),
+      mann: getAnswersFor("mann"),
+      conflicts: agree.conflicts
+    };
+
+    window.showResultView = function(view){
+      var btns = ["frau","mann","conflict"];
+      for (var i=0;i<btns.length;i++){
+        var b = document.getElementById("rv-"+btns[i]);
+        if (b) b.classList.toggle("active", btns[i]===view);
+      }
+      var rv = document.getElementById("resultView");
+      var h = "";
+
+      if (view === "conflict"){
+        var c = window.resultsData.conflicts;
+        if (!c.length){
+          h = "<p style='color:#7a6e7a;padding:20px;text-align:center;'>Keine Konflikte gefunden - entweder seid ihr euch einig, oder es haben noch nicht beide geantwortet.</p>";
+        } else {
+          h = "<div style='color:#7a6e7a;font-size:0.85rem;margin-bottom:12px;'>Hier denkt ihr unterschiedlich - das sind gute Gespraechsthemen:</div>";
+          var byCat = {};
+          for (var i=0;i<c.length;i++){
+            var cat = c[i].cat;
+            if (!byCat[cat]) byCat[cat] = [];
+            byCat[cat].push(c[i]);
+          }
+          for (var k in byCat){
+            h += "<div class='result-card' style='margin-bottom:14px;'>";
+            h += "<h3 style='color:#c96e6e;'>" + (CATS[k]||k) + "</h3>";
+            for (var j=0;j<byCat[k].length;j++){
+              var item = byCat[k][j];
+              h += "<div style='padding:10px 0;border-bottom:1px solid #2e2535;'>";
+              h += "<div style='font-size:0.9rem;margin-bottom:6px;'></div>";
+              h += "<div style='display:flex;gap:12px;flex-wrap:wrap;margin-top:6px;'>";
+              h += "<div style='flex:1;min-width:140px;background:rgba(201,169,110,0.08);padding:8px;border-radius:6px;'><div style='font-size:0.7rem;color:#c9a96e;'>SIE</div><div style='font-size:0.85rem;'></div></div>";
+              h += "<div style='flex:1;min-width:140px;background:rgba(139,94,139,0.08);padding:8px;border-radius:6px;'><div style='font-size:0.7rem;color:#8b5e8b;'>ER</div><div style='font-size:0.85rem;'></div></div>";
+              h += "</div></div>";
+            }
+            h += "</div>";
+          }
+          rv.innerHTML = h;
+          // Now fill text contents safely
+          var cards = rv.querySelectorAll(".result-card");
+          var idx = 0;
+          for (var ck in byCat){
+            var entries = cards[idx].querySelectorAll("[style*='border-bottom']");
+            for (var je=0;je<byCat[ck].length;je++){
+              var qDiv = entries[je].querySelector("div:nth-child(1)");
+              qDiv.textContent = byCat[ck][je].q;
+              var boxes = entries[je].querySelectorAll("[style*='border-radius:6px']");
+              boxes[0].querySelectorAll("div")[1].textContent = byCat[ck][je].frau;
+              boxes[1].querySelectorAll("div")[1].textContent = byCat[ck][je].mann;
+            }
+            idx++;
+          }
+          return;
+        }
+      } else {
+        var data = window.resultsData[view];
+        var color = view === "frau" ? "#c9a96e" : "#8b5e8b";
+        var label = view === "frau" ? "Was sie sich wuenscht" : "Was er sich wuenscht";
+        h = "<div style='color:#7a6e7a;font-size:0.85rem;margin-bottom:12px;'>" + label + " - sortiert nach Kategorie. Jede Auswahl zeigt was gewaehlt wurde.</div>";
+
+        var anyShown = false;
+        for (var k in CATS){
+          var items = data.wishes[k] || [];
+          if (!items.length) continue;
+          anyShown = true;
+          h += "<div class='result-card' style='margin-bottom:14px;'>";
+          h += "<h3 style='color:" + color + ";'>" + CATS[k] + " <span style='font-size:0.75rem;color:#7a6e7a;font-weight:normal;'>(" + items.length + ")</span></h3>";
+          for (var i=0;i<items.length;i++){
+            h += "<div style='padding:8px 0;border-bottom:1px solid #2e2535;'>";
+            h += "<div style='font-size:0.8rem;color:#7a6e7a;margin-bottom:4px;'></div>";
+            h += "<div style='font-size:0.9rem;color:" + color + ";'><span style='color:#7a6e7a;'>Waehlt: </span></div>";
+            h += "</div>";
+          }
+          h += "</div>";
+        }
+        if (!anyShown){
+          h = "<p style='color:#7a6e7a;padding:20px;text-align:center;'>Noch keine Antworten von " + (view==="frau"?"ihr":"ihm") + ".</p>";
+        }
+      }
+
+      rv.innerHTML = h;
+
+      // Fill text content safely (not via innerHTML to avoid HTML injection)
+      if (view !== "conflict"){
+        var data2 = window.resultsData[view];
+        var cards = rv.querySelectorAll(".result-card");
+        var cIdx = 0;
+        for (var kk in CATS){
+          var its = data2.wishes[kk] || [];
+          if (!its.length) continue;
+          var entries = cards[cIdx].querySelectorAll("[style*='border-bottom']");
+          for (var ii=0;ii<its.length;ii++){
+            var divs = entries[ii].querySelectorAll("div");
+            divs[0].textContent = its[ii].q;
+            divs[1].querySelector("span").textContent = "Waehlt: ";
+            divs[1].appendChild(document.createTextNode(its[ii].chosen));
+          }
+          cIdx++;
+        }
+      }
+    };
+
+    window.showResultView("frau");
   }
 
   function changePw(){
@@ -883,6 +1053,9 @@ header h1 { font-size: 1.2rem; }
   document.getElementById("openWdl").onclick = openWdl;
   document.getElementById("openEropoly").onclick = function(){
     window.location.href = "https://cbh555555.github.io/CBH/";
+  };
+  document.getElementById("openAdvet").onclick = function(){
+    window.location.href = "https://cbh555555.github.io/Advet/";
   };
   document.getElementById("logoutBtn").onclick = logout;
   document.getElementById("backBtn").onclick = function(){
