@@ -454,14 +454,45 @@
 
 <!-- LOGIN -->
 <div id="loginScreen">
-  <div class="login-box">
-    <h1>💫 Würdest du lieber</h1>
-    <p>Paare Edition – Privat & Sicher</p>
+  <div class="login-box" style="width:420px">
+    <h1>💫 Unser Spiel</h1>
+    <p>Privat & Sicher – Nur für uns</p>
     <input type="password" id="pwInput" placeholder="Passwort eingeben..." onkeydown="if(event.key==='Enter')login()">
     <button class="btn" onclick="login()">Einloggen</button>
     <button class="btn secondary" onclick="showSetPw()">Passwort einrichten</button>
     <div class="error-msg" id="loginError"></div>
   </div>
+</div>
+
+<!-- GAME SELECTOR -->
+<div id="gameSelector" style="display:none;min-height:100vh;background:radial-gradient(ellipse at center,#1e1025 0%,#0e0b10 70%);flex-direction:column;align-items:center;justify-content:center;padding:24px;">
+  <h1 style="font-family:'Playfair Display',serif;color:#c9a96e;font-size:2rem;margin-bottom:8px;text-align:center;">💫 Was möchtet ihr spielen?</h1>
+  <p style="color:#7a6e7a;margin-bottom:40px;font-size:0.95rem;">Wähle ein Spiel um zu starten</p>
+  <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;max-width:900px;">
+
+    <div onclick="openWDL()" style="cursor:pointer;background:#1a1520;border:2px solid #2e2535;border-radius:16px;padding:32px 28px;width:240px;text-align:center;transition:all 0.2s;box-shadow:0 4px 24px rgba(0,0,0,0.4);" onmouseover="this.style.borderColor='#c9a96e'" onmouseout="this.style.borderColor='#2e2535'">
+      <div style="font-size:3rem;margin-bottom:12px;">💫</div>
+      <div style="font-family:'Playfair Display',serif;color:#c9a96e;font-size:1.2rem;font-weight:700;margin-bottom:8px;">Würdest du lieber</div>
+      <div style="color:#7a6e7a;font-size:0.85rem;line-height:1.5;">247 Fragen für uns beide – Cuckold, Hotwife, Gefühle, Erotik & mehr</div>
+      <div style="margin-top:16px;padding:8px 16px;background:#c9a96e;color:#0e0b10;border-radius:8px;font-size:0.85rem;font-weight:700;">Spielen ▶</div>
+    </div>
+
+    <div style="cursor:default;background:#1a1520;border:2px dashed #2e2535;border-radius:16px;padding:32px 28px;width:240px;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,0.4);opacity:0.6;">
+      <div style="font-size:3rem;margin-bottom:12px;">🔍</div>
+      <div style="font-family:'Playfair Display',serif;color:#c96e6e;font-size:1.2rem;font-weight:700;margin-bottom:8px;">Cuckold Realitätscheck</div>
+      <div style="color:#7a6e7a;font-size:0.85rem;line-height:1.5;">Psychologischer & körperlicher Test – bin ich wirklich bereit?</div>
+      <div style="margin-top:16px;padding:8px 16px;background:#2e2535;color:#7a6e7a;border-radius:8px;font-size:0.85rem;font-weight:700;">🚧 Kommt bald</div>
+    </div>
+
+    <div onclick="openGame('https://cbh555555.github.io/CBH/')" style="cursor:pointer;background:#1a1520;border:2px solid #2e2535;border-radius:16px;padding:32px 28px;width:240px;text-align:center;transition:all 0.2s;box-shadow:0 4px 24px rgba(0,0,0,0.4);" onmouseover="this.style.borderColor='#8b5e8b'" onmouseout="this.style.borderColor='#2e2535'">
+      <div style="font-size:3rem;margin-bottom:12px;">🎲</div>
+      <div style="font-family:'Playfair Display',serif;color:#8b5e8b;font-size:1.2rem;font-weight:700;margin-bottom:8px;">Eropoly</div>
+      <div style="color:#7a6e7a;font-size:0.85rem;line-height:1.5;">Das erotische Brettspiel für Paare – Felder, Aufgaben & Überraschungen</div>
+      <div style="margin-top:16px;padding:8px 16px;background:#8b5e8b;color:white;border-radius:8px;font-size:0.85rem;font-weight:700;">Spielen ▶</div>
+    </div>
+
+  </div>
+  <button onclick="document.getElementById('gameSelector').style.display='none';document.getElementById('loginScreen').style.display='flex';" style="margin-top:32px;background:transparent;border:1px solid #2e2535;color:#7a6e7a;padding:8px 20px;border-radius:8px;cursor:pointer;font-size:0.85rem;">Abmelden</button>
 </div>
 
 <!-- APP -->
@@ -634,6 +665,7 @@ const CATEGORIES = {
   erotik:    '🔥 Erotik & Handlungen',
   fetisch:   '🖤 Fetisch & Tabu',
   keuschheit:'🔒 Keuschheit & Käfig',
+  wannabe:   '🏆 Cuckold – Hat er das Zeug?',
   absurd:    '🎲 Absurd & Witzig'
 };
 
@@ -963,6 +995,33 @@ const DEFAULT_QUESTIONS = [
   {id:554,player:'frau',cat:'keuschheit',q:'Wuerdest du lieber ihm den Kaefig tagsüber anlegen damit er den ganzen Tag daran denkt was du tust - oder nur nachts?',a:'Tagsüber',b:'Nur nachts',img:null,answers:{}},
   {id:555,player:'frau',cat:'keuschheit',q:'Wuerdest du lieber dass er im Kaefig zuschauen muss oder dass er draussen wartet und sich vorstellt was passiert?',a:'Im Kaefig zuschauen',b:'Draussen vorstellen',img:null,answers:{}},
   {id:556,player:'beide',cat:'keuschheit',q:'Wuerdest du lieber Keuschheit mit einem festen Zeitplan - z.B. immer montags frei - oder komplett nach ihrer Laune ohne Plan?',a:'Fester Zeitplan',b:'Nach ihrer Laune',img:null,answers:{}},
+  // CUCKOLD FRAGEBOGEN – HAT ER DAS ZEUG?
+  {id:600,player:'mann',cat:'wannabe',q:'Wenn sie nach Hause kommt und riecht nach einem anderen Mann – kannst du sie trotzdem kussen ohne innerlich wegzulaufen?',a:'Ja – ich kann es',b:'Nein – das waere zu viel',img:null,answers:{}},
+  {id:601,player:'mann',cat:'wannabe',q:'Wuerdest du ihr erlauben mit einem anderen zu schlafen und danach NICHTS von ihr verlangen – kein Bericht, keine Erklaerung, keine Rechtfertigung?',a:'Ja – sie schuldet mir nichts',b:'Nein – ich brauche Details oder Sicherheit',img:null,answers:{}},
+  {id:602,player:'mann',cat:'wannabe',q:'Wenn sie sagt der andere war heute besser als du je warst – kannst du das hoeren ohne es ihr spaeter vorzuwerfen?',a:'Ja – und ich bleibe ruhig',b:'Nein – das wuerde mich verfolgen',img:null,answers:{}},
+  {id:603,player:'mann',cat:'wannabe',q:'Hast du schon mal erlebt dass Eifersucht in dir hochkam und du sie trotzdem ruhig beiseitegelegt hast ohne Schweigen, Kälte oder Vorwuerfe?',a:'Ja – habe ich schon geschafft',b:'Nein – Eifersucht kontrolliert mich',img:null,answers:{}},
+  {id:604,player:'mann',cat:'wannabe',q:'Kannst du ihr nach dem Treffen Naehe geben – kussen, halten, fragen wie es ihr geht – ohne dabei an ihn zu denken?',a:'Ja – sie steht im Mittelpunkt',b:'Nein – ich koennte nicht abschalten',img:null,answers:{}},
+  {id:605,player:'mann',cat:'wannabe',q:'Wenn sie sagt sie will ihn wiedersehen naechste Woche – kannst du ja sagen und es wirklich so meinen?',a:'Ja – ich kann es so meinen',b:'Ja sagen aber innerlich nein meinen',img:null,answers:{}},
+  {id:606,player:'mann',cat:'wannabe',q:'Bist du bereit Verantwortung zu uebernehmen wenn es dir mal nicht gut geht damit – ohne ihr die Schuld zu geben?',a:'Ja – meine Gefuehle sind meine Aufgabe',b:'Nein – sie muesste es dann einschraenken',img:null,answers:{}},
+  {id:607,player:'mann',cat:'wannabe',q:'Wenn du zusiehst und merkst du wirst nicht erregt sondern nur verletzt – kannst du in dem Moment stoppen ohne Wut auf sie?',a:'Ja – stoppen ohne Wut',b:'Nein – ich wuerde Wut auf sie schieben',img:null,answers:{}},
+  {id:608,player:'mann',cat:'wannabe',q:'Hast du dir schon konkret vorgestellt wie es sich anfuehlt wenn ein anderer Mann sie zum Hoehepunkt bringt – und kannst du damit leben?',a:'Ja – ich habe es mir vorgestellt und es geht',b:'Nein – in der Theorie ja in der Realitaet nein',img:null,answers:{}},
+  {id:609,player:'mann',cat:'wannabe',q:'Wenn Freunde oder Familie es herausfinden wuerden – wuerdest du zu ihr stehen oder dich distanzieren?',a:'Ich stehe zu ihr – egal was andere denken',b:'Ich wuerde mich distanzieren',img:null,answers:{}},
+  {id:610,player:'mann',cat:'wannabe',q:'Kannst du ihre sexuelle Freiheit wirklich als Geschenk sehen das ihr gehoert – oder fuehlt es sich heimlich wie ein Verlust fuer dich an?',a:'Als ihr Geschenk – nicht mein Verlust',b:'Heimlich als Verlust',img:null,answers:{}},
+  {id:611,player:'mann',cat:'wannabe',q:'Wenn sie emotional aufgeloest nach Hause kommt weil es ein intensives Erlebnis war – kannst du einfach da sein ohne es zu analysieren?',a:'Ja – einfach da sein',b:'Nein – ich muesste sofort verstehen was war',img:null,answers:{}},
+  {id:612,player:'mann',cat:'wannabe',q:'Wuerdest du ihr erlauben den Liebhaber zu kussen – echter Kuss, lange, zaertlich – obwohl du weisst dass das mehr als nur Sex bedeutet?',a:'Ja – ich verbiete ihr nichts',b:'Kuss waere eine Grenze fuer mich',img:null,answers:{}},
+  {id:613,player:'mann',cat:'wannabe',q:'Wenn du merkst dass du Cuckold sein willst damit SIE gluecklich ist – und nicht nur wegen deiner eigenen Erregung – dann bist du auf dem richtigen Weg. Stimmts?',a:'Ja – es geht mir um ihr Glueck',b:'Ehrlich: es geht mir hauptsaechlich um meine Erregung',img:null,answers:{}},
+  {id:614,player:'mann',cat:'wannabe',q:'Kannst du ihr nach einem Treffen sagen ich bin stolz auf dich und das wirklich so meinen – ohne Unterton?',a:'Ja – echter Stolz',b:'Nein – ich koennte es nicht so meinen',img:null,answers:{}},
+  {id:615,player:'mann',cat:'wannabe',q:'Wenn das Ganze nach drei Monaten aufhoert weil sie es nicht mehr will – kannst du das akzeptieren ohne Vorwuerfe?',a:'Ja – ihre Entscheidung',b:'Nein – ich wuerde es schwer nehmen',img:null,answers:{}},
+
+  // WANNABE TEST – DIE FRAU BEWERTET IHN
+  {id:616,player:'frau',cat:'wannabe',q:'Wenn er eifersuechtg wird und schweigt statt zu reden – glaubst du dass er wirklich bereit ist oder nur glaubt es zu sein?',a:'Er glaubt es nur',b:'Er ist wirklich bereit',img:null,answers:{}},
+  {id:617,player:'frau',cat:'wannabe',q:'Hat er dir schon mal etwas gesagt das schwer war fuer ihn – und dabei nicht kontrollierend oder vorwurfsvoll geklungen?',a:'Ja – das hat er schon geschafft',b:'Nein – er wird immer kontrollierend',img:null,answers:{}},
+  {id:618,player:'frau',cat:'wannabe',q:'Wenn du ihn beobachtest wenn andere Maenner mit dir flirten – was siehst du in ihm: echte Neugier und Stolz oder versteckte Anspannung und Kontrolle?',a:'Echte Neugier und Stolz',b:'Versteckte Anspannung und Kontrolle',img:null,answers:{}},
+  {id:619,player:'frau',cat:'wannabe',q:'Glaubst du dass er nach dem ersten echten Treffen bei dir bleibt – oder dass er es bereut und dir die Schuld gibt?',a:'Er bleibt und traegt es',b:'Er wird mir die Schuld geben',img:null,answers:{}},
+  {id:620,player:'frau',cat:'wannabe',q:'Wenn du ihm sagst was dir beim anderen gefallen hat – hört er wirklich zu oder wartet er nur darauf dass du aufhoerst?',a:'Er hoert wirklich zu',b:'Er wartet nur dass ich aufhoere',img:null,answers:{}},
+  {id:621,player:'frau',cat:'wannabe',q:'Ist er ein echter Cuckold der dir Freiheit schenkt weil er dich liebt – oder ein Wannabe der Cuckold spielt weil er hofft dass es seine eigene Untreue rechtfertigt?',a:'Echter Cuckold aus Liebe',b:'Wannabe mit versteckter Agenda',img:null,answers:{}},
+  {id:622,player:'frau',cat:'wannabe',q:'Wenn du ehrlich bist – verdient er dieses Vertrauen das Cuckold-Sein braucht? Heute, so wie er ist?',a:'Ja – er verdient es',b:'Noch nicht – er muss noch wachsen',img:null,answers:{}},
+
 
 
 
@@ -1001,16 +1060,29 @@ function login() {
   const pw = document.getElementById('pwInput').value;
   if (pw === getPw()) {
     document.getElementById('loginScreen').style.display = 'none';
-    document.getElementById('app').style.display = 'block';
-    initApp();
+    document.getElementById('gameSelector').style.display = 'flex';
   } else {
+    document.getElementById('loginError').textContent = 'Falsches Passwort. Standardpasswort: liebesspiel';
+  }
+}
+
+function openGame(url) {
+  window.location.href = url;
+}
+
+function openWDL() {
+  document.getElementById('gameSelector').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+  initApp();
+} else {
     document.getElementById('loginError').textContent = 'Falsches Passwort.';
   }
 }
 
 function logout() {
-  document.getElementById('loginScreen').style.display = 'flex';
+  document.getElementById('gameSelector').style.display = 'none';
   document.getElementById('app').style.display = 'none';
+  document.getElementById('loginScreen').style.display = 'flex';
   document.getElementById('pwInput').value = '';
 }
 
@@ -1346,6 +1418,7 @@ function generateInsight(cat, aPct) {
     erotik: aPct > 60 ? '💡 Aktive Wünsche vorhanden – offen besprechen.' : '💡 Zurückhaltender – eigenes Tempo respektieren.',
     fetisch: aPct > 60 ? '💡 Lust auf Grenzerfahrungen – mit Sicherheit angehen.' : '💡 Eher klassisch – Vertrauen zuerst aufbauen.',
     keuschheit: aPct > 60 ? '💡 Keuschheit als starkes Element gewuenscht.' : '💡 Keuschheit eher als gelegentliches Spiel.',
+    wannabe: aPct > 60 ? '💡 Echte Eignung erkennbar – kein Wannabe.' : '💡 Noch viel Fantasie – wenig Substanz dahinter.',
     absurd: '😄 Humor ist definitiv vorhanden – perfekt für die Stimmung!',
   };
   return insights[cat] || '💡 Interessante Tendenzen erkennbar.';
