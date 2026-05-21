@@ -1,1683 +1,1430 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ehefrau Sex-Szenarien Helfer</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #1a1a2e;
-            color: #e6e6e6;
-            line-height: 1.6;
-            padding: 20px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .container {
-            background-color: #16213e;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            margin-bottom: 30px;
-        }
-        
-        h1 {
-            color: #ff6b8b;
-            text-align: center;
-            margin-bottom: 10px;
-            font-size: 2.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        
-        .subtitle {
-            text-align: center;
-            color: #8d99ae;
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-        }
-        
-        .disclaimer {
-            background-color: #0f3460;
-            border-left: 5px solid #ff6b8b;
-            padding: 15px;
-            margin-bottom: 25px;
-            border-radius: 5px;
-            font-size: 0.9rem;
-        }
-        
-        .selection-area {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-        
-        .category-card {
-            background: linear-gradient(145deg, #0f3460, #1a3a6e);
-            border-radius: 10px;
-            padding: 20px;
-            transition: all 0.3s;
-            cursor: pointer;
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .category-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(255, 107, 139, 0.3);
-            border-color: #ff6b8b;
-        }
-        
-        .category-card.selected {
-            border-color: #ff6b8b;
-            background: linear-gradient(145deg, #1a3a6e, #2a4a8e);
-            box-shadow: inset 0 0 15px rgba(255, 107, 139, 0.2);
-        }
-        
-        .category-title {
-            color: #ff6b8b;
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .difficulty {
-            display: inline-block;
-            padding: 3px 8px;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            margin-left: 10px;
-        }
-        
-        .easy {
-            background-color: #2e7d32;
-            color: white;
-        }
-        
-        .medium {
-            background-color: #f57c00;
-            color: white;
-        }
-        
-        .hard {
-            background-color: #c62828;
-            color: white;
-        }
-        
-        .intimate {
-            background-color: #9c27b0;
-            color: white;
-        }
-        
-        .category-description {
-            color: #b8c1ec;
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-            flex-grow: 1;
-        }
-        
-        .category-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-            margin-top: 10px;
-        }
-        
-        .tag {
-            background-color: rgba(255, 107, 139, 0.2);
-            color: #ffb3c1;
-            padding: 2px 8px;
-            border-radius: 10px;
-            font-size: 0.75rem;
-        }
-        
-        .content-display {
-            background: linear-gradient(145deg, #0f3460, #16213e);
-            border-radius: 10px;
-            padding: 25px;
-            margin-top: 20px;
-            min-height: 400px;
-            display: none;
-            border: 1px solid #1a3a6e;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-        
-        .content-display.active {
-            display: block;
-            animation: fadeIn 0.5s;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .content-title {
-            color: #ff6b8b;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #1a3a6e;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .option-list {
-            list-style-type: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-        
-        .option-item {
-            background-color: rgba(26, 58, 110, 0.7);
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #ff6b8b;
-            transition: all 0.3s;
-            backdrop-filter: blur(5px);
-            border: 1px solid #2a4a8e;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        
-        .option-item:hover {
-            background-color: rgba(42, 74, 142, 0.8);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .option-item.intimate {
-            border-left-color: #9c27b0;
-            background-color: rgba(156, 39, 176, 0.1);
-        }
-        
-        .option-item.intimate:hover {
-            background-color: rgba(156, 39, 176, 0.2);
-        }
-        
-        .option-text {
-            margin-bottom: 15px;
-            font-size: 1.05rem;
-            line-height: 1.5;
-            flex-grow: 1;
-        }
-        
-        .intimate-text {
-            color: #e1bee7;
-            font-weight: bold;
-        }
-        
-        .option-details {
-            background-color: rgba(0, 0, 0, 0.2);
-            padding: 10px;
-            border-radius: 5px;
-            margin-top: 10px;
-            font-size: 0.9rem;
-            color: #b8c1ec;
-            border-left: 3px solid #4fc3f7;
-        }
-        
-        .option-actions {
-            display: flex;
-            gap: 10px;
-            margin-top: 15px;
-            flex-wrap: wrap;
-        }
-        
-        .btn {
-            padding: 10px 20px;
-            border-radius: 5px;
-            border: none;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        .btn-select {
-            background-color: #ff6b8b;
-            color: white;
-        }
-        
-        .btn-select:hover {
-            background-color: #ff577a;
-            transform: scale(1.05);
-        }
-        
-        .btn-back {
-            background-color: #8d99ae;
-            color: white;
-        }
-        
-        .btn-back:hover {
-            background-color: #7a8496;
-        }
-        
-        .btn-next {
-            background-color: #2e7d32;
-            color: white;
-        }
-        
-        .btn-next:hover {
-            background-color: #276c2a;
-        }
-        
-        .btn-intimate {
-            background-color: #9c27b0;
-            color: white;
-        }
-        
-        .btn-intimate:hover {
-            background-color: #8a1fa0;
-        }
-        
-        .navigation {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 25px;
-            padding-top: 20px;
-            border-top: 1px solid #1a3a6e;
-        }
-        
-        .history {
-            background-color: #0f3460;
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 25px;
-            font-size: 0.9rem;
-            max-height: 200px;
-            overflow-y: auto;
-        }
-        
-        .history-title {
-            color: #ff6b8b;
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .history-item {
-            padding: 8px 0;
-            border-bottom: 1px dashed #1a3a6e;
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .history-text {
-            flex-grow: 1;
-        }
-        
-        .history-time {
-            color: #8d99ae;
-            font-size: 0.8rem;
-            min-width: 60px;
-            text-align: right;
-        }
-        
-        .reset-btn {
-            background-color: #c62828;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 5px;
-            border: none;
-            font-weight: bold;
-            cursor: pointer;
-            display: block;
-            margin: 20px auto;
-            transition: all 0.3s;
-        }
-        
-        .reset-btn:hover {
-            background-color: #b71c1c;
-            transform: scale(1.05);
-        }
-        
-        .instructions {
-            background-color: #0f3460;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 25px;
-            font-size: 0.95rem;
-            border-left: 5px solid #4fc3f7;
-        }
-        
-        .instructions h3 {
-            color: #4fc3f7;
-            margin-bottom: 10px;
-        }
-        
-        .intensity-toggle {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .toggle-label {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-        }
-        
-        .toggle-switch {
-            position: relative;
-            width: 60px;
-            height: 30px;
-            background-color: #0f3460;
-            border-radius: 15px;
-            margin-right: 10px;
-            transition: all 0.3s;
-        }
-        
-        .toggle-switch::after {
-            content: '';
-            position: absolute;
-            width: 26px;
-            height: 26px;
-            border-radius: 50%;
-            background-color: #ff6b8b;
-            top: 2px;
-            left: 2px;
-            transition: all 0.3s;
-        }
-        
-        input[type="checkbox"]:checked + .toggle-switch {
-            background-color: #9c27b0;
-        }
-        
-        input[type="checkbox"]:checked + .toggle-switch::after {
-            transform: translateX(30px);
-        }
-        
-        input[type="checkbox"] {
-            display: none;
-        }
-        
-        .stats {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-            padding: 15px;
-            background-color: rgba(15, 52, 96, 0.5);
-            border-radius: 10px;
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-value {
-            font-size: 1.8rem;
-            color: #ff6b8b;
-            font-weight: bold;
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            color: #8d99ae;
-        }
-        
-        .saved-scenarios {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #0f3460;
-            border-radius: 10px;
-            display: none;
-        }
-        
-        .saved-scenarios.active {
-            display: block;
-        }
-        
-        .scenario-item {
-            background-color: #1a3a6e;
-            padding: 15px;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .scenario-item:hover {
-            background-color: #2a4a8e;
-        }
-        
-        .mood-selector {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 25px;
-            flex-wrap: wrap;
-        }
-        
-        .mood-btn {
-            padding: 10px 20px;
-            border-radius: 25px;
-            border: 2px solid transparent;
-            background-color: #0f3460;
-            color: #b8c1ec;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-weight: bold;
-        }
-        
-        .mood-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .mood-btn.active {
-            border-color: #ff6b8b;
-            background-color: #1a3a6e;
-            color: #ff6b8b;
-        }
-        
-        .mood-btn.romantic {
-            border-color: #ff6b8b;
-        }
-        
-        .mood-btn.passionate {
-            border-color: #f44336;
-        }
-        
-        .mood-btn.adventurous {
-            border-color: #4caf50;
-        }
-        
-        .mood-btn.intimate {
-            border-color: #9c27b0;
-        }
-        
-        .mood-btn.playful {
-            border-color: #ff9800;
-        }
-        
-        .mood-btn.therapeutic {
-            border-color: #2196f3;
-        }
-        
-        @media (max-width: 768px) {
-            .selection-area {
-                grid-template-columns: 1fr;
-            }
-            
-            .container {
-                padding: 15px;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .option-list {
-                grid-template-columns: 1fr;
-            }
-            
-            .stats {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .mood-selector {
-                gap: 8px;
-            }
-            
-            .mood-btn {
-                padding: 8px 15px;
-                font-size: 0.9rem;
-            }
-        }
-        
-        .tip-box {
-            background-color: rgba(79, 195, 247, 0.1);
-            border-left: 4px solid #4fc3f7;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 5px;
-            font-size: 0.9rem;
-        }
-        
-        .tip-title {
-            color: #4fc3f7;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Würdest du lieber – Paare Edition</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0b10;
+    --card: #1a1520;
+    --accent: #c9a96e;
+    --accent2: #8b5e8b;
+    --text: #f0e8e0;
+    --muted: #7a6e7a;
+    --border: #2e2535;
+    --danger: #c96e6e;
+    --success: #6ec9a9;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* LOGIN */
+  #loginScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: radial-gradient(ellipse at center, #1e1025 0%, #0e0b10 70%);
+  }
+
+  .login-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 48px 40px;
+    width: 360px;
+    text-align: center;
+    box-shadow: 0 8px 48px rgba(0,0,0,0.6);
+  }
+
+  .login-box h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+
+  .login-box p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 32px;
+  }
+
+  .login-box input {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-size: 1rem;
+    margin-bottom: 16px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .login-box input:focus { border-color: var(--accent); }
+
+  .btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--accent);
+    color: #0e0b10;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  .btn:hover { opacity: 0.85; }
+  .btn.secondary {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    margin-top: 10px;
+  }
+
+  .error-msg {
+    color: var(--danger);
+    font-size: 0.85rem;
+    margin-top: 8px;
+  }
+
+  /* MAIN APP */
+  #app { display: none; }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+    border-bottom: 1px solid var(--border);
+    background: var(--card);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    color: var(--accent);
+    font-size: 1.4rem;
+  }
+
+  .header-btns { display: flex; gap: 10px; }
+
+  .btn-sm {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: opacity 0.2s;
+  }
+
+  .btn-sm:hover { opacity: 0.8; }
+  .btn-sm.gold { background: var(--accent); color: #0e0b10; }
+  .btn-sm.purple { background: var(--accent2); color: white; }
+  .btn-sm.red { background: var(--danger); color: white; }
+  .btn-sm.ghost { background: transparent; border: 1px solid var(--border); color: var(--text); }
+
+  /* TABS */
+  .tabs {
+    display: flex;
+    gap: 4px;
+    padding: 16px 32px 0;
+    overflow-x: auto;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .tab {
+    padding: 10px 18px;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--muted);
+    background: transparent;
+    border: none;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+
+  .tab.active {
+    background: var(--card);
+    color: var(--accent);
+    border: 1px solid var(--border);
+    border-bottom: 1px solid var(--card);
+  }
+
+  .tab:hover:not(.active) { color: var(--text); }
+
+  /* CONTENT */
+  .content { padding: 24px 32px; max-width: 1100px; margin: 0 auto; }
+
+  /* PLAY MODE */
+  .play-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .category-select {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .cat-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+  }
+
+  .cat-btn.active { background: var(--accent2); color: white; border-color: var(--accent2); }
+
+  .question-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .question-card::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 180px; height: 180px;
+    background: radial-gradient(circle, rgba(139,94,139,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .question-img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  .cat-label {
+    font-size: 0.75rem;
+    color: var(--accent2);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+
+  .question-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: var(--text);
+    max-width: 700px;
+  }
+
+  .options-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .option-btn {
+    flex: 1;
+    min-width: 200px;
+    padding: 18px 24px;
+    background: var(--card);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    color: var(--text);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .option-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .option-btn.selected-a { border-color: var(--accent); background: rgba(201,169,110,0.1); }
+  .option-btn.selected-b { border-color: var(--accent2); background: rgba(139,94,139,0.1); }
+
+  .nav-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  /* ADMIN / EDIT MODE */
+  .admin-section { margin-bottom: 32px; }
+
+  .admin-section h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--accent);
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+
+  .question-list { display: flex; flex-direction: column; gap: 8px; }
+
+  .question-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 16px;
+  }
+
+  .question-item .q-text { flex: 1; font-size: 0.9rem; color: var(--text); }
+  .question-item .q-cat { font-size: 0.75rem; color: var(--accent2); }
+
+  .add-question-form {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+  }
+
+  .form-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+
+  .form-row input, .form-row select, .form-row textarea {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px 14px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-size: 0.9rem;
+    font-family: 'Lato', sans-serif;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-row input:focus, .form-row select:focus, .form-row textarea:focus {
+    border-color: var(--accent);
+  }
+
+  .form-row select option { background: #1a1520; }
+
+  .img-upload-area {
+    border: 2px dashed var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    margin-bottom: 12px;
+  }
+
+  .img-upload-area:hover { border-color: var(--accent); }
+  .img-upload-area p { color: var(--muted); font-size: 0.85rem; }
+  .img-preview { max-width: 100%; max-height: 120px; border-radius: 8px; margin-top: 8px; }
+
+  /* RESULTS */
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+
+  .result-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  .result-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--accent);
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .result-bar-row { margin-bottom: 8px; }
+  .result-bar-label { font-size: 0.8rem; color: var(--muted); margin-bottom: 4px; }
+
+  .result-bar {
+    height: 8px;
+    border-radius: 4px;
+    background: var(--border);
+    overflow: hidden;
+  }
+
+  .result-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    background: var(--accent);
+    transition: width 0.6s ease;
+  }
+
+  .progress-info {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+  }
+
+  /* MODAL */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-overlay.open { display: flex; }
+
+  .modal {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    width: 500px;
+    max-width: 95vw;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .modal h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+
+  .modal-btns { display: flex; gap: 10px; margin-top: 16px; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+  @media (max-width: 600px) {
+    header { padding: 12px 16px; }
+    .content { padding: 16px; }
+    .tabs { padding: 12px 16px 0; }
+    .question-text { font-size: 1.2rem; }
+    .question-card { padding: 24px 16px; }
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>💖 Ehefrau Sex-Szenarien Helfer 💖</h1>
-        <div class="subtitle">Entdecke neue Ideen für Intimität, Leidenschaft und Verbindung in deiner Ehe</div>
-        
-        <div class="disclaimer">
-            <strong>Hinweis:</strong> Dieses Tool soll inspirieren und helfen, neue Aspekte der Sexualität in einer vertrauensvollen Beziehung zu erkunden. Kommunikation, Einvernehmlichkeit und Respekt sind die Grundlage für ein erfülltes Sexleben. Hört auf eure Gefühle und redet über eure Grenzen.
+
+<!-- LOGIN -->
+<div id="loginScreen">
+  <div class="login-box">
+    <h1>💫 Würdest du lieber</h1>
+    <p>Paare Edition – Privat & Sicher</p>
+    <input type="password" id="pwInput" placeholder="Passwort eingeben..." onkeydown="if(event.key==='Enter')login()">
+    <button class="btn" onclick="login()">Einloggen</button>
+    <button class="btn secondary" onclick="showSetPw()">Passwort einrichten</button>
+    <div class="error-msg" id="loginError"></div>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="app">
+  <header>
+    <h1>💫 Würdest du lieber</h1>
+    <div class="header-btns">
+      <button class="btn-sm gold" onclick="showTab('play')">▶ Spielen</button>
+      <button class="btn-sm purple" onclick="showTab('edit')">✏️ Bearbeiten</button>
+      <button class="btn-sm ghost" onclick="showTab('results')">📊 Auswertung</button>
+      <button class="btn-sm red" onclick="logout()">Abmelden</button>
+    </div>
+  </header>
+
+  <div class="tabs">
+    <button class="tab active" id="tab-play" onclick="showTab('play')">🎮 Spiel</button>
+    <button class="tab" id="tab-edit" onclick="showTab('edit')">✏️ Fragen verwalten</button>
+    <button class="tab" id="tab-results" onclick="showTab('results')">📊 Auswertung</button>
+    <button class="tab" id="tab-settings" onclick="showTab('settings')">⚙️ Einstellungen</button>
+  </div>
+
+  <!-- PLAY TAB -->
+  <div id="pane-play" class="content">
+    <div class="play-header">
+      <div>
+        <div style="font-size:0.8rem;color:var(--muted);margin-bottom:6px;">Spieler wählen:</div>
+        <div style="display:flex;gap:8px;">
+          <button class="cat-btn active" id="player-w" onclick="setPlayer('frau')">👩 An die Frau</button>
+          <button class="cat-btn" id="player-m" onclick="setPlayer('mann')">👨 An den Mann</button>
         </div>
-        
-        <div class="instructions">
-            <h3>Wie du dieses Tool nutzen kannst:</h3>
-            <p>1. Wähle deine aktuelle Stimmung oder das gewünschte Tempo</p>
-            <p>2. Entdecke verschiedene Szenarien-Kategorien</p>
-            <p>3. Wähle ein Szenario, das dich anspricht und folge den Handlungsvorschlägen</p>
-            <p>4. Speichere deine Favoriten für später</p>
-            <p>5. Teile die Ideen mit deinem Partner oder nutze sie als Inspiration für Gespräche</p>
-        </div>
-        
-        <div class="mood-selector" id="moodSelector">
-            <button class="mood-btn romantic active" data-mood="all">Alle Stimmungen</button>
-            <button class="mood-btn romantic" data-mood="romantic">Romantisch</button>
-            <button class="mood-btn passionate" data-mood="passionate">Leidenschaftlich</button>
-            <button class="mood-btn adventurous" data-mood="adventurous">Abenteuerlich</button>
-            <button class="mood-btn intimate" data-mood="intimate">Intim & Sinnlich</button>
-            <button class="mood-btn playful" data-mood="playful">Verspielt</button>
-            <button class="mood-btn therapeutic" data-mood="therapeutic">Heilend & Verbindend</button>
-        </div>
-        
-        <div class="intensity-toggle">
-            <label class="toggle-label">
-                <input type="checkbox" id="intimateToggle">
-                <span class="toggle-switch"></span>
-                <span>Zeige intime/heikle Themen</span>
-            </label>
-        </div>
-        
-        <div class="stats">
-            <div class="stat-item">
-                <div class="stat-value" id="totalScenarios">0</div>
-                <div class="stat-label">Szenarien</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-value" id="intimateCount">0</div>
-                <div class="stat-label">Intime</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-value" id="selectedCount">0</div>
-                <div class="stat-label">Ausgewählt</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-value" id="savedCount">0</div>
-                <div class="stat-label">Gespeichert</div>
-            </div>
-        </div>
-        
-        <div class="selection-area" id="categorySelection">
-            <!-- Kategorien werden per JavaScript geladen -->
-        </div>
-        
-        <div class="content-display" id="contentDisplay">
-            <!-- Inhalte werden dynamisch geladen -->
-        </div>
-        
-        <div class="navigation" id="navigation" style="display: none;">
-            <button class="btn btn-back" id="backBtn">← Zurück</button>
-            <div>
-                <button class="btn btn-intimate" id="saveBtn" style="display: none;">💾 Speichern</button>
-                <button class="btn btn-next" id="nextBtn" style="display: none; margin-left: 10px;">Weiter →</button>
-            </div>
-        </div>
-        
-        <div class="tip-box">
-            <div class="tip-title">Tipp für die Kommunikation:</div>
-            <div>"Ich habe etwas gefunden, das mich interessiert. Könnten wir darüber reden, ob es auch für dich spannend klingt?" ist ein guter Einstieg, um neue Ideen mit deinem Partner zu besprechen.</div>
-        </div>
-        
-        <div class="saved-scenarios" id="savedScenarios">
-            <h3 class="history-title">Gespeicherte Szenarien</h3>
-            <div id="savedList"></div>
-        </div>
-        
-        <div class="history">
-            <div class="history-title">
-                <span>Verlauf</span>
-                <button class="btn" id="clearHistoryBtn" style="padding: 5px 10px; font-size: 0.8rem;">Verlauf löschen</button>
-            </div>
-            <div id="historyList"></div>
-        </div>
-        
-        <button class="reset-btn" id="resetBtn">🔄 Neustart</button>
+      </div>
+      <div>
+        <div style="font-size:0.8rem;color:var(--muted);margin-bottom:6px;">Kategorie:</div>
+        <div class="category-select" id="catFilter"></div>
+      </div>
     </div>
 
-    <script>
-        // Datenstruktur für allgemeine Sex-Szenarien
-        const roleplayData = {
-            categories: [
-                {
-                    id: "romantic_evening",
-                    title: "Romantischer Abend zu zweit",
-                    description: "Langsame, gefühlvolle Szenarien mit Fokus auf emotionale Verbindung und Zärtlichkeit",
-                    difficulty: "easy",
-                    icon: "🌹",
-                    intimate: false,
-                    moods: ["romantic", "intimate"],
-                    tags: ["Zärtlichkeit", "Emotionen", "Langsam", "Augenkontakt"],
-                    content: [
-                        {
-                            id: "romantic1",
-                            text: "„Lass uns heute Abend mal das Tempo drosseln. Statt direkt ins Schlafzimmer zu gehen, nehmen wir uns Zeit für eine ausgedehnte Massage mit duftendem Öl bei Kerzenschein.“",
-                            intimate: false,
-                            details: "Fokus auf Berührung ohne Erwartung an Sex. Verwende warmes Massageöl und konzentriere dich auf jeden Zentimeter seines/ihres Körpers.",
-                            followUps: [
-                                {
-                                    text: "„Nach der Massage bleiben wir einfach eng umschlungen liegen und reden über schöne Erinnerungen oder unsere Träume. Ohne Ablenkung, nur wir zwei.“",
-                                    intimate: false,
-                                    followUps: [
-                                        {
-                                            text: "„Wenn sich daraus mehr entwickelt, ist das schön. Wenn nicht, ist die Nähe und Verbindung genug. Der Druck, Sex haben zu müssen, fällt weg.“",
-                                            intimate: false,
-                                            isEnd: true
-                                        }
-                                    ]
-                                },
-                                {
-                                    text: "„Ich massiere dich, bis du völlig entspannt bist. Dann küsse ich jeden Zentimeter, den ich massiert habe - langsam, ohne Eile.“",
-                                    intimate: false,
-                                    isEnd: true
-                                }
-                            ]
-                        },
-                        {
-                            id: "romantic2",
-                            text: "„Stell dir vor, wir tanzen eng umschlungen zu unserer Musik im Wohnzimmer, wie auf unserer Hochzeit. Nur wir zwei, im Schein einer einzigen Lampe.“",
-                            intimate: false,
-                            details: "Wähle Musik, die für euch beide Bedeutung hat. Der Fokus liegt auf der körperlichen Nähe und dem Gefühl der Verbindung.",
-                            followUps: [
-                                {
-                                    text: "„Wir tanzen, bis die Stimmung sich natürlich verändert. Vom Tanzen zum Stehenbleiben und Umarmen, zum Küssen, zum langsamen Ablegen der Kleidung... im Rhythmus der Musik.“",
-                                    intimate: false,
-                                    followUps: [
-                                        {
-                                            text: "„Wir lassen uns Zeit mit jedem Kleidungsstück. Jedes Mal, wenn etwas fällt, halten wir inne, schauen uns in die Augen und küssen uns, bevor es weitergeht.“",
-                                            intimate: false,
-                                            isEnd: true
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            id: "romantic3",
-                            text: "„Wie wäre es mit einem Bad zu zweit bei Kerzenschein? Wir nehmen uns Zeit, uns gegenseitig zu waschen und zu pflegen, wie in einem Luxus-Spa.“",
-                            intimate: false,
-                            details: "Badezusatz verwenden, weiche Handtücher bereitlegen. Kein Sex als Ziel, sondern sinnliche Fürsorge.",
-                            followUps: [
-                                {
-                                    text: "„Nach dem Bad trocknen wir uns gegenseitig ab, ganz langsam. Jeder Körperteil bekommt Aufmerksamkeit. Dann eincremen mit duftender Lotion, von den Füßen bis zum Nacken.“",
-                                    intimate: false,
-                                    isEnd: true
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    id: "communication_focus",
-                    title: "Kommunikation & Verbindung",
-                    description: "Szenarien, die offene Gespräche über Wünsche, Fantasien und Grenzen fördern",
-                    difficulty: "medium",
-                    icon: "💬",
-                    intimate: true,
-                    moods: ["therapeutic", "intimate"],
-                    tags: ["Kommunikation", "Vertrauen", "Gefühle", "Sicherheit"],
-                    content: [
-                        {
-                            id: "communication1",
-                            text: "„Lass uns heute Abend ein Spiel spielen: Wir nehmen uns je 5 Zettel und schreiben Wünsche/Fantasien auf, die wir noch nie ausgesprochen haben. Dann tauschen wir sie aus und reden darüber - ohne Druck, etwas umzusetzen.“",
-                            intimate: true,
-                            details: "Wichtig: Kein Urteilen, nur Zuhören und Verstehen. Es geht darum, einander besser kennenzulernen.",
-                            followUps: [
-                                {
-                                    text: "„Wenn etwas dabei ist, das wir beide spannend finden, könnten wir überlegen, wie wir es behutsam ausprobieren. Aber der Fokus bleibt auf dem Gespräch und dem Vertrauensaufbau.“",
-                                    intimate: true,
-                                    followUps: [
-                                        {
-                                            text: "„Wir könnten einen Wunsch auswählen, den wir beide interessant finden, und gemeinsam brainstormen, wie eine behutsame, sichere Version davon aussehen könnte.“",
-                                            intimate: true,
-                                            isEnd: true
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            id: "communication2",
-                            text: "„Wie wäre es mit einem 'Feedback-Abend', wo wir nur über Sex reden - was wir lieben, was wir uns wünschen, was wir ändern möchten? Mit dem Fokus auf 'Ich'-Botschaften und Wertschätzung.“",
-                            intimate: true,
-                            details: "Strukturiere das Gespräch mit Leitfragen wie 'Was hat dir letzte Woche besonders gut gefallen?' oder 'Gibt es etwas, das du dir öfter/vielleicht anders wünschst?'",
-                            followUps: [
-                                {
-                                    text: "„Wir beginnen mit Komplimenten - jeder sagt drei Dinge, die er/sie am Sex mit dem anderen besonders schätzt. Das schafft eine positive, sichere Atmosphäre.“",
-                                    intimate: true,
-                                    followUps: [
-                                        {
-                                            text: "„Dann teilen wir Wünsche mit 'Ich würde mich freuen, wenn wir mal... probieren könnten' oder 'Manchmal wünsche ich mir mehr/von...'. Immer als Einladung, nicht als Forderung.“",
-                                            intimate: true,
-                                            isEnd: true
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    id: "sensual_exploration",
-                    title: "Sinnliche Erkundung",
-                    description: "Die eigenen und die erogenen Zonen des Partners neu entdecken",
-                    difficulty: "easy",
-                    icon: "✨",
-                    intimate: false,
-                    moods: ["intimate", "playful"],
-                    tags: ["Berührung", "Erkundung", "Langsam", "Achtsamkeit"],
-                    content: [
-                        {
-                            id: "sensual1",
-                            text: "„Lass uns heute Abend nur berühren und erforschen, ohne dass es zum Sex führen muss. Wir nehmen uns 30 Minuten Zeit, um mit verbundenen Augen den Körper des anderen zu erkunden - nur mit den Händen.“",
-                            intimate: false,
-                            details: "Augenbinden verwenden. Der Fokus liegt auf der Wahrnehmung von Texturen, Temperaturen und Reaktionen.",
-                            followUps: [
-                                {
-                                    text: "„Nach der Hälfte der Zeit wechseln wir. Derjenige, der berührt wurde, erzählt, wie sich die Berührungen angefühlt haben und welche besonders angenehm waren.“",
-                                    intimate: false,
-                                    followUps: [
-                                        {
-                                            text: "„Zum Abschluss umarmen wir uns einfach und spüren nach. Wenn sich daraus mehr entwickelt, ist das in Ordnung. Wenn nicht, war es eine wertvolle Erfahrung der Nähe.“",
-                                            intimate: false,
-                                            isEnd: true
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            id: "sensual2",
-                            text: "„Wie wäre es mit einem 'Tast-Dinner' im Bett? Verschiedene Gegenstände mit unterschiedlichen Texturen (Seide, Fell, Bürste, Federn) und wir erforschen, wie sie sich auf der Haut anfühlen.“",
-                            intimate: false,
-                            details: "Vorbereiten verschiedener Texturen. Langsam und achtsam ausprobieren, kommunizieren, was sich gut anfühlt.",
-                            followUps: [
-                                {
-                                    text: "„Wir könnten auch Lebensmittel einbeziehen - Erdbeeren, Sahne, Honig... und sie nicht nur essen, sondern auch zur sinnlichen Berührung nutzen.“",
-                                    intimate: false,
-                                    isEnd: true
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    id: "new_positions",
-                    title: "Neue Positionen erkunden",
-                    description: "Verschiedene Sexpositionen ausprobieren, die unterschiedliche Intensitäten und Verbindungen bieten",
-                    difficulty: "medium",
-                    icon: "🔄",
-                    intimate: false,
-                    moods: ["passionate", "adventurous", "playful"],
-                    tags: ["Positionen", "Variation", "Komfort", "Spaß"],
-                    content: [
-                        {
-                            id: "positions1",
-                            text: "„Lass uns heute Abend drei neue Positionen ausprobieren - aber mit einem Twist: Wir wechseln alle 2-3 Minuten, egal ob wir 'fertig' sind oder nicht. Es geht um die Erfahrung, nicht um den Höhepunkt.“",
-                            intimate: false,
-                            details: "Vorher ein paar Positionen aussuchen, die ihr noch nie oder selten probiert habt. Kein Druck auf Performance.",
-                            followUps: [
-                                {
-                                    text: "„Nach jedem Wechsel reden wir kurz: 'Wie hat sich das angefühlt?' 'War es angenehm?' 'Sollten wir es länger probieren?' So lernen wir, was für uns funktioniert.“",
-                                    intimate: false,
-                                    followUps: [
-                                        {
-                                            text: "„Zum Abschluss wählen wir die Position, die uns beiden am besten gefallen hat, und bleiben darin, bis es natürlich endet.“",
-                                            intimate: false,
-                                            isEnd: true
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            id: "positions2",
-                            text: "„Stell dir vor, wir probieren Positionen aus, die besonders viel Augenkontakt und Nähe ermöglichen - wie Löffelchen, Missionarsstellung mit aufgestütztem Oberkörper, oder Sitting. Der Fokus liegt auf der Verbindung.“",
-                            intimate: false,
-                            details: "Positionen wählen, bei denen ihr euch anschauen könnt. Langsame, tiefe Bewegungen.",
-                            followUps: [
-                                {
-                                    text: "„Wir könnten abwechselnd führen: Eine Runde bestimmst du das Tempo und die Tiefe, dann ich. So erfahren wir, was dem anderen gefällt.“",
-                                    intimate: false,
-                                    isEnd: true
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    id: "fantasy_roleplay",
-                    title: "Sanfte Rollenspiele",
-                    description: "Einfache Rollenspiele, die Fantasie anregen ohne überwältigend zu sein",
-                    difficulty: "medium",
-                    icon: "🎭",
-                    intimate: true,
-                    moods: ["playful", "adventurous"],
-                    tags: ["Fantasie", "Spiel", "Charaktere", "Leichtigkeit"],
-                    content: [
-                        {
-                            id: "fantasy1",
-                            text: "„Wie wäre es, wenn wir heute Abend jemand anderes wären? Nicht komplett mit Kostüm, aber mit einer kleinen Rolle: Du bist der Masseur/die Masseuse, und ich bin der anspruchsvolle Kunde/die Kundin.“",
-                            intimate: false,
-                            details: "Einfache Rollen, die nicht zu weit von der Realität entfernt sind. Hilft, Hemmungen abzubauen.",
-                            followUps: [
-                                {
-                                    text: "„Wir bleiben in unseren Rollen, bis die 'Behandlung' vorbei ist. Das gibt uns die Freiheit, Dinge zu sagen und zu tun, die wir in unserer normalen Rolle vielleicht nicht täten.“",
-                                    intimate: false,
-                                    followUps: [
-                                        {
-                                            text: "„Nachdem wir 'aus den Rollen' sind, reden wir darüber, wie es sich angefühlt hat. Was war aufregend? Was war komisch? Ohne Druck, es wiederholen zu müssen.“",
-                                            intimate: false,
-                                            isEnd: true
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            id: "fantasy2",
-                            text: "„Stell dir vor, wir treffen uns in einer Bar als Fremde. Wir setzen uns getrennt hin und beginnen ein Gespräch, als ob wir uns nicht kennen würden. Flirten, als wäre es das erste Mal.“",
-                            intimate: false,
-                            details: "Getrennt im Raum positionieren. Sich mit neuer Identität ansprechen. Langsam annähern.",
-                            followUps: [
-                                {
-                                    text: "„Wir könnten sogar 'mit nach Hause nehmen' spielen - als ob wir beschließen würden, die Nacht zusammen zu verbringen, obwohl wir uns gerade erst kennengelernt haben.“",
-                                    intimate: false,
-                                    isEnd: true
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    id: "healing_intimacy",
-                    title: "Heilende Intimität",
-                    description: "Szenarien für Paare, die nach Konflikten, Stress oder Trockenphasen wieder zueinander finden möchten",
-                    difficulty: "hard",
-                    icon: "🕊️",
-                    intimate: true,
-                    moods: ["therapeutic", "intimate", "romantic"],
-                    tags: ["Heilung", "Wiederverbindung", "Sanft", "Achtsam"],
-                    content: [
-                        {
-                            id: "healing1",
-                            text: "„Nach der schwierigen Zeit, die wir hatten, schlage ich vor: Ein Abend nur mit Halten und Streicheln. Wir legen uns nackt aneinander, decken uns zu und bleiben einfach so - sprechen, weinen, schweigen, was auch immer kommt.“",
-                            intimate: true,
-                            details: "Kein Sex als Erwartung. Nur körperliche Nähe und die Erlaubnis, verletzlich zu sein.",
-                            followUps: [
-                                {
-                                    text: "„Wenn wir reden, verwenden wir Sätze wie 'Ich fühle...' oder 'Ich brauche...'. Keine Vorwürfe. Nur was jetzt in diesem Moment ist.“",
-                                    intimate: true,
-                                    followUps: [
-                                        {
-                                            text: "„Wir könnten vereinbaren: Wenn sich Sex natürlich entwickelt, ist das okay. Wenn nicht, ist die Nähe genug. Der Druck fällt weg.“",
-                                            intimate: true,
-                                            isEnd: true
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            id: "healing2",
-                            text: "„Wie wäre es mit einem 'Neuanfangs-Ritual'? Wir schreiben auf Zettel, was wir in unserer sexuellen Beziehung hinter uns lassen möchten, und verbrennen sie sicher in einer Schale. Dann schreiben wir, was wir uns wünschen, und bewahren sie auf.“",
-                            intimate: true,
-                            details: "Symbolischer Akt des Loslassens und Neuausrichtens. Schafft psychologische Klarheit.",
-                            followUps: [
-                                {
-                                    text: "„Nach dem Ritual umarmen wir uns und versprechen uns, mit Geduld und Liebe an unserer Intimität zu arbeiten - einen Schritt nach dem anderen.“",
-                                    intimate: true,
-                                    isEnd: true
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    id: "quick_connection",
-                    title: "Schnelle Verbindung",
-                    description: "Intime Momente für volle Terminkalender - wenn Zeit knapp ist, aber Nähe wichtig",
-                    difficulty: "easy",
-                    icon: "⚡",
-                    intimate: false,
-                    moods: ["passionate", "playful"],
-                    tags: ["Schnell", "Intensiv", "Effizient", "Überraschend"],
-                    content: [
-                        {
-                            id: "quick1",
-                            text: "„Du hast nur 20 Minuten vor der Arbeit? Wie wäre es mit einer 'Power-Intimität'-Session: 10 Minuten Massage, 5 Minuten leidenschaftliches Küssen, 5 Minuten schneller, intensiver Sex. Fokussiert und präsent.“",
-                            intimate: false,
-                            details: "Zeit nehmen, ganz präsent zu sein. Handy aus, Tür zu, nur ihr zwei in diesen Minuten.",
-                            followUps: [
-                                {
-                                    text: "„Wir könnten es 'Sprint statt Marathon' nennen. Manchmal ist kurzer, intensiver Sex genau das Richtige, um die Verbindung aufzufrischen.“",
-                                    intimate: false,
-                                    isEnd: true
-                                }
-                            ]
-                        },
-                        {
-                            id: "quick2",
-                            text: "„Wie wäre es mit einer 'Überraschungs-Pause'? Ich schicke dir eine Nachricht: 'In 10 Minuten bist du für 15 Minuten nur für mich da. Stelle den Timer.' Und dann machen wir in dieser Zeit nur das, worauf wir Lust haben.“",
-                            intimate: false,
-                            details: "Die begrenzte Zeit schafft Intensität und Spannung. Kein Aufbau, direkt zur Sache.",
-                            followUps: [
-                                {
-                                    text: "„Die Regel: In diesen 15 Minuten gibt es keine Ablenkungen, keine To-Do-Listen im Kopf. Nur körperliche Präsenz und Genuss.“",
-                                    intimate: false,
-                                    isEnd: true
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    id: "self_exploration",
-                    title: "Selbsterkundung zu zweit",
-                    description: "Sich selbst vor dem Partner zeigen und darüber sprechen - für mehr Vertrauen und Körperakzeptanz",
-                    difficulty: "hard",
-                    icon: "👁️",
-                    intimate: true,
-                    moods: ["intimate", "therapeutic"],
-                    tags: ["Selbstakzeptanz", "Verletzlichkeit", "Vertrauen", "Körperbild"],
-                    content: [
-                        {
-                            id: "self1",
-                            text: "„Ich möchte heute Abend etwas Verletzliches teilen: Ich zeige dir, wie ich mich selbst berühre, was mir gefällt. Du schaust nur zu, ohne einzugreifen. Danach reden wir darüber.“",
-                            intimate: true,
-                            details: "Sehr intimer Akt des Teilens. Schafft tiefes Vertrauen und Verständnis.",
-                            followUps: [
-                                {
-                                    text: "„Wenn du möchtest, könntest du danach dasselbe tun. Wir lernen, was dem anderen allein gefällt, ohne den Druck, es 'richtig' machen zu müssen.“",
-                                    intimate: true,
-                                    followUps: [
-                                        {
-                                            text: "„Später könnten wir diese Erkenntnisse nutzen, um unsere gemeinsame Intimität zu verbessern. Aber der Fokus heute ist das Teilen und Zuhören.“",
-                                            intimate: true,
-                                            isEnd: true
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            id: "self2",
-                            text: "„Lass uns nackt vor den Spiegel stellen und uns gegenseitig sagen, was wir an unserem und am Körper des anderen lieben. Keine Selbstkritik erlaubt, nur Wertschätzung.“",
-                            intimate: true,
-                            details: "Gegen Körperunzufriedenheit. Fokus auf das, was funktioniert und schön ist.",
-                            followUps: [
-                                {
-                                    text: "„Wir könnten sogar die 'Problemzonen' berühren und sagen: 'Dieser Teil von dir gehört zu dir, und ich liebe ihn, weil er dich zu dir macht.'“",
-                                    intimate: true,
-                                    isEnd: true
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        };
+    <div class="progress-info" id="progressInfo"></div>
 
-        // App State
-        let currentState = {
-            selectedCategory: null,
-            selectedOption: null,
-            selectedFollowUp: null,
-            history: [],
-            savedScenarios: [],
-            showIntimate: false,
-            currentMood: "all",
-            stats: {
-                totalSelections: 0,
-                intimateSelections: 0
-            }
-        };
+    <div class="question-card" id="questionCard">
+      <div class="cat-label" id="qCatLabel"></div>
+      <img id="qImg" class="question-img" style="display:none" src="" alt="">
+      <div class="question-text" id="qText">Wähle eine Kategorie und starte das Spiel!</div>
+    </div>
 
-        // DOM Elemente
-        const categorySelectionEl = document.getElementById('categorySelection');
-        const contentDisplayEl = document.getElementById('contentDisplay');
-        const navigationEl = document.getElementById('navigation');
-        const backBtn = document.getElementById('backBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const resetBtn = document.getElementById('resetBtn');
-        const saveBtn = document.getElementById('saveBtn');
-        const historyListEl = document.getElementById('historyList');
-        const savedScenariosEl = document.getElementById('savedScenarios');
-        const savedListEl = document.getElementById('savedList');
-        const intimateToggle = document.getElementById('intimateToggle');
-        const clearHistoryBtn = document.getElementById('clearHistoryBtn');
-        const totalScenariosEl = document.getElementById('totalScenarios');
-        const intimateCountEl = document.getElementById('intimateCount');
-        const selectedCountEl = document.getElementById('selectedCount');
-        const savedCountEl = document.getElementById('savedCount');
-        const moodButtons = document.querySelectorAll('.mood-btn');
+    <div class="options-row" id="optionsRow"></div>
 
-        // Kategorien anzeigen
-        function displayCategories() {
-            categorySelectionEl.innerHTML = '';
-            
-            roleplayData.categories.forEach(category => {
-                // Filtere nach intimen Inhalten wenn nötig
-                if (!currentState.showIntimate && category.intimate) {
-                    return;
-                }
-                
-                // Filtere nach Stimmung
-                if (currentState.currentMood !== "all" && !category.moods.includes(currentState.currentMood)) {
-                    return;
-                }
-                
-                const card = document.createElement('div');
-                card.className = `category-card ${currentState.selectedCategory?.id === category.id ? 'selected' : ''}`;
-                
-                let tagsHTML = '';
-                if (category.tags && category.tags.length > 0) {
-                    tagsHTML = '<div class="category-tags">';
-                    category.tags.forEach(tag => {
-                        tagsHTML += `<span class="tag">${tag}</span>`;
-                    });
-                    tagsHTML += '</div>';
-                }
-                
-                card.innerHTML = `
-                    <div class="category-title">
-                        ${category.icon} ${category.title}
-                        <span class="difficulty ${category.difficulty}">${getDifficultyText(category.difficulty)}</span>
-                        ${category.intimate ? '<span class="difficulty intimate">INTIM</span>' : ''}
-                    </div>
-                    <div class="category-description">${category.description}</div>
-                    ${tagsHTML}
-                `;
-                
-                card.addEventListener('click', () => {
-                    selectCategory(category);
-                });
-                
-                categorySelectionEl.appendChild(card);
-            });
-            
-            updateStats();
+    <div class="nav-row">
+      <button class="btn-sm ghost" onclick="prevQuestion()">◀ Zurück</button>
+      <button class="btn-sm gold" onclick="nextQuestion()">Nächste ▶</button>
+      <button class="btn-sm purple" onclick="shuffleQuestions()">🔀 Zufällig</button>
+    </div>
+  </div>
+
+  <!-- EDIT TAB -->
+  <div id="pane-edit" class="content" style="display:none">
+    <div class="admin-section">
+      <h2>➕ Neue Frage hinzufügen</h2>
+      <div class="add-question-form">
+        <div class="form-row">
+          <select id="newPlayer">
+            <option value="frau">👩 An die Frau</option>
+            <option value="mann">👨 An den Mann</option>
+            <option value="beide">👫 An beide</option>
+          </select>
+          <select id="newCat">
+            <option value="anfaenger">🌱 Anfänger & Erste Schritte</option>
+            <option value="cuckold">🔑 Cuckold & Hotwife</option>
+            <option value="liebhaber">💋 Der Liebhaber</option>
+            <option value="gefuehle">❤️ Gefühle & Eifersucht</option>
+            <option value="erotik">🔥 Erotik & Handlungen</option>
+            <option value="fetisch">🖤 Fetisch & Tabu</option>
+            <option value="absurd">🎲 Absurd & Witzig</select>
+        </div>
+        <div class="form-row">
+          <textarea id="newQ" rows="2" placeholder="Würdest du lieber... die Frage hier eingeben"></textarea>
+        </div>
+        <div class="form-row">
+          <input type="text" id="newA" placeholder="Option A">
+          <input type="text" id="newB" placeholder="Option B">
+        </div>
+        <div class="img-upload-area" onclick="document.getElementById('imgUpload').click()">
+          <p>📷 Bild hinzufügen (optional) – klicke hier</p>
+          <img id="imgPreview" class="img-preview" style="display:none" src="" alt="">
+          <input type="file" id="imgUpload" accept="image/*" style="display:none" onchange="handleImg(event)">
+        </div>
+        <button class="btn-sm gold" onclick="addQuestion()">✅ Frage hinzufügen</button>
+      </div>
+    </div>
+
+    <div class="admin-section">
+      <h2>📋 Alle Fragen</h2>
+      <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;" id="editCatFilter"></div>
+      <div class="question-list" id="questionList"></div>
+    </div>
+  </div>
+
+  <!-- RESULTS TAB -->
+  <div id="pane-results" class="content" style="display:none">
+    <h2 style="font-family:'Playfair Display',serif;color:var(--accent);margin-bottom:20px;">📊 Auswertung & Analyse</h2>
+    <div id="resultsContent"></div>
+  </div>
+
+  <!-- SETTINGS TAB -->
+  <div id="pane-settings" class="content" style="display:none">
+    <h2 style="font-family:'Playfair Display',serif;color:var(--accent);margin-bottom:20px;">⚙️ Einstellungen</h2>
+
+    <div class="add-question-form" style="max-width:600px;margin-bottom:16px;">
+      <p style="color:var(--accent);font-weight:700;margin-bottom:12px;">📤 Datei für GitHub exportieren</p>
+      <p style="color:var(--muted);font-size:0.85rem;margin-bottom:12px;">Exportiert alle Fragen UND Bilder in eine neue HTML-Datei die du direkt auf GitHub hochladen kannst.</p>
+      <button class="btn-sm gold" style="width:100%" onclick="exportFullHtml()">⬇️ Komplette HTML-Datei mit Bildern exportieren</button>
+      <div id="exportMsg" style="color:var(--success);font-size:0.85rem;margin-top:8px;"></div>
+      <div style="margin-top:16px;padding:12px;background:var(--bg);border-radius:8px;font-size:0.8rem;color:var(--muted);line-height:1.8;">
+        <strong style="color:var(--text)">So lädst du es auf GitHub hoch:</strong><br>
+        1. Gehe auf <strong style="color:var(--accent)">github.com</strong> → kostenloses Konto erstellen<br>
+        2. Oben rechts auf <strong>+</strong> → <strong>New repository</strong><br>
+        3. Name eingeben z.B. <strong>unser-spiel</strong> → Public → Create<br>
+        4. Klicke auf <strong>uploading an existing file</strong><br>
+        5. Exportierte HTML-Datei reinziehen → <strong>Commit changes</strong><br>
+        6. Gehe zu <strong>Settings → Pages → Branch: main → Save</strong><br>
+        7. Dein Link: <strong style="color:var(--accent)">deinname.github.io/unser-spiel</strong>
+      </div>
+    </div>
+    <div class="add-question-form" style="max-width:400px">
+      <p style="color:var(--muted);margin-bottom:16px;font-size:0.9rem;">Passwort ändern</p>
+      <div class="form-row"><input type="password" id="newPw1" placeholder="Neues Passwort"></div>
+      <div class="form-row"><input type="password" id="newPw2" placeholder="Wiederholen"></div>
+      <button class="btn-sm gold" onclick="changePw()">Passwort speichern</button>
+      <div id="pwMsg" style="color:var(--success);font-size:0.85rem;margin-top:8px;"></div>
+    </div>
+    <div class="add-question-form" style="max-width:400px;margin-top:16px;">
+      <p style="color:var(--muted);margin-bottom:16px;font-size:0.9rem;">Daten</p>
+      <button class="btn-sm ghost" onclick="exportData()">📤 Daten exportieren</button>
+      <button class="btn-sm red" style="margin-top:10px;width:100%" onclick="resetAnswers()">🗑️ Antworten zurücksetzen</button>
+      <button class="btn-sm red" style="margin-top:10px;width:100%;background:#8b0000" onclick="resetAllData()">🔄 Alle Fragen neu laden (Cache leeren)</button>
+    </div>
+  </div>
+</div>
+
+<!-- SET PW MODAL -->
+<div class="modal-overlay" id="setPwModal">
+  <div class="modal">
+    <h2>Passwort einrichten</h2>
+    <p style="color:var(--muted);margin-bottom:16px;font-size:0.9rem;">Wähle ein persönliches Passwort für deine private Fragensammlung.</p>
+    <div class="form-row"><input type="password" id="setPw1" placeholder="Passwort wählen"></div>
+    <div class="form-row"><input type="password" id="setPw2" placeholder="Wiederholen"></div>
+    <div id="setPwErr" class="error-msg"></div>
+    <div class="modal-btns">
+      <button class="btn-sm gold" onclick="confirmSetPw()">Speichern</button>
+      <button class="btn-sm ghost" onclick="closeModal('setPwModal')">Abbrechen</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ─── STATE ───────────────────────────────────────────────────────────────────
+const DEFAULT_PW = 'liebesspiel';
+let currentTab = 'play';
+let currentPlayer = 'frau';
+let currentCatFilter = 'all';
+let currentIdx = 0;
+let filteredQs = [];
+let pendingImg = null;
+
+const CATEGORIES = {
+  anfaenger: '🌱 Anfänger & Erste Schritte',
+  cuckold:   '🔑 Cuckold & Hotwife',
+  liebhaber: '💋 Der Liebhaber',
+  gefuehle:  '❤️ Gefühle & Eifersucht',
+  erotik:    '🔥 Erotik & Handlungen',
+  fetisch:   '🖤 Fetisch & Tabu',
+  keuschheit:'🔒 Keuschheit & Käfig',
+  absurd:    '🎲 Absurd & Witzig'
+};
+
+// ─── DEFAULT QUESTIONS ────────────────────────────────────────────────────────
+const DEFAULT_QUESTIONS = [
+
+  // ═══════════════════════════════════════════════
+  // 🌱 ANFÄNGER & ERSTE SCHRITTE
+  // ═══════════════════════════════════════════════
+
+  {id:1,player:'frau',cat:'anfaenger',q:'Würdest du lieber in die Sauna gehen und dort offen mit einem fremden Mann flirten oder lieber in einen Club tanzen gehen?',a:'Sauna & Flirten',b:'Club tanzen',img:null,answers:{}},
+  {id:2,player:'frau',cat:'anfaenger',q:'Würdest du lieber auf einer Party dein Höschen einem fremden Mann heimlich zeigen oder eine Stunde intensiv mit ihm flirten?',a:'Höschen zeigen',b:'Intensiv flirten',img:null,answers:{}},
+  {id:3,player:'frau',cat:'anfaenger',q:'Würdest du lieber im Swingerclub einfach nur zuschauen oder gar nicht erst hingehen?',a:'Zuschauen',b:'Gar nicht hingehen',img:null,answers:{}},
+  {id:4,player:'frau',cat:'anfaenger',q:'Würdest du lieber offen mit deinem Partner über deine geheimen Fantasien reden oder sie lieber für dich behalten?',a:'Offen reden',b:'Für mich behalten',img:null,answers:{}},
+  {id:5,player:'frau',cat:'anfaenger',q:'Würdest du lieber einem fremden Mann beim Tanzen sehr nah kommen und spüren wie er reagiert oder lieber Abstand halten?',a:'Sehr nah kommen',b:'Abstand halten',img:null,answers:{}},
+  {id:6,player:'frau',cat:'anfaenger',q:'Würdest du lieber ein aufreizendes Foto von dir an einen fremden Mann schicken oder lieber ein Date mit ihm haben?',a:'Aufregtes Foto schicken',b:'Date haben',img:null,answers:{}},
+  {id:7,player:'frau',cat:'anfaenger',q:'Würdest du lieber dass dein Mann dabei ist wenn du das erste Mal flirtest oder lieber allein?',a:'Mann dabei',b:'Allein',img:null,answers:{}},
+  {id:8,player:'frau',cat:'anfaenger',q:'Würdest du lieber langsam herantasten – erst küssen dann mehr – oder direkt einsteigen?',a:'Langsam herantasten',b:'Direkt einsteigen',img:null,answers:{}},
+  {id:9,player:'mann',cat:'anfaenger',q:'Würdest du lieber zusehen wie deine Frau auf der Tanzfläche sehr intensiv mit einem anderen tanzt oder lieber selbst dabei tanzen?',a:'Zuschauen',b:'Selbst dabei sein',img:null,answers:{}},
+  {id:10,player:'mann',cat:'anfaenger',q:'Würdest du lieber dass deine Frau das erste Mal flirtet und du es erst danach erfährst oder live dabei bist?',a:'Danach erfahren',b:'Live dabei sein',img:null,answers:{}},
+  {id:11,player:'mann',cat:'anfaenger',q:'Würdest du lieber in kleinen Schritten ins Thema hineinwachsen oder lieber direkt tief einsteigen?',a:'Kleine Schritte',b:'Direkt einsteigen',img:null,answers:{}},
+  {id:12,player:'beide',cat:'anfaenger',q:'Würdest du lieber das Thema als reine Fantasie behalten oder es aktiv ausprobieren?',a:'Reine Fantasie',b:'Aktiv ausprobieren',img:null,answers:{}},
+
+  // ═══════════════════════════════════════════════
+  // 🔑 CUCKOLD & HOTWIFE
+  // ═══════════════════════════════════════════════
+
+  {id:20,player:'frau',cat:'cuckold',q:'Würdest du lieber einen anderen Mann ganz normal privat treffen oder lieber im Swingerclub?',a:'Privat treffen',b:'Swingerclub',img:null,answers:{}},
+  {id:21,player:'frau',cat:'cuckold',q:'Würdest du lieber selbst den anderen Mann aussuchen oder deinem Mann die Wahl überlassen?',a:'Selbst aussuchen',b:'Mann wählt',img:null,answers:{}},
+  {id:22,player:'frau',cat:'cuckold',q:'Würdest du lieber jemanden den ihr beide kennt oder einen völligen Fremden?',a:'Jemanden den wir kennen',b:'Völligen Fremden',img:null,answers:{}},
+  {id:23,player:'frau',cat:'cuckold',q:'Würdest du lieber ein einmaliges Treffen oder eine feste wiederkehrende Bekanntschaft?',a:'Einmalig',b:'Feste Bekanntschaft',img:null,answers:{}},
+  {id:24,player:'frau',cat:'cuckold',q:'Würdest du lieber bei euch zuhause treffen oder in einem Hotel?',a:'Zuhause',b:'Hotel',img:null,answers:{}},
+  {id:25,player:'frau',cat:'cuckold',q:'Würdest du lieber dass dein Mann dabei ist und zuschaut oder dass er woanders wartet?',a:'Er schaut zu',b:'Er wartet woanders',img:null,answers:{}},
+  {id:26,player:'frau',cat:'cuckold',q:'Würdest du lieber die Hotwife-Rolle voll ausleben – du bestimmst alles – oder lieber gemeinsam entscheiden?',a:'Ich bestimme alles',b:'Gemeinsam entscheiden',img:null,answers:{}},
+  {id:27,player:'frau',cat:'cuckold',q:'Würdest du lieber deinen Mann mit Andeutungen und Nachrichten reizen bevor du gehst oder ihn einfach überraschen?',a:'Vorher reizen',b:'Überraschen',img:null,answers:{}},
+  {id:28,player:'frau',cat:'cuckold',q:'Würdest du lieber die getragene Unterwäsche danach als Beweis zeigen oder diskret verschwinden lassen?',a:'Als Beweis zeigen',b:'Diskret verschwinden lassen',img:null,answers:{}},
+  {id:29,player:'frau',cat:'cuckold',q:'Würdest du lieber jemanden der körperlich sehr anders ist als dein Mann oder ähnlich?',a:'Sehr anders',b:'Ähnlich wie mein Mann',img:null,answers:{}},
+  {id:30,player:'frau',cat:'cuckold',q:'Würdest du lieber jemanden der dominanter ist als dein Mann oder sanfter?',a:'Dominanter',b:'Sanfter',img:null,answers:{}},
+  {id:31,player:'frau',cat:'cuckold',q:'Würdest du lieber jemanden jünger als deinen Mann oder älter?',a:'Jünger',b:'Älter',img:null,answers:{}},
+  {id:32,player:'frau',cat:'cuckold',q:'Würdest du lieber danach direkt mit deinem Mann intim sein oder erst etwas Abstand brauchen?',a:'Direkt intim',b:'Erst Abstand',img:null,answers:{}},
+  {id:33,player:'frau',cat:'cuckold',q:'Würdest du lieber dass dein Mann dich nach dem Treffen verwöhnt oder du ihn?',a:'Er verwöhnt mich',b:'Ich verwöhne ihn',img:null,answers:{}},
+  {id:34,player:'mann',cat:'cuckold',q:'Würdest du lieber dabei sein und live zuschauen oder es dir danach erzählen lassen?',a:'Live zuschauen',b:'Danach erzählen lassen',img:null,answers:{}},
+  {id:35,player:'mann',cat:'cuckold',q:'Würdest du lieber das Sperma aus deiner Frau auslecken oder lieber selbst noch in sie eindringen und reinspritzen?',a:'Auslecken',b:'Selbst reinspritzen',img:null,answers:{}},
+  {id:36,player:'mann',cat:'cuckold',q:'Würdest du lieber alle Details hören oder lieber nur das Wesentliche wissen?',a:'Alle Details',b:'Nur das Wesentliche',img:null,answers:{}},
+  {id:37,player:'mann',cat:'cuckold',q:'Würdest du lieber dass sie dir live per Nachricht berichtet während sie beim anderen ist oder erst danach?',a:'Live berichten',b:'Erst danach',img:null,answers:{}},
+  {id:38,player:'mann',cat:'cuckold',q:'Würdest du lieber Fotos oder Videos bekommen während sie weg ist oder keine Spuren?',a:'Fotos & Videos',b:'Keine Spuren',img:null,answers:{}},
+  {id:39,player:'mann',cat:'cuckold',q:'Würdest du lieber wissen wie sie den anderen findet oder es lieber nicht wissen?',a:'Wissen',b:'Nicht wissen',img:null,answers:{}},
+  {id:40,player:'mann',cat:'cuckold',q:'Würdest du lieber dass sie aufreizend gekleidet zum Treffen geht oder eher dezent?',a:'Aufreizend',b:'Dezent',img:null,answers:{}},
+  {id:41,player:'mann',cat:'cuckold',q:'Würdest du lieber dass ihr Liebhaber dich kennt und respektiert oder ein anonymer Fremder bleibt?',a:'Kennt mich',b:'Anonymer Fremder',img:null,answers:{}},
+  {id:42,player:'beide',cat:'cuckold',q:'Würdest du lieber klare Regeln vorher festlegen oder lieber spontan und flexibel bleiben?',a:'Klare Regeln',b:'Spontan & flexibel',img:null,answers:{}},
+  {id:43,player:'beide',cat:'cuckold',q:'Würdest du lieber jederzeit ohne Erklärung stoppen können oder lieber ein gemeinsames Codewort nutzen?',a:'Jederzeit stoppen',b:'Codewort',img:null,answers:{}},
+
+  // ═══════════════════════════════════════════════
+  // 💋 DER LIEBHABER
+  // ═══════════════════════════════════════════════
+
+  {id:50,player:'frau',cat:'liebhaber',q:'Würdest du lieber einen Liebhaber der sehr zärtlich und liebevoll ist oder einen der dominant und fordernd ist?',a:'Zärtlich & liebevoll',b:'Dominant & fordernd',img:null,answers:{}},
+  {id:51,player:'frau',cat:'liebhaber',q:'Würdest du lieber einen Liebhaber der dir das Gefühl gibt einzigartig zu sein oder einen der dich als reine Lust behandelt?',a:'Einzigartig & besonders',b:'Reine Lust',img:null,answers:{}},
+  {id:52,player:'frau',cat:'liebhaber',q:'Würdest du lieber einen Liebhaber der dir den Weg zeigt und führt oder einen bei dem du selbst alles bestimmst?',a:'Er führt mich',b:'Ich bestimme alles',img:null,answers:{}},
+  {id:53,player:'frau',cat:'liebhaber',q:'Würdest du lieber ein ganzes Wochenende mit deinem Liebhaber verbringen oder lieber nur kurze intensive Treffen?',a:'Ganzes Wochenende',b:'Kurze intensive Treffen',img:null,answers:{}},
+  {id:54,player:'frau',cat:'liebhaber',q:'Würdest du lieber dass dein Liebhaber dir das Gefühl von Verliebt-Sein gibt oder dass es klar nur körperlich bleibt?',a:'Gefühl von Verliebt-Sein',b:'Nur körperlich',img:null,answers:{}},
+  {id:55,player:'frau',cat:'liebhaber',q:'Würdest du lieber bei deinem Liebhaber Geborgenheit und Sicherheit spüren oder das Kribbeln des Verbotenen?',a:'Geborgenheit & Sicherheit',b:'Kribbeln des Verbotenen',img:null,answers:{}},
+  {id:56,player:'frau',cat:'liebhaber',q:'Würdest du lieber dass dein Liebhaber dir Wertschätzung zeigt – Nachrichten, kleine Gesten – oder komplett diskret bleibt?',a:'Wertschätzung zeigen',b:'Komplett diskret',img:null,answers:{}},
+  {id:57,player:'frau',cat:'liebhaber',q:'Würdest du lieber einen Liebhaber der körperlich sehr präsent und intensiv ist oder einen der emotional sehr tief mit dir verbunden ist?',a:'Körperlich präsent & intensiv',b:'Emotional tief verbunden',img:null,answers:{}},
+  {id:58,player:'frau',cat:'liebhaber',q:'Würdest du lieber dass dein Liebhaber deutlich größer bestückt ist als dein Mann oder in etwa gleich?',a:'Deutlich größer',b:'Ähnlich wie mein Mann',img:null,answers:{}},
+  {id:59,player:'frau',cat:'liebhaber',q:'Würdest du lieber einen Liebhaber der sehr lang ausdauernd ist oder einen der kurz aber extrem intensiv ist?',a:'Lang & ausdauernd',b:'Kurz & extrem intensiv',img:null,answers:{}},
+  {id:60,player:'frau',cat:'liebhaber',q:'Würdest du lieber einen Liebhaber der mehrmals kommen kann oder einen der einmal sehr lange durchhält?',a:'Mehrmals',b:'Einmal sehr lange',img:null,answers:{}},
+  {id:61,player:'frau',cat:'liebhaber',q:'Würdest du lieber dass dein Liebhaber bis zu deinem Höhepunkt wartet oder sich selbst nicht kontrolliert?',a:'Wartet auf mich',b:'Unkontrolliert & triebhaft',img:null,answers:{}},
+  {id:62,player:'frau',cat:'liebhaber',q:'Würdest du lieber einen Mann mit kleinem aber dickem Glied oder einem langen aber schmalem?',a:'Klein aber dick',b:'Lang aber schmal',img:null,answers:{}},
+  {id:63,player:'frau',cat:'liebhaber',q:'Würdest du lieber einen durchschnittlich großen Mann der wirklich weiß was er tut oder einen sehr großen der ungeübt ist?',a:'Durchschnittlich & geübt',b:'Sehr groß & ungeübt',img:null,answers:{}},
+  {id:64,player:'frau',cat:'liebhaber',q:'Würdest du lieber deinem Mann von der Größe des Liebhabers erzählen oder es für dich behalten?',a:'Offen erzählen',b:'Für mich behalten',img:null,answers:{}},
+  {id:65,player:'frau',cat:'liebhaber',q:'Wenn dein Liebhaber dir sexuell alles gibt – würdest du lieber dass dein Mann dich dann nicht mehr sexuell bedienen muss oder dass er es trotzdem versucht?',a:'Muss es nicht mehr versuchen',b:'Soll es trotzdem versuchen',img:null,answers:{}},
+  {id:66,player:'mann',cat:'liebhaber',q:'Würdest du lieber wissen was dein Liebhaber deiner Frau bedeutet oder es lieber nicht wissen?',a:'Wissen',b:'Nicht wissen',img:null,answers:{}},
+  {id:67,player:'mann',cat:'liebhaber',q:'Würdest du lieber wissen dass ihr Liebhaber deutlich größer ist als du oder dass er kleiner ist?',a:'Er ist größer',b:'Er ist kleiner',img:null,answers:{}},
+  {id:68,player:'mann',cat:'liebhaber',q:'Würdest du dich lieber von ihr im Spiel kleiner Schwanz oder schneller Spritzer nennen lassen?',a:'Kleiner Schwanz',b:'Schneller Spritzer',img:null,answers:{}},
+  {id:69,player:'mann',cat:'liebhaber',q:'Würdest du lieber wissen dass ihr Liebhaber ausdauernder ist als du oder lieber nicht wissen?',a:'Wissen',b:'Nicht wissen',img:null,answers:{}},
+  {id:70,player:'mann',cat:'liebhaber',q:'Würdest du lieber dass sie dir sagt wie lange es mit dem Liebhaber gedauert hat oder es für sich behält?',a:'Sagt es mir',b:'Behält es für sich',img:null,answers:{}},
+  {id:71,player:'mann',cat:'liebhaber',q:'Würdest du lieber dass sie dich sexuell nicht mehr braucht weil der Liebhaber das übernimmt oder dass sie beides will?',a:'Liebhaber übernimmt das',b:'Sie will beides',img:null,answers:{}},
+
+  // ═══════════════════════════════════════════════
+  // ❤️ GEFÜHLE & EIFERSUCHT
+  // ═══════════════════════════════════════════════
+
+  {id:80,player:'frau',cat:'gefuehle',q:'Würdest du lieber dass das Kribbeln zum Liebhaber nur oberflächlich bleibt oder tiefer werden darf?',a:'Nur oberflächlich',b:'Darf tiefer werden',img:null,answers:{}},
+  {id:81,player:'frau',cat:'gefuehle',q:'Würdest du lieber das Gefühl von Verliebt-Sein zum Liebhaber genießen ohne es deinem Mann zu sagen oder offen damit umgehen?',a:'Für mich behalten',b:'Offen damit sein',img:null,answers:{}},
+  {id:82,player:'frau',cat:'gefuehle',q:'Würdest du lieber dass ein Wochenende mit dem Liebhaber rein körperlich bleibt oder auch emotional verbindend sein darf?',a:'Rein körperlich',b:'Auch emotional',img:null,answers:{}},
+  {id:83,player:'frau',cat:'gefuehle',q:'Würdest du lieber eine emotionale Verbindung zum Liebhaber erlaubt haben oder klare Trennung – nur Körper?',a:'Emotionale Verbindung okay',b:'Nur Körper – keine Gefühle',img:null,answers:{}},
+  {id:84,player:'frau',cat:'gefuehle',q:'Würdest du lieber nach dem Treffen über deine Gefühle sprechen oder sie lieber selbst verarbeiten?',a:'Darüber sprechen',b:'Selbst verarbeiten',img:null,answers:{}},
+  {id:85,player:'frau',cat:'gefuehle',q:'Würdest du lieber dass dein Mann weiß wenn du dich zum Liebhaber hingezogen fühlst oder es für dich behalten?',a:'Er soll es wissen',b:'Für mich behalten',img:null,answers:{}},
+  {id:86,player:'frau',cat:'gefuehle',q:'Würdest du lieber die Beziehung zu deinem Mann als Fundament sehen und den Liebhaber als Extra oder beides gleichwertig?',a:'Mann als Fundament',b:'Beides gleichwertig',img:null,answers:{}},
+  {id:87,player:'frau',cat:'gefuehle',q:'Würdest du lieber dass dein Mann dich genauso liebt nachdem du einen anderen hattest oder dass er es als Zeichen von Vertrauen sieht?',a:'Genauso liebt wie vorher',b:'Als Vertrauen & Stärke',img:null,answers:{}},
+  {id:88,player:'mann',cat:'gefuehle',q:'Würdest du deine Frau noch genauso lieben nachdem sie einen anderen Mann intim hatte oder ändert sich etwas in dir?',a:'Genauso lieben',b:'Etwas ändert sich',img:null,answers:{}},
+  {id:89,player:'mann',cat:'gefuehle',q:'Würdest du lieber deine Eifersucht offen ansprechen oder lieber selbst damit umgehen?',a:'Offen ansprechen',b:'Selbst verarbeiten',img:null,answers:{}},
+  {id:90,player:'mann',cat:'gefuehle',q:'Würdest du lieber sofort wissen wenn sie Gefühle für den Liebhaber entwickelt oder warten bis sie es selbst sagt?',a:'Sofort wissen',b:'Warten bis sie es sagt',img:null,answers:{}},
+  {id:91,player:'mann',cat:'gefuehle',q:'Würdest du lieber mit deiner Eifersucht kämpfen und innerlich wachsen oder die Situation stoppen bevor es zu viel wird?',a:'Kämpfen & wachsen',b:'Stoppen wenn zu viel',img:null,answers:{}},
+  {id:92,player:'mann',cat:'gefuehle',q:'Würdest du lieber nach einem schwierigen Abend sofort reden oder erst schlafen und am Morgen sprechen?',a:'Sofort reden',b:'Erst schlafen',img:null,answers:{}},
+  {id:93,player:'mann',cat:'gefuehle',q:'Würdest du lieber dass sie dir nach jedem Treffen ihre Gefühle beschreibt oder nur die sachlichen Fakten nennt?',a:'Gefühle beschreiben',b:'Nur Fakten',img:null,answers:{}},
+  {id:94,player:'mann',cat:'gefuehle',q:'Würdest du lieber dass eure Liebesbeziehung durch das Thema tiefer wird oder dass Gefühle klar davon getrennt bleiben?',a:'Beziehung wird tiefer',b:'Klar getrennt halten',img:null,answers:{}},
+  {id:95,player:'beide',cat:'gefuehle',q:'Würdest du lieber über Eifersucht sprechen wie über ein normales Gefühl oder so tun als wäre sie nicht da?',a:'Normal ansprechen',b:'Ignorieren & verdrängen',img:null,answers:{}},
+  {id:96,player:'beide',cat:'gefuehle',q:'Würdest du lieber eine feste Nachsorge-Routine nach jedem Treffen oder je nach Stimmung entscheiden?',a:'Feste Routine',b:'Je nach Stimmung',img:null,answers:{}},
+
+  // ═══════════════════════════════════════════════
+  // 🔥 EROTIK & HANDLUNGEN
+  // ═══════════════════════════════════════════════
+
+  {id:100,player:'frau',cat:'erotik',q:'Würdest du lieber nur noch Vaginalsex mit dem anderen Mann oder lieber alles andere außer das?',a:'Nur vaginal',b:'Alles andere',img:null,answers:{}},
+  {id:101,player:'frau',cat:'erotik',q:'Würdest du lieber einen Mann nur mit deinem Mund zum Höhepunkt bringen oder nur mit deiner Hand?',a:'Mit dem Mund',b:'Mit der Hand',img:null,answers:{}},
+  {id:102,player:'frau',cat:'erotik',q:'Würdest du lieber einen ganzen Abend nur verwöhnt werden – Oral, Massage, alles – oder nur selbst aktiv sein?',a:'Nur verwöhnt werden',b:'Nur selbst aktiv',img:null,answers:{}},
+  {id:103,player:'frau',cat:'erotik',q:'Würdest du lieber einen Dreier mit zwei Männern oder mit einem Mann und einer Frau?',a:'Zwei Männer (MMF)',b:'Mann & Frau (FFM)',img:null,answers:{}},
+  {id:104,player:'frau',cat:'erotik',q:'Würdest du lieber ungeschützt mit einem sehr vertrauten Liebhaber oder immer mit Kondom auch bei Fremden?',a:'Vertraut & ungeschützt',b:'Immer mit Kondom',img:null,answers:{}},
+  {id:105,player:'frau',cat:'erotik',q:'Würdest du lieber von ihm von hinten oder von vorne genommen werden?',a:'Von hinten',b:'Von vorne',img:null,answers:{}},
+  {id:106,player:'frau',cat:'erotik',q:'Würdest du lieber von einem Mann während des Aktes sehr dominierend angesprochen werden oder in den höchsten Tönen gelobt?',a:'Dominant & direkt',b:'Gelobt & vergöttert',img:null,answers:{}},
+  {id:107,player:'frau',cat:'erotik',q:'Würdest du lieber selbst schmutzige Dinge flüstern oder zuhören wie er dir ins Ohr sagt was er gleich mit dir macht?',a:'Selbst flüstern',b:'Ihm zuhören',img:null,answers:{}},
+  {id:108,player:'frau',cat:'erotik',q:'Würdest du lieber laut stöhnen dürfen oder komplett still bleiben müssen?',a:'Laut stöhnen',b:'Komplett still',img:null,answers:{}},
+  {id:109,player:'frau',cat:'erotik',q:'Würdest du lieber dass er in deinen Mund kommt oder auf deinen Körper?',a:'In den Mund',b:'Auf den Körper',img:null,answers:{}},
+  {id:110,player:'frau',cat:'erotik',q:'Würdest du lieber nach dem Sex gemeinsam einschlafen ohne zu duschen oder sofort duschen gehen?',a:'So einschlafen',b:'Sofort duschen',img:null,answers:{}},
+  {id:111,player:'frau',cat:'erotik',q:'Würdest du lieber heimlich unter dem Tisch im Restaurant einen Mann mit der Hand verwöhnen oder ein vibrierendes Ei tragen während er dich anblickt?',a:'Mit der Hand verwöhnen',b:'Vibrierendes Ei tragen',img:null,answers:{}},
+  {id:112,player:'frau',cat:'erotik',q:'Würdest du lieber beim Sex im Freien von einem fremden Paar beobachtet werden oder von einem einzelnen älteren Mann?',a:'Fremdes Paar',b:'Älterer Mann allein',img:null,answers:{}},
+  {id:113,player:'frau',cat:'erotik',q:'Würdest du lieber nie wieder Oralsex geben aber dafür immer empfangen oder umgekehrt?',a:'Nur empfangen',b:'Nur geben',img:null,answers:{}},
+  {id:114,player:'frau',cat:'erotik',q:'Würdest du lieber zum Höhepunkt kommen nur mit dem Wasserstrahl der Duschbrause oder nur mit einem Vibrator?',a:'Duschbrause',b:'Vibrator',img:null,answers:{}},
+  {id:115,player:'frau',cat:'erotik',q:'Würdest du lieber eine Woche erregt sein aber nicht kommen dürfen oder jeden Tag dreimal kommen aber immer allein?',a:'Erregt aber nicht kommen',b:'Dreimal täglich aber allein',img:null,answers:{}},
+  {id:116,player:'mann',cat:'erotik',q:'Würdest du lieber deine Frau beim anderen Mann oral verwöhnen sehen oder beim Eindringen zuschauen?',a:'Beim Oral zuschauen',b:'Beim Eindringen zuschauen',img:null,answers:{}},
+  {id:117,player:'mann',cat:'erotik',q:'Würdest du lieber dass sie dem anderen einen bläst während du zuschaust oder dass du ihr zusehen musst wie sie reitet?',a:'Oral zuschauen',b:'Beim Reiten zuschauen',img:null,answers:{}},
+  {id:118,player:'mann',cat:'erotik',q:'Würdest du lieber dass sie ihn mit Kondom nimmt und du danach noch ran darfst oder ohne Kondom aber du bist danach dran?',a:'Mit Kondom & ich danach',b:'Ohne Kondom & ich danach',img:null,answers:{}},
+
+  // ═══════════════════════════════════════════════
+  // 🖤 FETISCH & TABU
+  // ═══════════════════════════════════════════════
+
+  {id:120,player:'frau',cat:'fetisch',q:'Würdest du lieber dominant gefesselt werden oder deinen Partner fesseln und kontrollieren?',a:'Gefesselt werden',b:'Fesseln & kontrollieren',img:null,answers:{}},
+  {id:121,player:'frau',cat:'fetisch',q:'Würdest du lieber die Submissive-Rolle einnehmen oder die Dominant-Rolle?',a:'Submissive',b:'Dominant',img:null,answers:{}},
+  {id:122,player:'frau',cat:'fetisch',q:'Würdest du lieber eine Stunde mit einem professionellen Dom spielen oder eine Stunde Submissive zu einer Domina sein?',a:'Mit einem Dom',b:'Bei einer Domina',img:null,answers:{}},
+  {id:123,player:'frau',cat:'fetisch',q:'Würdest du lieber in einer Umkleidekabine beim Sex erwischt werden oder im Aufzug?',a:'Umkleidekabine',b:'Aufzug',img:null,answers:{}},
+  {id:124,player:'frau',cat:'fetisch',q:'Würdest du lieber anonym vor zahlendem Publikum masturbieren oder einen Quickie mit einem Fremden in einer dunklen Club-Ecke?',a:'Anonym vor Publikum',b:'Quickie im Club',img:null,answers:{}},
+  {id:125,player:'frau',cat:'fetisch',q:'Würdest du lieber herausfinden dass dein Mann heimlich deine Unterwäsche trägt oder dass er monatlich Geld an Webcam-Girls zahlt?',a:'Trägt meine Unterwäsche',b:'Zahlt an Webcam-Girls',img:null,answers:{}},
+  {id:126,player:'frau',cat:'fetisch',q:'Würdest du lieber einen erotischen Traum von deinem Schwager haben oder von deinem Chef – beides nur Fantasie?',a:'Schwager',b:'Chef',img:null,answers:{}},
+  {id:127,player:'frau',cat:'fetisch',q:'Würdest du lieber ein Keuschheitsspiel mit deinem Mann spielen – er trägt den Gürtel – oder er bestimmt wann du kommen darfst?',a:'Er trägt den Gürtel',b:'Er bestimmt meinen Höhepunkt',img:null,answers:{}},
+  {id:128,player:'frau',cat:'fetisch',q:'Würdest du lieber ein aufreizendes Foto von dir an einen fremden Mann schicken oder ein kurzes Video?',a:'Aufreizendes Foto',b:'Kurzes Video',img:null,answers:{}},
+  {id:129,player:'mann',cat:'fetisch',q:'Würdest du lieber einen Keuschheitsgürtel tragen während deine Frau beim Liebhaber ist oder freie Hand haben?',a:'Keuschheitsgürtel tragen',b:'Freie Hand',img:null,answers:{}},
+  {id:130,player:'mann',cat:'fetisch',q:'Würdest du lieber verbal gedemütigt werden – kleiner Schwanz, schlechter Liebhaber – oder still zugucken ohne Worte?',a:'Verbal gedemütigt',b:'Still zugucken',img:null,answers:{}},
+  {id:131,player:'mann',cat:'fetisch',q:'Würdest du lieber dass sie den Schlüssel zum Keuschheitsgürtel dem Liebhaber gibt oder selbst behält?',a:'Liebhaber bekommt ihn',b:'Sie behält ihn',img:null,answers:{}},
+  {id:132,player:'beide',cat:'fetisch',q:'Würdest du lieber Rollenspiele in eure Cuckold-Dynamik einbauen oder es immer real und ohne Spiel halten?',a:'Mit Rollenspielen',b:'Immer real',img:null,answers:{}},
+
+  // ═══════════════════════════════════════════════
+  // 🎲 ABSURD & WITZIG
+  // ═══════════════════════════════════════════════
+
+  {id:140,player:'beide',cat:'absurd',q:'Würdest du lieber jedes Mal wenn du flirtest Konfetti vom Himmel fallen sehen oder Trompetenmusik hören?',a:'Konfetti',b:'Trompetenmusik',img:null,answers:{}},
+  {id:141,player:'beide',cat:'absurd',q:'Würdest du lieber beim Höhepunkt immer laut niesen müssen oder jedes Mal laut Mahlzeit rufen?',a:'Niesen',b:'Mahlzeit rufen',img:null,answers:{}},
+  {id:142,player:'beide',cat:'absurd',q:'Würdest du lieber nie wieder Schokolade essen oder nie wieder ein Bad nehmen?',a:'Kein Schokolade',b:'Nie Bad nehmen',img:null,answers:{}},
+  {id:143,player:'beide',cat:'absurd',q:'Würdest du lieber die Gedanken deiner Mutter hören können oder die deiner besten Freundin?',a:'Mutter',b:'Beste Freundin',img:null,answers:{}},
+  {id:144,player:'beide',cat:'absurd',q:'Würdest du lieber für einen Tag unsichtbar sein oder fliegen können?',a:'Unsichtbar',b:'Fliegen',img:null,answers:{}},
+  {id:145,player:'beide',cat:'absurd',q:'Würdest du lieber immer barfuß laufen müssen oder immer High Heels tragen?',a:'Barfuß',b:'High Heels',img:null,answers:{}},
+  {id:146,player:'beide',cat:'absurd',q:'Würdest du lieber für immer nur Orgasmen haben die 10 Sekunden dauern aber extrem intensiv sind oder eine Minute dauern aber nur halb so intensiv?',a:'10 Sekunden extrem',b:'1 Minute mittel',img:null,answers:{}},
+  {id:147,player:'beide',cat:'absurd',q:'Würdest du lieber beim Küssen immer Schluckauf bekommen oder immer niesen müssen?',a:'Schluckauf',b:'Niesen',img:null,answers:{}},
+  {id:148,player:'beide',cat:'absurd',q:'Würdest du lieber dass dein Handy alle Nachrichten laut mit Roboterstimme vorliest oder dass du selbst nie flüstern kannst – nur schreien?',a:'Roboterstimme',b:'Immer schreien',img:null,answers:{}},
+  {id:149,player:'beide',cat:'absurd',q:'Würdest du lieber deinen Job für ein Jahr aufgeben aber mit Traumpartner auf Weltreise oder arbeiten bleiben aber nie wieder Urlaub?',a:'Weltreise ohne Job',b:'Arbeiten ohne Urlaub',img:null,answers:{}},
+  {id:150,player:'beide',cat:'absurd',q:'Würdest du lieber dass dein Haustier alle deine Geheimnisse kennt oder dein Nachbar?',a:'Haustier weiß alles',b:'Nachbar weiß alles',img:null,answers:{}},
+  // ═══════════════════════════════════════════════
+  // ❤️ TIEFE EIFERSUCHT & SELBSTERKENNUNG – FRAU
+  // ═══════════════════════════════════════════════
+
+  {id:200,player:'frau',cat:'gefuehle',q:'Merkst du dass deine Eifersucht oft mehr mit deinem eigenen Selbstwert zu tun hat – oder wirklich mit seinem Verhalten?',a:'Meist mein Selbstwert',b:'Meist sein Verhalten',img:null,answers:{}},
+  {id:201,player:'frau',cat:'gefuehle',q:'Wenn er mit jemand anderem schläft – achtest du mehr auf emotionale Exklusivität wie Verlieben oder auf rein körperliche Handlungen?',a:'Emotionale Exklusivität',b:'Körperliche Handlungen',img:null,answers:{}},
+  {id:202,player:'frau',cat:'gefuehle',q:'Verwechselst du manchmal „er geht gut mit Eifersucht um" damit dass er kaum reagiert – oder damit dass er ehrlich reagiert und dann bei dir bleibt?',a:'Kaum reagieren = gut',b:'Ehrlich reagieren & bleiben = gut',img:null,answers:{}},
+  {id:203,player:'frau',cat:'gefuehle',q:'Willst du einen Partner der Eifersucht nie zeigt – oder einen der sie zeigen, benennen und regulieren kann?',a:'Niemals Eifersucht zeigen',b:'Zeigen, benennen & regulieren',img:null,answers:{}},
+  {id:204,player:'frau',cat:'gefuehle',q:'Was wäre schlimmer für dich – dass er mit jemand anderem kommt oder dass er jemand anderen dabei küsst?',a:'Mit jemand anderem kommen',b:'Jemand anderen küssen',img:null,answers:{}},
+
+  // ═══════════════════════════════════════════════
+  // ❤️ TIEFE EIFERSUCHT – MANN UNTER DER LUPE
+  // ═══════════════════════════════════════════════
+
+  {id:210,player:'frau',cat:'gefuehle',q:'Wie reagiert er wenn du von früheren Sexerlebnissen mit anderen Männern erzählst – Neugier, Wut, Abwertung oder Desinteresse?',a:'Neugier & Offenheit',b:'Wut, Abwertung oder Desinteresse',img:null,answers:{}},
+  {id:211,player:'frau',cat:'gefuehle',q:'Kann er sagen „Das löst etwas in mir aus" ohne sofort Vorwürfe zu machen oder Kontrolle zu fordern?',a:'Ja – er benennt es ruhig',b:'Nein – er macht Vorwürfe',img:null,answers:{}},
+  {id:212,player:'frau',cat:'gefuehle',q:'Hat er bewusst zugelassen dass du mit jemand anderem schläfst – und kam danach ehrlich mit seinen Gefühlen zu dir statt mit passiv-aggressiven Kommentaren?',a:'Ehrlich & direkt',b:'Passiv-aggressiv',img:null,answers:{}},
+  {id:213,player:'frau',cat:'gefuehle',q:'Was tut er wenn Eifersucht hochkommt – Rückzug, Anklage, körperliche Annäherung oder offene Frage nach Sicherheit?',a:'Annäherung & offene Frage',b:'Rückzug oder Anklage',img:null,answers:{}},
+  {id:214,player:'frau',cat:'gefuehle',q:'Ab wann ist Eifersucht bei ihm berechtigt – und ab wann ist sie ein Zeichen von eigener Unsicherheit die er nicht verarbeitet hat?',a:'Er unterscheidet das gut',b:'Er erkennt den Unterschied nicht',img:null,answers:{}},
+  {id:215,player:'frau',cat:'gefuehle',q:'Wenn er nichts dagegen hätte dass du mit einem anderen Mann schläfst – ist das echte Großzügigkeit oder eher emotionale Gleichgültigkeit?',a:'Echte Großzügigkeit',b:'Emotionale Gleichgültigkeit',img:null,answers:{}},
+  {id:216,player:'frau',cat:'gefuehle',q:'Kann er gleichzeitig neugierig auf deine sexuelle Freiheit sein UND verletzlich genug um dir zu sagen „Jetzt brauche ich Nähe von dir"?',a:'Ja – beides zusammen',b:'Nein – nur eines von beidem',img:null,answers:{}},
+  {id:217,player:'frau',cat:'gefuehle',q:'Wie geht er mit einem Flirt von dir auf einer Party um den er zufällig sieht – schreitet er ein, zieht sich zurück oder bleibt er ruhig und spricht dich später an?',a:'Ruhig & spricht mich später an',b:'Einschreiten oder Rückzug',img:null,answers:{}},
+  {id:218,player:'frau',cat:'gefuehle',q:'Kannst du ihm eine offene Fantasie von dir mit einem anderen erzählen – ohne dass er sofort den Sex bewertet oder dich beschämt?',a:'Ja – er hört zu',b:'Nein – er bewertet oder beschämt',img:null,answers:{}},
+  {id:219,player:'frau',cat:'gefuehle',q:'Würde er dir erlauben mit einem anderen zu schlafen – aber dann wochenlang kalt und distanziert sein? Wäre das für dich akzeptabel?',a:'Nein – das wäre ein Problem',b:'Ich könnte damit umgehen',img:null,answers:{}},
+
+  // ═══════════════════════════════════════════════
+  // ❤️ DIE GOLDFRAGE – AN BEIDE
+  // ═══════════════════════════════════════════════
+
+  {id:220,player:'mann',cat:'gefuehle',q:'Kannst du sagen: „Das war schwer für mich – aber ich will dass du frei bist. Hilf mir bitte danach dich wieder nah zu fühlen" – oder ist das zu viel verlangt?',a:'Ja – das kann ich sagen',b:'Das ist zu viel für mich',img:null,answers:{}},
+  {id:221,player:'mann',cat:'gefuehle',q:'Was wäre schlimmer für dich – dass sie mit einem anderen kommt oder dass sie ihn dabei küsst?',a:'Mit jemand anderem kommen',b:'Jemand anderen küssen',img:null,answers:{}},
+  {id:222,player:'mann',cat:'gefuehle',q:'Wenn du keine Eifersucht spürst wenn sie mit einem anderen ist – bist du dann wirklich entspannt oder fühlst du dich innerlich distanziert von ihr?',a:'Wirklich entspannt',b:'Innerlich distanziert',img:null,answers:{}},
+  {id:223,player:'mann',cat:'gefuehle',q:'Kannst du deine Eifersucht benennen ohne sie zu einer Waffe gegen sie zu machen?',a:'Ja – ich benenne sie ruhig',b:'Schwierig – ich werde vorwurfsvoll',img:null,answers:{}},
+  {id:224,player:'mann',cat:'gefuehle',q:'Wenn sie nach einem Treffen mit dem Liebhaber nach Hause kommt und du siehst ihr an dass es schön war – was passiert in dir?',a:'Ich bin neugierig und nah bei ihr',b:'Ich ziehe mich zurück',img:null,answers:{}},
+  {id:225,player:'mann',cat:'gefuehle',q:'Kannst du gleichzeitig stolz auf ihre Freiheit sein UND verletzlich genug um zu sagen „Ich brauche jetzt deine Nähe"?',a:'Ja – beides geht zusammen',b:'Nein – ich zeige keine Verletzlichkeit',img:null,answers:{}},
+  {id:226,player:'mann',cat:'gefuehle',q:'Wenn sie sagt sie fühlt sich beim Liebhaber wertgeschätzt und besonders – löst das in dir Eifersucht aus oder Stolz oder beides?',a:'Stolz überwiegt',b:'Eifersucht überwiegt',img:null,answers:{}},
+  {id:227,player:'mann',cat:'gefuehle',q:'Würdest du lieber dass sie dir sagt „Er ist besser als du" und du weißt es ist wahr – oder dass sie es denkt aber nie sagt?',a:'Lieber offen und ehrlich',b:'Lieber für sich behalten',img:null,answers:{}},
+  // SPIEGEL-FRAGEN KONTROLLE & EHRLICHKEIT - AN DEN MANN
+  {id:230,player:'mann',cat:'gefuehle',q:'Du zeigst Eifersucht wenn sie mit anderen schreibt - aber kannst du selbst lueckenlos erklaeren wo du jeden Abend warst? Ist deine Eifersucht wirklich Erotik oder ist sie Kontrolle?',a:'Ehrlich: es ist Kontrolle',b:'Es ist echte Erotik',img:null,answers:{}},
+  {id:231,player:'mann',cat:'gefuehle',q:'Wenn sie nach einem Treffen sagt er war zaertlicher als du - kannst du das annehmen und bei ihr bleiben oder bricht dann etwas in dir?',a:'Ich kann es annehmen',b:'Es bricht etwas in mir',img:null,answers:{}},
+  {id:232,player:'mann',cat:'gefuehle',q:'Was waere schlimmer fuer dich: Dass ein anderer sie zum Schreien bringt - oder dass sie danach merkt wie wenig sie dich eigentlich noch braucht?',a:'Dass sie ihn geniesst',b:'Dass sie mich nicht mehr braucht',img:null,answers:{}},
+  {id:233,player:'mann',cat:'gefuehle',q:'Du willst entspannt zuschauen - aber nur solange du sicher bist dass er ihr weniger gibt als du. Was passiert in dir wenn du diese Sicherheit nicht mehr hast?',a:'Ich bleibe trotzdem dabei',b:'Dann will ich es nicht mehr',img:null,answers:{}},
+  {id:234,player:'mann',cat:'gefuehle',q:'Wenn sie beim anderen Dinge tut die sie bei dir nie wollte - bleibt deine Lust bestehen oder schlaegt sie in etwas anderes um?',a:'Lust bleibt bestehen',b:'Sie schlaegt in etwas anderes um',img:null,answers:{}},
+  {id:235,player:'mann',cat:'gefuehle',q:'Wenn nach dem dritten Treffen keine Eifersucht mehr kommt sondern nur noch Gleichgueltigkeit von ihrer Seite - haelt dein Ego das aus?',a:'Ja - ich halte das aus',b:'Nein - das waere zu viel',img:null,answers:{}},
+  {id:236,player:'mann',cat:'gefuehle',q:'Verlangst du von ihr totale Offenheit - weisst aber selbst nicht immer wo du warst oder mit wem du geschrieben hast? Ist das Augenhoehe?',a:'Nein - das ist nicht Augenhoehe',b:'Ja - ich bin selbst offen',img:null,answers:{}},
+  {id:237,player:'mann',cat:'gefuehle',q:'Wenn sie sagt er kuemmert sich um mich danach aber du nicht - was tust du mit diesem Satz? Rechtfertigst du dich oder fragst du was sie braucht?',a:'Ich frage was sie braucht',b:'Ich rechtfertige mich',img:null,answers:{}},
+  {id:238,player:'mann',cat:'gefuehle',q:'Cuckold bedeutet dass sie wirklich frei ist - auch frei dich zu verlassen wenn sie merkt was fehlt. Kannst du mit dieser echten Freiheit leben oder willst du heimlich die Faeden behalten?',a:'Ich kann mit echter Freiheit leben',b:'Ich will heimlich die Faeden behalten',img:null,answers:{}},
+  {id:239,player:'mann',cat:'gefuehle',q:'Wenn sie dich fragt warst du treu - kannst du ohne Zoegern mit Ja antworten? Und wenn nicht - hast du dann das Recht eifersuechtg zu sein?',a:'Ja - ich war treu',b:'Nein - ich war es nicht immer',img:null,answers:{}},
+
+  // SPIEGEL-FRAGEN - DIE FRAU SCHAUT GENAU HIN
+  {id:240,player:'frau',cat:'gefuehle',q:'Wenn er Cuckold spielen will aber bei einer harmlosen Nachricht von dir schon eifersuechtg wird - was sagt dir das ueber seine wirkliche Bereitschaft?',a:'Er ist noch nicht bereit',b:'Es ist normale Spannung',img:null,answers:{}},
+  {id:241,player:'frau',cat:'gefuehle',q:'Wenn er dir sexuelle Freiheit anbietet aber selbst nicht transparent ist wo er ist und mit wem - vertraust du ihm dann wirklich?',a:'Nein - kein Vertrauen ohne Transparenz',b:'Ja - ich vertraue ihm trotzdem',img:null,answers:{}},
+  {id:242,player:'frau',cat:'gefuehle',q:'Glaubst du dass sein Wunsch nach dem Cuckold-Lifestyle wirklich erotische Neugier ist - oder ist es eine clevere Art dir Freiheit zu geben waehrend er selbst tut was er will?',a:'Echte Neugier',b:'Clevere Ablenkung',img:null,answers:{}},
+  {id:243,player:'frau',cat:'gefuehle',q:'Wenn er nach eurem Spiel wochenlang kalt und distanziert ist ohne darueber zu reden - ist das fuer dich ein Zeichen dass er damit umgeht oder dass er es bereut?',a:'Er kommt damit nicht klar',b:'Er verarbeitet es still',img:null,answers:{}},
+  {id:244,player:'frau',cat:'gefuehle',q:'Wuerdest du einem Mann deine sexuelle Freiheit zeigen der dir nicht sagen kann wo er letzte Woche wirklich war?',a:'Nein - Vertrauen zuerst',b:'Ja - das ist getrennt',img:null,answers:{}},
+  {id:245,player:'frau',cat:'gefuehle',q:'Wenn er sagt ich will dass du frei bist aber seine Eifersucht zeigt er nur wenn du wirklich frei bist - was stimmt dann wirklich?',a:'Seine Eifersucht zeigt die Wahrheit',b:'Er meint es trotzdem ehrlich',img:null,answers:{}},
+  // BESTÄRKUNG FRAU – CUCKOLD & HOTWIFE
+  {id:300,player:'frau',cat:'cuckold',q:'Du hast das Recht Lust zu empfangen und sie zu zeigen. Würdest du lieber diese Freiheit voll annehmen oder dich kleiner machen als du bist?',a:'Ich nehme sie voll an',b:'Ich mache mich kleiner',img:null,answers:{}},
+  {id:301,player:'frau',cat:'cuckold',q:'Dein Verlangen nach einem anderen Mann macht dich nicht zu einer schlechten Frau. Würdest du lieber dazu stehen oder es weiter verstecken?',a:'Ich stehe dazu',b:'Ich verstecke es noch',img:null,answers:{}},
+  {id:302,player:'frau',cat:'cuckold',q:'Wenn du mit einem anderen Mann schläfst und es genießt – verdienst du dieses Genießen. Würdest du lieber ohne Schuldgefühle zurückkommen oder dich hinterher rechtfertigen müssen?',a:'Ohne Schuldgefühle',b:'Ich würde mich rechtfertigen',img:null,answers:{}},
+  {id:303,player:'frau',cat:'cuckold',q:'Du bist nicht sein Besitz. Würdest du lieber eine Beziehung in der deine Lust willkommen ist oder eine in der sie geduldet wird?',a:'Willkommen & gefeiert',b:'Geduldet & kontrolliert',img:null,answers:{}},
+  {id:304,player:'frau',cat:'cuckold',q:'Wenn du merkst dass du den anderen wirklich genießt – würdest du lieber dazu stehen und es deinem Mann sagen oder so tun als wäre es nichts?',a:'Ich stehe dazu und sage es',b:'Ich tue so als wäre es nichts',img:null,answers:{}},
+
+  // BESTÄRKUNG FRAU – LIEBHABER & LUST
+  {id:305,player:'frau',cat:'liebhaber',q:'Du darfst bei einem anderen Mann Dinge fühlen die du bei deinem Mann nicht fühlst – das ist kein Verrat sondern Menschlichkeit. Würdest du lieber diese Gefühle annehmen oder sie bekämpfen?',a:'Annehmen & verstehen',b:'Bekämpfen & verdrängen',img:null,answers:{}},
+  {id:306,player:'frau',cat:'liebhaber',q:'Wenn dein Liebhaber dir gibt was dir fehlt – Dominanz, Zärtlichkeit, Intensität – hast du das Recht danach zu verlangen. Würdest du lieber direkt sagen was du willst oder es stumm hinnehmen?',a:'Direkt sagen was ich will',b:'Stumm hinnehmen',img:null,answers:{}},
+  {id:307,player:'frau',cat:'liebhaber',q:'Du musst dich nicht zwischen Sicherheit und Leidenschaft entscheiden – beides ist möglich. Würdest du lieber aktiv beides einfordern oder dich mit einem begnügen?',a:'Beides aktiv einfordern',b:'Mit einem begnügen',img:null,answers:{}},
+  {id:308,player:'frau',cat:'liebhaber',q:'Wenn du nach einem Treffen mit dem Liebhaber leuchtende Augen hast – das ist kein Grund zur Scham. Würdest du lieber dieses Leuchten zeigen oder verstecken?',a:'Zeigen & dazu stehen',b:'Verstecken aus Scham',img:null,answers:{}},
+  {id:309,player:'frau',cat:'liebhaber',q:'Dein Körper gehört dir. Würdest du lieber selbst entscheiden wem du ihn gibst und wann – oder warten bis er es erlaubt?',a:'Ich entscheide selbst',b:'Ich warte auf seine Erlaubnis',img:null,answers:{}},
+
+  // BESTÄRKUNG FRAU – GEFÜHLE & SELBSTWERT
+  {id:310,player:'frau',cat:'gefuehle',q:'Wenn du merkst dass du beim Liebhaber aufblühst – ist das eine Information über dich, nicht über deinen Mann. Würdest du lieber diese Information annehmen oder ignorieren?',a:'Annehmen & verstehen',b:'Ignorieren',img:null,answers:{}},
+  {id:311,player:'frau',cat:'gefuehle',q:'Du hast das Recht auf Wertschätzung, Dominanz, Geborgenheit und Leidenschaft gleichzeitig. Würdest du lieber danach verlangen oder dich damit abfinden dass du nur einen Teil bekommst?',a:'Ich verlange alles',b:'Ich begnüge mich',img:null,answers:{}},
+  {id:312,player:'frau',cat:'gefuehle',q:'Wenn du dich beim Liebhaber zum ersten Mal wirklich gesehen fühlst – würdest du lieber ehrlich mit dir sein was das bedeutet oder es wegdiskutieren?',a:'Ehrlich mit mir sein',b:'Wegdiskutieren',img:null,answers:{}},
+
+  // KONFRONTATION MANN – CUCKOLD
+  {id:320,player:'mann',cat:'cuckold',q:'Wenn du sagst du willst Cuckold sein aber kontrollierst jeden ihrer Schritte – was bist du dann wirklich: ein Cuckold oder ein Kontrollfreak mit erotischer Verpackung?',a:'Ich muss das ehrlich prüfen',b:'Ich bin wirklich bereit',img:null,answers:{}},
+  {id:321,player:'mann',cat:'cuckold',q:'Wenn sie nach Hause kommt und du siehst dass es ihr gut geht mit ihm – kannst du das aushalten ohne es ihr später als Waffe zu benutzen?',a:'Ja – ich benutze es nicht',b:'Ich weiß es nicht ehrlich',img:null,answers:{}},
+  {id:322,player:'mann',cat:'cuckold',q:'Hast du ihr jemals gesagt was du wirklich brauchst nach einem Treffen – oder versteckst du deine Verletzlichkeit hinter Schweigen oder sarkastischen Kommentaren?',a:'Ich sage was ich brauche',b:'Ich verstecke es',img:null,answers:{}},
+  {id:323,player:'mann',cat:'cuckold',q:'Wenn sie beim anderen lacht, stöhnt, weint vor Lust – und du weißt sie meint es – bleibt dein Herz offen oder zieht es sich zu?',a:'Mein Herz bleibt offen',b:'Es zieht sich zu',img:null,answers:{}},
+  {id:324,player:'mann',cat:'cuckold',q:'Bist du bereit ihr zu sagen ich brauche dich danach nah bei mir ohne dich dabei klein zu fühlen – oder ist dir dein Ego wichtiger als deine echte Verbindung zu ihr?',a:'Ich sage es – Ego egal',b:'Ego ist mir wichtiger',img:null,answers:{}},
+
+  // KONFRONTATION MANN – LIEBHABER
+  {id:325,player:'mann',cat:'liebhaber',q:'Wenn er ihr in einem Abend mehr gibt als du in einem Monat – was machst du mit dieser Erkenntnis: lernst du daraus oder wirst du sauer auf sie?',a:'Ich lerne daraus',b:'Ich werde sauer auf sie',img:null,answers:{}},
+  {id:326,player:'mann',cat:'liebhaber',q:'Hast du sie je gefragt was ihr wirklich fehlt – oder hoffst du dass der Cuckold-Lifestyle die Frage ersetzt die du dir nicht traust zu stellen?',a:'Ich habe gefragt',b:'Ich vermeide die Frage',img:null,answers:{}},
+  {id:327,player:'mann',cat:'liebhaber',q:'Wenn sie sagt er berührt mich anders als du – ist deine erste Reaktion Neugier und Lernwille oder Kränkung und Rückzug?',a:'Neugier & Lernwille',b:'Kränkung & Rückzug',img:null,answers:{}},
+
+  // KONFRONTATION MANN – EROTIK
+  {id:330,player:'mann',cat:'erotik',q:'Wenn sie beim anderen schreit und du es hörst – bist du ehrlich genug zuzugeben was das wirklich in dir auslöst, oder erzählst du dir eine Geschichte darüber?',a:'Ich bin ehrlich mit mir',b:'Ich erzähle mir eine Geschichte',img:null,answers:{}},
+  {id:331,player:'mann',cat:'erotik',q:'Wenn sie mit dem anderen Dinge macht die sie dir verweigert hat – kannst du das ohne Groll tragen oder wirst du es ihr irgendwann vorwerfen?',a:'Ohne Groll',b:'Ich werde es vorwerfen',img:null,answers:{}},
+  {id:332,player:'mann',cat:'erotik',q:'Bist du in der Lage nach dem Treffen mit ihr intim zu sein ohne innerlich Bilder von ihm zu bekämpfen – oder lässt du sie bewusst zu?',a:'Ich lasse sie bewusst zu',b:'Ich kämpfe sie weg',img:null,answers:{}},
+  // ANFAENGER AUFSTOCKUNG
+  {id:400,player:'frau',cat:'anfaenger',q:'Wenn du weisst dass ein fremder Mann dich begehrt und dein Mann es weiss - wuerdest du lieber dieses Gefuehl geniessen oder es schnell abwuergen?',a:'Geniessen und zeigen',b:'Schnell abwuergen',img:null,answers:{}},
+  {id:401,player:'frau',cat:'anfaenger',q:'Wuerdest du lieber deinem Mann ein Foto schicken waehrend du mit einem anderen flirtest - damit er weiss was passiert - oder es fuer dich behalten?',a:'Foto schicken',b:'Fuer mich behalten',img:null,answers:{}},
+  {id:402,player:'frau',cat:'anfaenger',q:'Wenn ein fremder Mann dich im Club anmacht und du spuerst echte Anziehung - wuerdest du lieber deinem Mann danach alles erzaehlen oder nur das Ergebnis?',a:'Alles erzaehlen',b:'Nur das Ergebnis',img:null,answers:{}},
+  {id:403,player:'frau',cat:'anfaenger',q:'Wuerdest du lieber das erste Mal mit Alkohol um die Hemmungen zu senken oder lieber nuechtern damit es wirklich deine Entscheidung ist?',a:'Mit etwas Alkohol',b:'Nuechtern & bewusst',img:null,answers:{}},
+  {id:404,player:'frau',cat:'anfaenger',q:'Wenn du das erste Mal mit einem anderen Mann kuesst - wuerdest du lieber dass dein Mann zuschaut oder es nicht weiss?',a:'Er schaut zu',b:'Er weiss es nicht',img:null,answers:{}},
+  {id:405,player:'frau',cat:'anfaenger',q:'Wuerdest du lieber deine Fantasien erst im Rollenspiel mit deinem Mann ausprobieren oder direkt in die Realitaet gehen?',a:'Erst Rollenspiel',b:'Direkt Realitaet',img:null,answers:{}},
+  {id:406,player:'mann',cat:'anfaenger',q:'Wuerdest du lieber deine Frau beim ersten Mal begleiten und alles miterleben oder ihr die volle Freiheit lassen und danach reden?',a:'Begleiten & miterleben',b:'Volle Freiheit & danach reden',img:null,answers:{}},
+  {id:407,player:'mann',cat:'anfaenger',q:'Wenn sie vom ersten Treffen zurueckkommt und du siehst dass sie erregt und gluecklich ist - was machst du als erstes?',a:'Sie kuesst und nah bei ihr sein',b:'Fragen stellen',img:null,answers:{}},
+  {id:408,player:'mann',cat:'anfaenger',q:'Wuerdest du lieber dass sie beim ersten Mal einen Mann waehlt den du kennst oder einen voelligen Fremden?',a:'Jemanden den ich kenne',b:'Voelligen Fremden',img:null,answers:{}},
+  {id:409,player:'beide',cat:'anfaenger',q:'Wuerdest du lieber gemeinsam einen Erotikfilm schauen um das Thema zu eroeffnen oder lieber direkt offen darueber reden?',a:'Film zusammen schauen',b:'Direkt reden',img:null,answers:{}},
+
+  // FETISCH AUFSTOCKUNG
+  {id:410,player:'frau',cat:'fetisch',q:'Wuerdest du lieber von ihm an den Haaren gezogen werden waehrend er dich von hinten nimmt oder lieber mit einem Tuch verbunden werden sodass du nichts siehst?',a:'An den Haaren gezogen',b:'Verbunden & blind',img:null,answers:{}},
+  {id:411,player:'frau',cat:'fetisch',q:'Wuerdest du lieber dass er dich anspuckt im Eifer des Gefechts oder dass er dich wuergend am Hals haelt - beides nur wenn du es willst?',a:'Anspucken',b:'Wuergegriff am Hals',img:null,answers:{}},
+  {id:412,player:'frau',cat:'fetisch',q:'Wuerdest du lieber in einer Gangbang-Fantasie die Hauptrolle spielen - mehrere Maenner nur fuer dich - oder lieber Zuschauerin bei anderen sein?',a:'Hauptrolle fuer mich',b:'Zuschauerin',img:null,answers:{}},
+  {id:413,player:'frau',cat:'fetisch',q:'Wuerdest du lieber ein Wochenende lang die Sklavin eines Mannes spielen der alle Regeln setzt oder lieber selbst die Herrin sein die alles bestimmt?',a:'Seine Sklavin',b:'Selbst die Herrin',img:null,answers:{}},
+  {id:414,player:'frau',cat:'fetisch',q:'Wuerdest du lieber dass er dich mit einem Spiegel zwingt zuzusehen wenn er dich nimmt oder lieber die Augen verbunden haben damit du nur fuehlen kannst?',a:'Zusehen im Spiegel',b:'Verbunden nur fuehlen',img:null,answers:{}},
+  {id:415,player:'frau',cat:'fetisch',q:'Wuerdest du lieber ein erotisches Video von dir machen das nur ihr beide je sehen werden oder lieber keines aber dafuer Fotos?',a:'Video nur fuer uns',b:'Nur Fotos',img:null,answers:{}},
+  {id:416,player:'mann',cat:'fetisch',q:'Wuerdest du lieber zusehen wie sie von zwei Maennern gleichzeitig genommen wird oder lieber selbst einer der zwei sein?',a:'Nur zuschauen',b:'Selbst einer der zwei sein',img:null,answers:{}},
+  {id:417,player:'mann',cat:'fetisch',q:'Wuerdest du lieber ihr sagen was sie beim Liebhaber tun soll - als stiller Regisseur - oder ihr voellige Freiheit lassen?',a:'Stiller Regisseur',b:'Voellige Freiheit',img:null,answers:{}},
+
+  // ABSURD AUFSTOCKUNG
+  {id:420,player:'beide',cat:'absurd',q:'Wuerdest du lieber beim Sex immer Fahrstuhlmusik im Hintergrund hoeren oder immer einen Kommentator der alles beschreibt?',a:'Fahrstuhlmusik',b:'Sportkommentator',img:null,answers:{}},
+  {id:421,player:'beide',cat:'absurd',q:'Wuerdest du lieber dass dein Orgasmus jedes Mal von Feuerwerk begleitet wird oder von einer Herde Enten die quaken?',a:'Feuerwerk',b:'Quakende Enten',img:null,answers:{}},
+  {id:422,player:'beide',cat:'absurd',q:'Wuerdest du lieber fuer den Rest des Lebens nur noch Sex im Stehen haben oder nur noch liegend - keine andere Position moeglich?',a:'Nur noch im Stehen',b:'Nur noch liegend',img:null,answers:{}},
+  {id:423,player:'beide',cat:'absurd',q:'Wuerdest du lieber dass dein Partner nach dem Sex immer sofort einschlaeft wie ein Lichtschalter oder immer mindestens eine Stunde reden will?',a:'Sofort schlafen',b:'Eine Stunde reden',img:null,answers:{}},
+  {id:424,player:'beide',cat:'absurd',q:'Wuerdest du lieber unsichtbar sein aber immer nach Knoblauch riechen oder sichtbar aber immer einen bunten Clownshut tragen muessen?',a:'Unsichtbar mit Knoblauch',b:'Sichtbar mit Clownshut',img:null,answers:{}},
+  {id:425,player:'beide',cat:'absurd',q:'Wuerdest du lieber dass dein Telefon bei jeder erotischen Nachricht die du schreibst laut den Text vorliest oder dass es sie automatisch an deine Mutter weiterleitet?',a:'Laut vorlesen',b:'An Mutter weiterleiten',img:null,answers:{}},
+  {id:426,player:'beide',cat:'absurd',q:'Wuerdest du lieber bei jedem Kuss automatisch das Lied Atemlos durch die Nacht hoeren oder immer die Tagesschau-Melodie?',a:'Atemlos',b:'Tagesschau-Melodie',img:null,answers:{}},
+  {id:427,player:'beide',cat:'absurd',q:'Wuerdest du lieber dass dein Liebesleben als Doku im Fernsehen laeuft - anonym aber erkennbar fuer Freunde - oder als Roman veroffentlicht wird?',a:'Als TV-Doku',b:'Als Roman',img:null,answers:{}},
+  {id:428,player:'beide',cat:'absurd',q:'Wuerdest du lieber fuer immer nur noch Sex bei Vollmond haben oder nur noch wenn es regnet?',a:'Nur bei Vollmond',b:'Nur wenn es regnet',img:null,answers:{}},
+  {id:429,player:'beide',cat:'absurd',q:'Wuerdest du lieber dass dein Haustier bei jedem Kuss ein Lied pfeift oder dass es applaudiert?',a:'Ein Lied pfeift',b:'Applaudiert',img:null,answers:{}},
+  // PENISKAEFIG – AN DEN MANN
+  {id:500,player:'mann',cat:'keuschheit',q:'Wuerdest du lieber einen Peniskaefig tragen waehrend sie beim Liebhaber ist und weisst dass er frei ist was du nicht bist - oder lieber ohne?',a:'Mit Kaefig',b:'Ohne Kaefig',img:null,answers:{}},
+  {id:501,player:'mann',cat:'keuschheit',q:'Wuerdest du lieber den Schluessel zum Kaefig ihr geben oder dem Liebhaber - sodass nur er entscheiden kann wann du wieder raus darfst?',a:'Ihr geben',b:'Dem Liebhaber geben',img:null,answers:{}},
+  {id:502,player:'mann',cat:'keuschheit',q:'Wuerdest du lieber eine Woche im Kaefig verbringen und weisst sie trifft ihn zweimal - oder drei Tage und weisst du wirst danach nicht ran duerfen?',a:'Eine Woche Kaefig',b:'Drei Tage ohne danach',img:null,answers:{}},
+  {id:503,player:'mann',cat:'keuschheit',q:'Wuerdest du lieber dass sie dir den Kaefig anlegt und dabei laechelt weil sie weiss was sie gleich tut - oder dass sie es schweigend und ernst tut?',a:'Laechelnd',b:'Schweigend & ernst',img:null,answers:{}},
+  {id:504,player:'mann',cat:'keuschheit',q:'Wuerdest du lieber im Kaefig neben ihr schlafen nachdem sie vom Liebhaber kommt - riechen und spueren was war - oder in einem anderen Zimmer?',a:'Neben ihr schlafen',b:'Anderes Zimmer',img:null,answers:{}},
+  {id:505,player:'mann',cat:'keuschheit',q:'Wuerdest du lieber dass sie dir sagt wie es war waehrend du im Kaefig sitzt und nichts tun kannst - oder schweigt sie dabei?',a:'Sie erzaehlt es mir',b:'Sie schweigt',img:null,answers:{}},
+  {id:506,player:'mann',cat:'keuschheit',q:'Wuerdest du lieber nach einer Woche Kaefig von ihr befreit werden und sie nimmt dich sofort - oder erst nach drei weiteren Tagen Warten?',a:'Sofort nach Kaefig',b:'Noch drei Tage warten',img:null,answers:{}},
+
+  // PENISKAEFIG – AN DIE FRAU
+  {id:507,player:'frau',cat:'keuschheit',q:'Wuerdest du lieber deinem Mann den Kaefig anlegen und den Schluessel selbst behalten - oder ihn dem Liebhaber uebergeben als Zeichen wer gerade die Kontrolle hat?',a:'Selbst behalten',b:'Liebhaber bekommt ihn',img:null,answers:{}},
+  {id:508,player:'frau',cat:'keuschheit',q:'Wuerdest du lieber deinen Mann im Kaefig wissen waehrend du beim Liebhaber bist - und das Wissen geniesst du - oder stoert dich das?',a:'Ich geniesse das Wissen',b:'Es stoert mich',img:null,answers:{}},
+  {id:509,player:'frau',cat:'keuschheit',q:'Wuerdest du lieber nach dem Treffen nach Hause kommen und ihm zeigen dass du gut bedient wurdest - waehrend er im Kaefig nicht kann - oder ihn sofort befreien?',a:'Erst zeigen was war',b:'Sofort befreien',img:null,answers:{}},
+
+  // GROESSE & AUSDAUER – AN DIE FRAU – VIELE DETAILFRAGEN
+  {id:510,player:'frau',cat:'liebhaber',q:'Wuerdest du lieber einen Mann mit 18 cm der nach 3 Minuten fertig ist oder einen mit 13 cm der 30 Minuten durchhaelt?',a:'18 cm - 3 Minuten',b:'13 cm - 30 Minuten',img:null,answers:{}},
+  {id:511,player:'frau',cat:'liebhaber',q:'Wuerdest du lieber einen Mann unter 12 cm der genau weiss wo er druecken muss oder einen ueber 20 cm der keine Ahnung hat was er tut?',a:'Unter 12 cm aber gekonnt',b:'Ueber 20 cm aber ungekonnt',img:null,answers:{}},
+  {id:512,player:'frau',cat:'liebhaber',q:'Wuerdest du lieber dass er 15 Minuten lang sehr intensiv ist und dann aufhoert oder 45 Minuten lang gleichmaessig aber weniger intensiv?',a:'15 Minuten sehr intensiv',b:'45 Minuten gleichmaessig',img:null,answers:{}},
+  {id:513,player:'frau',cat:'liebhaber',q:'Wuerdest du lieber einen Mann der genau die richtige Groesse hat um dich voll auszufuellen aber schnell kommt oder einen der etwas kleiner ist aber mehrmals kommen kann?',a:'Volle Ausfuellung - einmal',b:'Etwas kleiner - mehrmals',img:null,answers:{}},
+  {id:514,player:'frau',cat:'liebhaber',q:'Wuerdest du lieber ueber 20 cm haben und weisst es tut am Anfang weh - oder exakt 15 cm die perfekt passen ohne Schmerz?',a:'Ueber 20 cm mit Schmerz',b:'Perfekte 15 cm ohne Schmerz',img:null,answers:{}},
+  {id:515,player:'frau',cat:'liebhaber',q:'Wuerdest du lieber einen Mann der eine Stunde lang macht was du willst ohne selbst zu kommen - oder einen der nach 10 Minuten kommt aber dich dreimal zum Hoehepunkt bringt?',a:'Stundenlang fuer mich',b:'10 Minuten aber dreimal fuer mich',img:null,answers:{}},
+  {id:516,player:'frau',cat:'liebhaber',q:'Wuerdest du lieber dass er so gross ist dass du es am naechsten Tag noch sputest oder lieber dass du danach sofort wieder koennttest?',a:'Noch am naechsten Tag spueren',b:'Sofort wieder koennen',img:null,answers:{}},
+  {id:517,player:'frau',cat:'liebhaber',q:'Wuerdest du lieber einen Mann der genau weiss wie er seinen Finger einsetzt und dich damit zum Hoehepunkt bringt bevor er ueberhaupt anfaengt oder einen der sofort eindringen will?',a:'Erst Finger - dann mehr',b:'Sofort eindringen',img:null,answers:{}},
+  {id:518,player:'frau',cat:'liebhaber',q:'Wuerdest du lieber dass er sehr dick ist aber nur durchschnittlich lang - oder sehr lang aber duenn?',a:'Dick aber nicht so lang',b:'Lang aber duenn',img:null,answers:{}},
+  {id:519,player:'frau',cat:'liebhaber',q:'Wuerdest du lieber mit einem Mann schlafen der exakt zweimal so gross ist wie dein Mann - oder einem der exakt gleich gross ist aber dreimal so ausdauernd?',a:'Doppelt so gross',b:'Gleich gross - dreifach ausdauernd',img:null,answers:{}},
+  {id:520,player:'frau',cat:'liebhaber',q:'Wuerdest du lieber einen Mann der dich fragt ob es gut ist alle zwei Minuten - oder einen der einfach weiss wann er was tun soll ohne zu fragen?',a:'Fragt alle zwei Minuten',b:'Weiss es ohne zu fragen',img:null,answers:{}},
+  {id:521,player:'frau',cat:'liebhaber',q:'Wuerdest du lieber einen Mann der beim Sex immer schneller wird bis zum Ende oder einen der das Tempo wechselt - mal langsam mal hart - je nach deiner Reaktion?',a:'Immer schneller',b:'Tempo nach meiner Reaktion',img:null,answers:{}},
+  {id:522,player:'frau',cat:'liebhaber',q:'Wuerdest du lieber einen Mann der dich erst eine Stunde lang verwöhnt bis du fleht und dann erst eindringt oder einen der direkt und hart loslegt?',a:'Erst eine Stunde verwoehn',b:'Direkt und hart',img:null,answers:{}},
+
+  // GROESSE & VERGLEICH – AN DEN MANN
+  {id:530,player:'mann',cat:'liebhaber',q:'Wenn sie dir sagt er hat 18 cm und du weisst du hast 14 - wuerdest du lieber genau wissen wie es sich anfuehlt fuer sie oder es nicht wissen?',a:'Genau wissen',b:'Lieber nicht wissen',img:null,answers:{}},
+  {id:531,player:'mann',cat:'liebhaber',q:'Wuerdest du lieber dass sie nach dem Treffen sagt er war groesser als ich dachte - oder er war kleiner als erwartet?',a:'Groesser als erwartet',b:'Kleiner als erwartet',img:null,answers:{}},
+  {id:532,player:'mann',cat:'liebhaber',q:'Wuerdest du lieber dass sie dir nach dem Sex mit ihm zeigt wie er sich angefuehlt hat - mit den Haenden als Groessenvergleich - oder lieber nicht?',a:'Ja zeig mir',b:'Lieber nicht',img:null,answers:{}},
+  {id:533,player:'mann',cat:'liebhaber',q:'Wenn er eine Stunde mit ihr braucht und du weisst du schaffst 15 Minuten - wuerdest du lieber zuschauen oder draussen warten?',a:'Zuschauen',b:'Draussen warten',img:null,answers:{}},
+  {id:534,player:'mann',cat:'liebhaber',q:'Wuerdest du lieber von ihr hoeren er hat laenger gehalten als du je koennttest - und das erregt dich - oder macht dich das eher klein?',a:'Es erregt mich',b:'Es macht mich klein',img:null,answers:{}},
+
+  // NEUE KEUSCHHEIT KATEGORIE HINZUFUEGEN
+  {id:540,player:'beide',cat:'keuschheit',q:'Wuerdest du lieber Keuschheit als dauerhaftes Element in eure Beziehung einbauen oder nur als gelegentliches Spiel?',a:'Dauerhaftes Element',b:'Nur gelegentlich',img:null,answers:{}},
+  {id:541,player:'frau',cat:'keuschheit',q:'Wuerdest du lieber die volle Kontrolle ueber seinen Kaefig haben - Schluessel immer bei dir - oder ihm manchmal die Illusion der Kontrolle lassen?',a:'Volle Kontrolle bei mir',b:'Ihm manchmal Illusion lassen',img:null,answers:{}},
+  {id:542,player:'frau',cat:'keuschheit',q:'Wuerdest du lieber ihm erlauben sich selbst zu befriedigen waehrend du beim Liebhaber bist - oder soll er warten bis du entscheidest?',a:'Er darf selbst',b:'Er wartet auf mich',img:null,answers:{}},
+  {id:550,player:'mann',cat:'keuschheit',q:'Wuerdest du lieber den Kaefig freiwillig anlegen oder lieber dass sie ihn anlegt ohne dich vorher zu fragen?',a:'Freiwillig selbst',b:'Sie legt ihn an ohne Frage',img:null,answers:{}},
+  {id:551,player:'mann',cat:'keuschheit',q:'Wuerdest du lieber im Kaefig erregt sein und nichts tun koennen waehrend sie neben dir liegt - oder lieber im anderen Zimmer schlafen?',a:'Neben ihr - erregt und hilflos',b:'Anderes Zimmer',img:null,answers:{}},
+  {id:552,player:'mann',cat:'keuschheit',q:'Wuerdest du lieber dass sie dir sagt wie lange noch - und es laenger ist als du dachtest - oder dass sie gar nichts sagt und du nicht weisst wann es endet?',a:'Sie sagt wie lange',b:'Kein Wort - volle Ungewissheit',img:null,answers:{}},
+  {id:553,player:'frau',cat:'keuschheit',q:'Wuerdest du lieber ihm sagen er kommt erst wieder raus wenn der Liebhaber es erlaubt - oder wenn du selbst Lust hast ihn zu befreien?',a:'Wenn Liebhaber es erlaubt',b:'Wenn ich Lust habe',img:null,answers:{}},
+  {id:554,player:'frau',cat:'keuschheit',q:'Wuerdest du lieber ihm den Kaefig tagsüber anlegen damit er den ganzen Tag daran denkt was du tust - oder nur nachts?',a:'Tagsüber',b:'Nur nachts',img:null,answers:{}},
+  {id:555,player:'frau',cat:'keuschheit',q:'Wuerdest du lieber dass er im Kaefig zuschauen muss oder dass er draussen wartet und sich vorstellt was passiert?',a:'Im Kaefig zuschauen',b:'Draussen vorstellen',img:null,answers:{}},
+  {id:556,player:'beide',cat:'keuschheit',q:'Wuerdest du lieber Keuschheit mit einem festen Zeitplan - z.B. immer montags frei - oder komplett nach ihrer Laune ohne Plan?',a:'Fester Zeitplan',b:'Nach ihrer Laune',img:null,answers:{}},
+
+
+
+
+
+
+];
+
+// ─── STORAGE HELPERS ──────────────────────────────────────────────────────────
+function saveData(questions) {
+  localStorage.setItem('wdl_questions', JSON.stringify(questions));
+}
+
+function loadData() {
+  const stored = localStorage.getItem('wdl_questions');
+  if (stored) {
+    const parsed = JSON.parse(stored);
+    // If stored has fewer questions than current default, reset to new version
+    if (parsed.length < DEFAULT_QUESTIONS.length) {
+      saveData(DEFAULT_QUESTIONS);
+      return DEFAULT_QUESTIONS;
+    }
+    return parsed;
+  }
+  saveData(DEFAULT_QUESTIONS);
+  return DEFAULT_QUESTIONS;
+}
+
+function getQuestions() { return loadData(); }
+
+function savePw(pw) { localStorage.setItem('wdl_pw', pw); }
+function getPw() { return localStorage.getItem('wdl_pw') || DEFAULT_PW; }
+
+// ─── AUTH ─────────────────────────────────────────────────────────────────────
+function login() {
+  const pw = document.getElementById('pwInput').value;
+  if (pw === getPw()) {
+    document.getElementById('loginScreen').style.display = 'none';
+    document.getElementById('app').style.display = 'block';
+    initApp();
+  } else {
+    document.getElementById('loginError').textContent = 'Falsches Passwort.';
+  }
+}
+
+function logout() {
+  document.getElementById('loginScreen').style.display = 'flex';
+  document.getElementById('app').style.display = 'none';
+  document.getElementById('pwInput').value = '';
+}
+
+function showSetPw() { document.getElementById('setPwModal').classList.add('open'); }
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+
+function confirmSetPw() {
+  const p1 = document.getElementById('setPw1').value;
+  const p2 = document.getElementById('setPw2').value;
+  if (!p1) { document.getElementById('setPwErr').textContent = 'Bitte Passwort eingeben.'; return; }
+  if (p1 !== p2) { document.getElementById('setPwErr').textContent = 'Passwörter stimmen nicht überein.'; return; }
+  savePw(p1);
+  closeModal('setPwModal');
+  document.getElementById('setPwErr').textContent = '';
+}
+
+function changePw() {
+  const p1 = document.getElementById('newPw1').value;
+  const p2 = document.getElementById('newPw2').value;
+  if (!p1 || p1 !== p2) { document.getElementById('pwMsg').textContent = 'Passwörter stimmen nicht überein.'; return; }
+  savePw(p1);
+  document.getElementById('pwMsg').textContent = '✅ Passwort gespeichert!';
+  document.getElementById('newPw1').value = '';
+  document.getElementById('newPw2').value = '';
+}
+
+// ─── INIT ─────────────────────────────────────────────────────────────────────
+function initApp() {
+  renderCatFilters();
+  buildFilteredList();
+  renderQuestion();
+  renderEditFilters();
+  renderQuestionList();
+  renderResults();
+}
+
+// ─── TAB SWITCHING ────────────────────────────────────────────────────────────
+function showTab(tab) {
+  ['play','edit','results','settings'].forEach(t => {
+    document.getElementById('pane-'+t).style.display = t === tab ? 'block' : 'none';
+    document.getElementById('tab-'+t).classList.toggle('active', t === tab);
+  });
+  currentTab = tab;
+  if (tab === 'results') renderResults();
+  if (tab === 'edit') renderQuestionList();
+}
+
+// ─── PLAY ─────────────────────────────────────────────────────────────────────
+function setPlayer(p) {
+  currentPlayer = p;
+  document.getElementById('player-w').classList.toggle('active', p === 'frau');
+  document.getElementById('player-m').classList.toggle('active', p === 'mann');
+  currentCatFilter = 'all';
+  renderCatFilters();
+  buildFilteredList();
+  renderQuestion();
+}
+
+function renderCatFilters() {
+  const el = document.getElementById('catFilter');
+  let html = '<button class="cat-btn '+(currentCatFilter==='all'?'active':'')+'" onclick="setCat(\'all\')">Alle</button>';
+  Object.entries(CATEGORIES).forEach(([k,v]) => {
+    html += `<button class="cat-btn ${currentCatFilter===k?'active':''}" onclick="setCat('${k}')">${v}</button>`;
+  });
+  el.innerHTML = html;
+}
+
+function setCat(cat) {
+  currentCatFilter = cat;
+  renderCatFilters();
+  buildFilteredList();
+  currentIdx = 0;
+  renderQuestion();
+}
+
+function buildFilteredList() {
+  const qs = getQuestions();
+  filteredQs = qs.filter(q => {
+    const playerMatch = q.player === currentPlayer || q.player === 'beide';
+    const catMatch = currentCatFilter === 'all' || q.cat === currentCatFilter;
+    return playerMatch && catMatch;
+  });
+}
+
+function renderQuestion() {
+  const el = document.getElementById('qText');
+  const catEl = document.getElementById('qCatLabel');
+  const imgEl = document.getElementById('qImg');
+  const optEl = document.getElementById('optionsRow');
+  const progEl = document.getElementById('progressInfo');
+
+  if (filteredQs.length === 0) {
+    el.textContent = 'Keine Fragen in dieser Kategorie.';
+    catEl.textContent = '';
+    imgEl.style.display = 'none';
+    optEl.innerHTML = '';
+    progEl.textContent = '';
+    return;
+  }
+
+  if (currentIdx >= filteredQs.length) currentIdx = 0;
+  const q = filteredQs[currentIdx];
+
+  catEl.textContent = CATEGORIES[q.cat] || q.cat;
+  el.textContent = q.q;
+  progEl.textContent = `Frage ${currentIdx+1} von ${filteredQs.length}`;
+
+  if (q.img) {
+    imgEl.src = q.img;
+    imgEl.style.display = 'block';
+  } else {
+    imgEl.style.display = 'none';
+  }
+
+  const savedAns = q.answers && q.answers[currentPlayer];
+  optEl.innerHTML = `
+    <button class="option-btn ${savedAns==='a'?'selected-a':''}" onclick="saveAnswer('a')">🅐 ${q.a}</button>
+    <button class="option-btn ${savedAns==='b'?'selected-b':''}" onclick="saveAnswer('b')">🅑 ${q.b}</button>
+  `;
+}
+
+function saveAnswer(ans) {
+  const qs = getQuestions();
+  const q = filteredQs[currentIdx];
+  const idx = qs.findIndex(x => x.id === q.id);
+  if (idx !== -1) {
+    if (!qs[idx].answers) qs[idx].answers = {};
+    qs[idx].answers[currentPlayer] = ans;
+    saveData(qs);
+    filteredQs[currentIdx] = qs[idx];
+  }
+  renderQuestion();
+  setTimeout(nextQuestion, 500);
+}
+
+function nextQuestion() {
+  currentIdx = (currentIdx + 1) % filteredQs.length;
+  renderQuestion();
+}
+
+function prevQuestion() {
+  currentIdx = (currentIdx - 1 + filteredQs.length) % filteredQs.length;
+  renderQuestion();
+}
+
+function shuffleQuestions() {
+  filteredQs = filteredQs.sort(() => Math.random() - 0.5);
+  currentIdx = 0;
+  renderQuestion();
+}
+
+// ─── EDIT ─────────────────────────────────────────────────────────────────────
+let editCatFilter = 'all';
+
+function renderEditFilters() {
+  const el = document.getElementById('editCatFilter');
+  let html = `<button class="cat-btn ${editCatFilter==='all'?'active':''}" onclick="setEditCat('all')">Alle</button>`;
+  Object.entries(CATEGORIES).forEach(([k,v]) => {
+    html += `<button class="cat-btn ${editCatFilter===k?'active':''}" onclick="setEditCat('${k}')">${v}</button>`;
+  });
+  el.innerHTML = html;
+}
+
+function setEditCat(cat) {
+  editCatFilter = cat;
+  renderEditFilters();
+  renderQuestionList();
+}
+
+function renderQuestionList() {
+  const qs = getQuestions().filter(q => editCatFilter === 'all' || q.cat === editCatFilter);
+  const el = document.getElementById('questionList');
+  if (qs.length === 0) { el.innerHTML = '<p style="color:var(--muted)">Keine Fragen.</p>'; return; }
+  el.innerHTML = qs.map(q => `
+    <div class="question-item" style="flex-direction:column;align-items:stretch;gap:8px;">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div style="flex:1">
+          <div class="q-cat">${CATEGORIES[q.cat]||q.cat} · ${q.player==='frau'?'👩 Frau':q.player==='mann'?'👨 Mann':'👫 Beide'}</div>
+          <div class="q-text">${q.q}</div>
+          <div style="font-size:0.8rem;color:var(--muted);margin-top:4px;">A: ${q.a} &nbsp;|&nbsp; B: ${q.b}</div>
+        </div>
+        <button class="btn-sm red" onclick="deleteQuestion(${q.id})">✕</button>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding-top:4px;border-top:1px solid var(--border)">
+        ${q.img
+          ? `<img src="${q.img}" style="width:80px;height:54px;object-fit:cover;border-radius:6px;cursor:pointer" onclick="removeImg(${q.id})" title="Klicken zum Entfernen">`
+          : `<div style="width:80px;height:54px;border:2px dashed var(--border);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:var(--muted);cursor:pointer" onclick="document.getElementById('imgQ${q.id}').click()">📷 Bild</div>`
         }
+        <div style="font-size:0.75rem;color:var(--muted)">
+          ${q.img ? '✅ Bild vorhanden – klicken zum Entfernen' : 'Kein Bild – klicke um eines hinzuzufügen'}
+        </div>
+        <input type="file" id="imgQ${q.id}" accept="image/*" style="display:none" onchange="addImgToQuestion(${q.id}, event)">
+        ${q.img ? '' : `<button class="btn-sm ghost" style="font-size:0.75rem" onclick="document.getElementById('imgQ${q.id}').click()">📷 Bild hinzufügen</button>`}
+      </div>
+    </div>
+  `).join('');
+}
 
-        function getDifficultyText(difficulty) {
-            switch(difficulty) {
-                case 'easy': return 'Einfach';
-                case 'medium': return 'Mittel';
-                case 'hard': return 'Herausfordernd';
-                default: return '';
-            }
-        }
+function handleImg(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    pendingImg = ev.target.result;
+    const prev = document.getElementById('imgPreview');
+    prev.src = pendingImg;
+    prev.style.display = 'block';
+  };
+  reader.readAsDataURL(file);
+}
 
-        // Kategorie auswählen
-        function selectCategory(category) {
-            currentState.selectedCategory = category;
-            currentState.selectedOption = null;
-            currentState.selectedFollowUp = null;
-            
-            displayCategories();
-            displayCategoryContent(category);
-            addToHistory(`Kategorie: ${category.title}`, category.icon);
-            
-            navigationEl.style.display = 'flex';
-            nextBtn.style.display = 'none';
-            saveBtn.style.display = 'none';
-            savedScenariosEl.classList.remove('active');
-        }
+function addQuestion() {
+  const player = document.getElementById('newPlayer').value;
+  const cat = document.getElementById('newCat').value;
+  const q = document.getElementById('newQ').value.trim();
+  const a = document.getElementById('newA').value.trim();
+  const b = document.getElementById('newB').value.trim();
 
-        // Kategorie-Inhalt anzeigen
-        function displayCategoryContent(category) {
-            contentDisplayEl.innerHTML = '';
-            contentDisplayEl.classList.add('active');
-            
-            const title = document.createElement('h2');
-            title.className = 'content-title';
-            title.innerHTML = `${category.icon} ${category.title} ${category.intimate ? '<span class="difficulty intimate">INTIM</span>' : ''}`;
-            contentDisplayEl.appendChild(title);
-            
-            if (category.content.length === 0) {
-                const emptyMessage = document.createElement('div');
-                emptyMessage.className = 'option-item';
-                emptyMessage.innerHTML = `<div class="option-text">Keine Inhalte verfügbar für diese Kategorie.</div>`;
-                contentDisplayEl.appendChild(emptyMessage);
-                return;
-            }
-            
-            const list = document.createElement('ul');
-            list.className = 'option-list';
-            
-            category.content.forEach(option => {
-                const item = document.createElement('li');
-                item.className = `option-item ${option.intimate ? 'intimate' : ''}`;
-                
-                const textDiv = document.createElement('div');
-                textDiv.className = 'option-text';
-                if (option.intimate) {
-                    textDiv.innerHTML = `<span class="intimate-text">${option.text}</span>`;
-                } else {
-                    textDiv.textContent = option.text;
-                }
-                
-                item.appendChild(textDiv);
-                
-                if (option.details) {
-                    const detailsDiv = document.createElement('div');
-                    detailsDiv.className = 'option-details';
-                    detailsDiv.textContent = option.details;
-                    item.appendChild(detailsDiv);
-                }
-                
-                const actionsDiv = document.createElement('div');
-                actionsDiv.className = 'option-actions';
-                
-                const selectBtn = document.createElement('button');
-                selectBtn.className = `btn ${option.intimate ? 'btn-intimate' : 'btn-select'}`;
-                selectBtn.innerHTML = option.intimate ? '💖 Diese Option wählen' : 'Diese Option wählen';
-                selectBtn.dataset.id = option.id;
-                
-                selectBtn.addEventListener('click', () => {
-                    selectOption(option);
-                });
-                
-                actionsDiv.appendChild(selectBtn);
-                item.appendChild(actionsDiv);
-                list.appendChild(item);
-            });
-            
-            contentDisplayEl.appendChild(list);
-        }
+  if (!q || !a || !b) { alert('Bitte Frage und beide Optionen eingeben.'); return; }
 
-        // Option auswählen
-        function selectOption(option) {
-            currentState.selectedOption = option;
-            currentState.stats.totalSelections++;
-            if (option.intimate) {
-                currentState.stats.intimateSelections++;
-            }
-            
-            displayOptionFollowUps(option);
-            addToHistory(`Option: ${option.text.substring(0, 60)}...`, '💬');
-            
-            nextBtn.style.display = option.followUps && option.followUps.length > 0 ? 'inline-block' : 'none';
-            saveBtn.style.display = 'inline-block';
-            
-            updateStats();
-        }
+  const qs = getQuestions();
+  const newId = Math.max(0, ...qs.map(x => x.id)) + 1;
+  qs.push({ id: newId, player, cat, q, a, b, img: pendingImg, answers: {} });
+  saveData(qs);
 
-        // Folgoptionen anzeigen
-        function displayOptionFollowUps(option) {
-            contentDisplayEl.innerHTML = '';
-            
-            const title = document.createElement('h2');
-            title.className = 'content-title';
-            title.innerHTML = `${currentState.selectedCategory.icon} Ausgewählte Option ${option.intimate ? '<span class="difficulty intimate">INTIM</span>' : ''}`;
-            contentDisplayEl.appendChild(title);
-            
-            const selectedOption = document.createElement('div');
-            selectedOption.className = `option-item ${option.intimate ? 'intimate' : ''}`;
-            
-            const textDiv = document.createElement('div');
-            textDiv.className = 'option-text';
-            if (option.intimate) {
-                textDiv.innerHTML = `<span class="intimate-text">${option.text}</span>`;
-            } else {
-                textDiv.textContent = option.text;
-            }
-            
-            selectedOption.appendChild(textDiv);
-            
-            if (option.details) {
-                const detailsDiv = document.createElement('div');
-                detailsDiv.className = 'option-details';
-                detailsDiv.textContent = option.details;
-                selectedOption.appendChild(detailsDiv);
-            }
-            
-            contentDisplayEl.appendChild(selectedOption);
-            
-            if (option.followUps && option.followUps.length > 0) {
-                const followUpTitle = document.createElement('h3');
-                followUpTitle.className = 'content-title';
-                followUpTitle.textContent = 'Wie könnte es weitergehen?';
-                followUpTitle.style.fontSize = '1.2rem';
-                followUpTitle.style.marginTop = '20px';
-                contentDisplayEl.appendChild(followUpTitle);
-                
-                const list = document.createElement('ul');
-                list.className = 'option-list';
-                
-                option.followUps.forEach((followUp, index) => {
-                    const item = document.createElement('li');
-                    item.className = `option-item ${followUp.intimate ? 'intimate' : ''}`;
-                    
-                    const textDiv = document.createElement('div');
-                    textDiv.className = 'option-text';
-                    if (followUp.intimate) {
-                        textDiv.innerHTML = `<span class="intimate-text">${followUp.text}</span>`;
-                    } else {
-                        textDiv.textContent = followUp.text;
-                    }
-                    
-                    item.appendChild(textDiv);
-                    
-                    const actionsDiv = document.createElement('div');
-                    actionsDiv.className = 'option-actions';
-                    
-                    const selectBtn = document.createElement('button');
-                    selectBtn.className = `btn ${followUp.intimate ? 'btn-intimate' : 'btn-select'}`;
-                    selectBtn.textContent = 'Diesen Weg wählen';
-                    selectBtn.dataset.index = index;
-                    
-                    selectBtn.addEventListener('click', () => {
-                        selectFollowUp(followUp, index);
-                    });
-                    
-                    actionsDiv.appendChild(selectBtn);
-                    item.appendChild(actionsDiv);
-                    list.appendChild(item);
-                });
-                
-                contentDisplayEl.appendChild(list);
-            } else {
-                displayEndOfPath(option);
-            }
-        }
+  document.getElementById('newQ').value = '';
+  document.getElementById('newA').value = '';
+  document.getElementById('newB').value = '';
+  document.getElementById('imgPreview').style.display = 'none';
+  document.getElementById('imgUpload').value = '';
+  pendingImg = null;
 
-        // Folgoption auswählen
-        function selectFollowUp(followUp, index) {
-            currentState.selectedFollowUp = { followUp, index };
-            currentState.stats.totalSelections++;
-            if (followUp.intimate) {
-                currentState.stats.intimateSelections++;
-            }
-            
-            if (followUp.isEnd) {
-                displayEndOfPath(followUp);
-                addToHistory(`Fortsetzung: ${followUp.text.substring(0, 60)}... [ENDE]`, '🏁');
-            } else if (followUp.followUps && followUp.followUps.length > 0) {
-                displayOptionFollowUps(followUp);
-                addToHistory(`Fortsetzung: ${followUp.text.substring(0, 60)}...`, '→');
-            }
-            
-            nextBtn.style.display = followUp.followUps && followUp.followUps.length > 0 ? 'inline-block' : 'none';
-            saveBtn.style.display = 'inline-block';
-            
-            updateStats();
-        }
+  renderQuestionList();
+  buildFilteredList();
+  alert('✅ Frage hinzugefügt!');
+}
 
-        // Ende eines Handlungsstrangs anzeigen
-        function displayEndOfPath(item) {
-            contentDisplayEl.innerHTML = '';
-            
-            const title = document.createElement('h2');
-            title.className = 'content-title';
-            title.innerHTML = `✨ Vorschlag abgeschlossen ✨`;
-            contentDisplayEl.appendChild(title);
-            
-            const selectedOption = document.createElement('div');
-            selectedOption.className = `option-item ${item.intimate ? 'intimate' : ''}`;
-            
-            const textDiv = document.createElement('div');
-            textDiv.className = 'option-text';
-            if (item.intimate) {
-                textDiv.innerHTML = `<span class="intimate-text">${item.text}</span>`;
-            } else {
-                textDiv.textContent = item.text;
-            }
-            
-            selectedOption.appendChild(textDiv);
-            contentDisplayEl.appendChild(selectedOption);
-            
-            const endMessage = document.createElement('div');
-            endMessage.className = 'option-item';
-            endMessage.innerHTML = `
-                <div class="option-text" style="text-align: center; padding: 30px;">
-                    <strong>Dieser Vorschlag ist jetzt vollständig.</strong><br><br>
-                    <div style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
-                        <div>Du könntest nun:</div>
-                        <div>1. Zurück zur vorherigen Entscheidung gehen</div>
-                        <div>2. Eine neue Kategorie auswählen</div>
-                        <div>3. Dieses Szenario mit deinem Partner besprechen</div>
-                        <div>4. Dieses Szenario für später speichern</div>
-                        <div style="margin-top: 15px; font-style: italic; color: #ff6b8b;">
-                            Denke daran: Jede Idee kann angepasst werden, um für euch beide zu funktionieren.
-                        </div>
-                    </div>
-                </div>
-            `;
-            contentDisplayEl.appendChild(endMessage);
-        }
+function deleteQuestion(id) {
+  if (!confirm('Frage löschen?')) return;
+  let qs = getQuestions().filter(q => q.id !== id);
+  saveData(qs);
+  renderQuestionList();
+  buildFilteredList();
+}
 
-        // Szenario speichern
-        function saveScenario() {
-            if (!currentState.selectedOption) return;
-            
-            const scenario = {
-                id: Date.now(),
-                category: currentState.selectedCategory?.title || 'Unbekannt',
-                option: currentState.selectedOption.text,
-                followUp: currentState.selectedFollowUp?.followUp?.text || null,
-                timestamp: new Date().toLocaleString(),
-                intimate: currentState.selectedOption.intimate || (currentState.selectedFollowUp?.followUp?.intimate || false)
-            };
-            
-            currentState.savedScenarios.push(scenario);
-            updateSavedScenarios();
-            addToHistory('Szenario gespeichert', '💾');
-            
-            // Kurze Bestätigung anzeigen
-            const saveBtn = document.getElementById('saveBtn');
-            const originalText = saveBtn.innerHTML;
-            saveBtn.innerHTML = '✅ Gespeichert!';
-            saveBtn.style.backgroundColor = '#2e7d32';
-            
-            setTimeout(() => {
-                saveBtn.innerHTML = originalText;
-                saveBtn.style.backgroundColor = '';
-            }, 1500);
-        }
+function addImgToQuestion(id, event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    const qs = getQuestions();
+    const idx = qs.findIndex(q => q.id === id);
+    if (idx !== -1) {
+      qs[idx].img = ev.target.result;
+      saveData(qs);
+      renderQuestionList();
+      buildFilteredList();
+    }
+  };
+  reader.readAsDataURL(file);
+}
 
-        // Gespeicherte Szenarien aktualisieren
-        function updateSavedScenarios() {
-            savedListEl.innerHTML = '';
-            
-            if (currentState.savedScenarios.length === 0) {
-                savedListEl.innerHTML = '<div class="scenario-item">Noch keine Szenarien gespeichert.</div>';
-                savedScenariosEl.classList.remove('active');
-                return;
-            }
-            
-            savedScenariosEl.classList.add('active');
-            
-            // Zeige die gespeicherten Szenarien (neueste zuerst)
-            const reversedScenarios = [...currentState.savedScenarios].reverse();
-            
-            reversedScenarios.forEach((scenario, index) => {
-                const item = document.createElement('div');
-                item.className = `scenario-item ${scenario.intimate ? 'intimate' : ''}`;
-                
-                const content = document.createElement('div');
-                content.style.flexGrow = '1';
-                content.innerHTML = `
-                    <div><strong>${scenario.category}</strong></div>
-                    <div style="font-size: 0.9rem; margin-top: 5px; color: #b8c1ec;">${scenario.option.substring(0, 80)}${scenario.option.length > 80 ? '...' : ''}</div>
-                    <div style="font-size: 0.8rem; margin-top: 5px; color: #8d99ae;">${scenario.timestamp}</div>
-                `;
-                
-                const deleteBtn = document.createElement('button');
-                deleteBtn.className = 'btn';
-                deleteBtn.style.padding = '5px 10px';
-                deleteBtn.style.fontSize = '0.8rem';
-                deleteBtn.style.backgroundColor = '#c62828';
-                deleteBtn.textContent = 'Löschen';
-                deleteBtn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    deleteSavedScenario(scenario.id);
-                });
-                
-                item.appendChild(content);
-                item.appendChild(deleteBtn);
-                item.addEventListener('click', () => {
-                    loadSavedScenario(scenario);
-                });
-                
-                savedListEl.appendChild(item);
-            });
-            
-            updateStats();
-        }
+function removeImg(id) {
+  if (!confirm('Bild entfernen?')) return;
+  const qs = getQuestions();
+  const idx = qs.findIndex(q => q.id === id);
+  if (idx !== -1) {
+    qs[idx].img = null;
+    saveData(qs);
+    renderQuestionList();
+    buildFilteredList();
+  }
+}
 
-        // Gespeichertes Szenario laden
-        function loadSavedScenario(scenario) {
-            // Finde die Kategorie
-            const category = roleplayData.categories.find(cat => cat.title === scenario.category);
-            if (category) {
-                selectCategory(category);
-                addToHistory(`Geladen: ${scenario.category}`, '📂');
-            }
-        }
+// ─── RESULTS ──────────────────────────────────────────────────────────────────
+function renderResults() {
+  const qs = getQuestions();
+  const answered = qs.filter(q => q.answers && Object.keys(q.answers).length > 0);
 
-        // Gespeichertes Szenario löschen
-        function deleteSavedScenario(id) {
-            currentState.savedScenarios = currentState.savedScenarios.filter(s => s.id !== id);
-            updateSavedScenarios();
-            addToHistory('Szenario gelöscht', '🗑️');
-        }
+  if (answered.length === 0) {
+    document.getElementById('resultsContent').innerHTML = '<p style="color:var(--muted)">Noch keine Antworten vorhanden. Spiele zuerst das Spiel!</p>';
+    return;
+  }
 
-        // Zurück-Button Funktion
-        function goBack() {
-            if (currentState.selectedFollowUp) {
-                // Zurück zur Option
-                currentState.selectedFollowUp = null;
-                displayOptionFollowUps(currentState.selectedOption);
-                addToHistory(`← Zurück`, '↩️');
-            } else if (currentState.selectedOption) {
-                // Zurück zur Kategorie
-                currentState.selectedOption = null;
-                displayCategoryContent(currentState.selectedCategory);
-                addToHistory(`← Zurück zur Kategorie`, '↩️');
-            } else if (currentState.selectedCategory) {
-                // Zurück zur Kategorieauswahl
-                currentState.selectedCategory = null;
-                contentDisplayEl.classList.remove('active');
-                navigationEl.style.display = 'none';
-                saveBtn.style.display = 'none';
-                displayCategories();
-                addToHistory(`← Zurück zur Übersicht`, '↩️');
-            }
-            
-            nextBtn.style.display = 'none';
-        }
+  // Group by category
+  const byCat = {};
+  answered.forEach(q => {
+    if (!byCat[q.cat]) byCat[q.cat] = [];
+    byCat[q.cat].push(q);
+  });
 
-        // Weiter-Button Funktion (nächste Folgoption)
-        function goNext() {
-            if (currentState.selectedFollowUp && currentState.selectedFollowUp.followUp.followUps) {
-                // Zeige die nächsten Folgoptionen
-                displayOptionFollowUps(currentState.selectedFollowUp.followUp);
-            }
-        }
+  let html = '<div class="results-grid">';
+  Object.entries(byCat).forEach(([cat, qs]) => {
+    const aCount = qs.reduce((acc, q) => acc + Object.values(q.answers).filter(v=>v==='a').length, 0);
+    const bCount = qs.reduce((acc, q) => acc + Object.values(q.answers).filter(v=>v==='b').length, 0);
+    const total = aCount + bCount;
+    const aPct = total ? Math.round(aCount/total*100) : 0;
+    const bPct = 100 - aPct;
 
-        // Zur Geschichte hinzufügen
-        function addToHistory(text, icon = '📝') {
-            const timestamp = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
-            currentState.history.push({ text, timestamp, icon });
-            updateHistoryDisplay();
-            
-            // Begrenze die History auf 50 Einträge
-            if (currentState.history.length > 50) {
-                currentState.history = currentState.history.slice(-50);
-            }
-        }
+    html += `
+      <div class="result-card">
+        <h3>${CATEGORIES[cat]||cat}</h3>
+        <div style="font-size:0.8rem;color:var(--muted);margin-bottom:12px;">${qs.length} Fragen beantwortet</div>
+        <div class="result-bar-row">
+          <div class="result-bar-label">Option A gewählt: ${aPct}%</div>
+          <div class="result-bar"><div class="result-bar-fill" style="width:${aPct}%;background:var(--accent)"></div></div>
+        </div>
+        <div class="result-bar-row">
+          <div class="result-bar-label">Option B gewählt: ${bPct}%</div>
+          <div class="result-bar"><div class="result-bar-fill" style="width:${bPct}%;background:var(--accent2)"></div></div>
+        </div>
+        <div style="margin-top:12px;font-size:0.8rem;color:var(--muted)">
+          ${generateInsight(cat, aPct)}
+        </div>
+      </div>
+    `;
+  });
+  html += '</div>';
 
-        // Geschichte aktualisieren
-        function updateHistoryDisplay() {
-            historyListEl.innerHTML = '';
-            
-            if (currentState.history.length === 0) {
-                historyListEl.innerHTML = '<div class="history-item"><div class="history-text">Noch keine Auswahl getroffen.</div></div>';
-                return;
-            }
-            
-            // Zeige die Einträge (neueste zuerst)
-            const reversedHistory = [...currentState.history].reverse();
-            
-            reversedHistory.forEach(entry => {
-                const item = document.createElement('div');
-                item.className = 'history-item';
-                item.innerHTML = `
-                    <div class="history-text">${entry.icon} ${entry.text}</div>
-                    <div class="history-time">${entry.timestamp}</div>
-                `;
-                historyListEl.appendChild(item);
-            });
-        }
+  // Overall summary
+  const totalAns = answered.reduce((acc,q) => acc + Object.keys(q.answers).length, 0);
+  html = `<div style="color:var(--muted);font-size:0.9rem;margin-bottom:20px;">Insgesamt ${totalAns} Antworten in ${answered.length} Fragen.</div>` + html;
 
-        // Statistiken aktualisieren
-        function updateStats() {
-            // Zähle alle Szenarien
-            let totalScenarios = 0;
-            let intimateScenarios = 0;
-            
-            roleplayData.categories.forEach(category => {
-                category.content.forEach(option => {
-                    totalScenarios++;
-                    if (option.intimate) intimateScenarios++;
-                    
-                    // Zähle auch FollowUps
-                    if (option.followUps) {
-                        option.followUps.forEach(followUp => {
-                            totalScenarios++;
-                            if (followUp.intimate) intimateScenarios++;
-                            
-                            if (followUp.followUps) {
-                                followUp.followUps.forEach(followUp2 => {
-                                    totalScenarios++;
-                                    if (followUp2.intimate) intimateScenarios++;
-                                });
-                            }
-                        });
-                    }
-                });
-            });
-            
-            totalScenariosEl.textContent = totalScenarios;
-            intimateCountEl.textContent = intimateScenarios;
-            selectedCountEl.textContent = currentState.stats.totalSelections;
-            savedCountEl.textContent = currentState.savedScenarios.length;
-        }
+  document.getElementById('resultsContent').innerHTML = html;
+}
 
-        // Zurücksetzen
-        function resetApp() {
-            currentState = {
-                selectedCategory: null,
-                selectedOption: null,
-                selectedFollowUp: null,
-                history: [],
-                savedScenarios: currentState.savedScenarios, // Behalte gespeicherte Szenarien
-                showIntimate: currentState.showIntimate, // Behalte den Intim-Filter
-                currentMood: currentState.currentMood, // Behalte die aktuelle Stimmung
-                stats: {
-                    totalSelections: 0,
-                    intimateSelections: 0
-                }
-            };
-            
-            contentDisplayEl.classList.remove('active');
-            navigationEl.style.display = 'none';
-            saveBtn.style.display = 'none';
-            savedScenariosEl.classList.remove('active');
-            displayCategories();
-            updateHistoryDisplay();
-            updateStats();
-            addToHistory("Helfer zurückgesetzt", "🔄");
-        }
+function generateInsight(cat, aPct) {
+  const insights = {
+    anfaenger: aPct > 60 ? '💡 Bereit für erste Schritte – Neugier ist vorhanden.' : '💡 Eher vorsichtig – gut alles langsam anzugehen.',
+    cuckold: aPct > 60 ? '💡 Klare Tendenz zur aktiven Umsetzung.' : '💡 Eher zurückhaltend – Kommunikation ist wichtig.',
+    liebhaber: aPct > 60 ? '💡 Emotionale Verbindung zum Liebhaber gewünscht.' : '💡 Klare körperliche Trennung bevorzugt.',
+    gefuehle: aPct > 60 ? '💡 Offene Haltung zu Gefühlen – Ehrlichkeit ist das Fundament.' : '💡 Klare Grenzen bei Emotionen wichtig.',
+    erotik: aPct > 60 ? '💡 Aktive Wünsche vorhanden – offen besprechen.' : '💡 Zurückhaltender – eigenes Tempo respektieren.',
+    fetisch: aPct > 60 ? '💡 Lust auf Grenzerfahrungen – mit Sicherheit angehen.' : '💡 Eher klassisch – Vertrauen zuerst aufbauen.',
+    keuschheit: aPct > 60 ? '💡 Keuschheit als starkes Element gewuenscht.' : '💡 Keuschheit eher als gelegentliches Spiel.',
+    absurd: '😄 Humor ist definitiv vorhanden – perfekt für die Stimmung!',
+  };
+  return insights[cat] || '💡 Interessante Tendenzen erkennbar.';
+}
 
-        // Event Listener
-        backBtn.addEventListener('click', goBack);
-        nextBtn.addEventListener('click', goNext);
-        resetBtn.addEventListener('click', resetApp);
-        saveBtn.addEventListener('click', saveScenario);
-        clearHistoryBtn.addEventListener('click', () => {
-            currentState.history = [];
-            updateHistoryDisplay();
-            addToHistory("Verlauf gelöscht", "🗑️");
-        });
+// ─── EXPORT ───────────────────────────────────────────────────────────────────
+function exportData() {
+  const data = JSON.stringify(getQuestions(), null, 2);
+  const blob = new Blob([data], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'wuerdest-du-lieber.json';
+  a.click();
+}
 
-        // Intim-Toggle
-        intimateToggle.addEventListener('change', () => {
-            currentState.showIntimate = intimateToggle.checked;
-            displayCategories();
-            
-            if (currentState.selectedCategory && currentState.selectedCategory.intimate && !currentState.showIntimate) {
-                // Wenn die aktuelle Kategorie intim ist und wir sie ausblenden, zurücksetzen
-                currentState.selectedCategory = null;
-                contentDisplayEl.classList.remove('active');
-                navigationEl.style.display = 'none';
-            }
-            
-            addToHistory(`Intime Themen: ${currentState.showIntimate ? 'EIN' : 'AUS'}`, currentState.showIntimate ? '💖' : '👁️');
-        });
+function exportFullHtml() {
+  const msg = document.getElementById('exportMsg');
+  msg.textContent = '⏳ Wird erstellt...';
 
-        // Stimmungs-Buttons
-        moodButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Entferne aktive Klasse von allen Buttons
-                moodButtons.forEach(btn => btn.classList.remove('active'));
-                
-                // Füge aktive Klasse zum geklickten Button hinzu
-                button.classList.add('active');
-                
-                // Setze die aktuelle Stimmung
-                currentState.currentMood = button.dataset.mood;
-                
-                // Aktualisiere die Anzeige
-                displayCategories();
-                
-                // Zurücksetzen der Auswahl
-                currentState.selectedCategory = null;
-                contentDisplayEl.classList.remove('active');
-                navigationEl.style.display = 'none';
-                saveBtn.style.display = 'none';
-                
-                addToHistory(`Stimmung: ${button.textContent}`, '🎭');
-            });
-        });
+  // Get current questions with all images
+  const currentQuestions = getQuestions();
 
-        // Tastatur-Shortcuts
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                goBack();
-            } else if (e.key === 'ArrowRight' && nextBtn.style.display !== 'none') {
-                goNext();
-            } else if (e.key === 's' && (e.ctrlKey || e.metaKey)) {
-                e.preventDefault();
-                saveScenario();
-            } else if (e.key === 'r' && (e.ctrlKey || e.metaKey)) {
-                e.preventDefault();
-                resetApp();
-            }
-        });
+  // Read the current page HTML
+  let html = document.documentElement.outerHTML;
 
-        // Initialisierung
-        displayCategories();
-        updateHistoryDisplay();
-        updateStats();
-        updateSavedScenarios();
-        addToHistory("Ehefrau Sex-Szenarien Helfer gestartet", "🚀");
+  // Replace DEFAULT_QUESTIONS with current data including images
+  const questionsJson = JSON.stringify(currentQuestions);
+  html = html.replace(
+    /const DEFAULT_QUESTIONS = \[[\s\S]*?\];/,
+    'const DEFAULT_QUESTIONS = ' + questionsJson + ';'
+  );
 
-        // Info über Tastaturkürzel anzeigen
-        setTimeout(() => {
-            addToHistory("Tipp: Drücke ESC für zurück, Pfeil rechts für weiter", "💡");
-            addToHistory("Wähle eine Stimmung, die deiner aktuellen Verfassung entspricht", "🎭");
-        }, 2000);
-    </script>
+  // Fix loadData to always use DEFAULT_QUESTIONS on first load
+  html = html.replace(
+    /function loadData\(\)[\s\S]*?^}/m,
+    \`function loadData() {
+  const stored = localStorage.getItem('wdl_questions');
+  if (stored) {
+    const parsed = JSON.parse(stored);
+    if (parsed.length < DEFAULT_QUESTIONS.length) {
+      saveData(DEFAULT_QUESTIONS);
+      return DEFAULT_QUESTIONS;
+    }
+    return parsed;
+  }
+  saveData(DEFAULT_QUESTIONS);
+  return DEFAULT_QUESTIONS;
+}\`
+  );
+
+  const blob = new Blob([html], {type:'text/html;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'index.html';
+  a.click();
+  URL.revokeObjectURL(url);
+
+  msg.textContent = '✅ Fertig! index.html wurde heruntergeladen – jetzt auf GitHub hochladen.';
+  setTimeout(() => msg.textContent = '', 5000);
+}
+
+function resetAnswers() {
+  if (!confirm('Alle Antworten wirklich löschen?')) return;
+  const qs = getQuestions().map(q => ({...q, answers: {}}));
+  saveData(qs);
+  alert('\u2705 Antworten zurückgesetzt.');
+}
+
+function resetAllData() {
+  if (!confirm('ALLE Daten löschen und auf neuesten Stand zurücksetzen?')) return;
+  localStorage.removeItem('wdl_questions');
+  saveData(DEFAULT_QUESTIONS);
+  buildFilteredList();
+  renderQuestion();
+  renderQuestionList();
+  renderResults();
+  alert('\u2705 Alle ' + DEFAULT_QUESTIONS.length + ' Fragen neu geladen!');
+}
+</script>
 </body>
 </html>
